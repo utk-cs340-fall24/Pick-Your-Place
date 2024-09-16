@@ -5,9 +5,9 @@ This directory contains the **HelloPlus** program, which demonstrates the use of
 ## How to Run:
 
 1. Clone the repository.
-2. Navigate to the `helloplus/netid` directory.
+2. Navigate to the `helloplus/bmatasic` directory.
 3. Open `index.html` in a browser to view the form.
-4. Fill out the form and observe how the JavaScript handles the input.
+4. Fill out the form and observe how the JavaScript handles the input by using dev tools.
 
 ## Application in Group Project:
 
