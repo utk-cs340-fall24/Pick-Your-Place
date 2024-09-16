@@ -2,7 +2,7 @@
 ---
 ## Practice working with the following relevant languages/frameworks: Bootstrap, html/css
 
-Two major components of our project includes two dynamic navigation bars- one is meant to 
+A major component of our project includes two dynamic navigation bars- one is meant to 
 display the details of a city and the other showcases the list of destinations the user 
 has appended to their bucket list. Through this assignment, I am exploring the possible
 html/css implementation of the basic structure of the latter of these two navigation 
