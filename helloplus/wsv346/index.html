@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>jweste25</title>
+</head>
+
+<body class="p-3">
+
+    <div class="container">
+        <div class="row">
+            <!-- This is the structure for the placeholder Amsterdam Card. -->
+            <div class="col-md-6 mb-3">
+                <div class="card" style="width: 18rem;" data-bs-toggle="offcanvas" data-bs-target="#Amsterdam"
+                    aria-controls="offcanvasExample">
+                    <img src="img/amsterdam.jpeg" class="card-img-top fixed-size-img" alt="Image of Amsterdam">
+                    <div class="card-body">
+                        <p class="card-text">Amsterdam, Denmark</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This is the structure for the placeholder City Card. -->
+            <div class="col-md-6 mb-3">
+                <div class="card" style="width: 18rem;" data-bs-toggle="offcanvas" data-bs-target="#City"
+                    aria-controls="offcanvasExample">
+                    <img src="img/under.jpeg" class="card-img-top fixed-size-img" alt="Image of City">
+                    <div class="card-body">
+                        <p class="card-text">City, Country</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the offCanvas for Amsterdam. -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Amsterdam"
+        aria-labelledby="AmsterdamOffCanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="AmsterdamOffCanvas">Amsterdam, Netherlands</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Add to Bucket List Button -->
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <button type="button" class="btn btn-outline-success w-100">Add City to Bucket List</button>
+            </div>
+            <!-- This is the main accordion for each city's information -->
+            <div class="accordion w-100" id="MainAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#TopSpots" aria-expanded="true" aria-controls="TopSpots">
+                            Top Spots
+                        </button>
+                    </h2>
+                    <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                        <div class="accordion-body">
+                            Top Spots items will be listed here.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat">
+                            Places to Eat
+                        </button>
+                    </h2>
+                    <div id="PlacesToEat" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+                        <div class="accordion-body">
+                            Places to Eat items will be listed here.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#Lodging" aria-expanded="false" aria-controls="Lodging">
+                            Lodging
+                        </button>
+                    </h2>
+                    <div id="Lodging" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+                        <div class="accordion-body">
+                            Lodging items will be listed here.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the offCanvas for Tokyo. -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="City" aria-labelledby="CityOffCanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="CityOffCanvas">City, Country</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-3">
+            <div class="offcanvas-body">
+                <!-- Add to Bucket List Button -->
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <button type="button" class="btn btn-outline-success w-100">Add City to Bucket List</button>
+                </div>
+                <!-- This is the main accordion for each city's information -->
+                <div class="accordion w-100" id="MainAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#TopSpots" aria-expanded="true" aria-controls="TopSpots">
+                                Top Spots
+                            </button>
+                        </h2>
+                        <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body">
+                                Top Spots items will be listed here.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat">
+                                Places to Eat
+                            </button>
+                        </h2>
+                        <div id="PlacesToEat" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body">
+                                Places to Eat items will be listed here.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#Lodging" aria-expanded="false" aria-controls="Lodging">
+                                Lodging
+                            </button>
+                        </h2>
+                        <div id="Lodging" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body">
+                                Lodging items will be listed here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
