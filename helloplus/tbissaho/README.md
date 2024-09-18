@@ -2,6 +2,7 @@
 This program creates a card with an image overlay and a checkbox in the top right-hand corner that can be toggled on and off.
 
 **How it is Used**
+
 This program will be used for the city cards users will view when looking at popular cities in a country. If they would like to add the city to their bucket list or if a city is already added, the checkbox will be toggled on.
 
 ***How to Run*** 
