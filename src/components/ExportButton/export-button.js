@@ -15,18 +15,38 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.log('Error loading file:', error));
     }
 });
-document.getElementById('userForm').addEventListener('submit', function(event) {
-  event.preventDefault();  // Prevent the default form submission behavior
 
-  // Collect the form data
-  const formData = {
-      fullName: document.getElementById('fullName').value,
-      email: document.getElementById('email').value,
-  };
+$(document).ready(function(){
+  let formSubmitted = false;
 
-  // Send the data to your back-end for further processing (e.g., using Fetch API or Axios)
-  // For this example, we'll just log the data to the console
-  console.log(formData);
+  // Prevent attaching multiple event listeners
+  $("#userForm").off('submit');
 
-  // Add code to generate and send the document based on form data
+  // Listen for the form submission
+  $("#userForm").on('submit', function(event) {
+    event.preventDefault();  // Prevent the default form submission
+    // Extract the form data
+    const fullName = $('#fullName').val();
+    const email = $('#email').val();
+
+    // Check if the data is not empty (basic validation)
+    if (fullName && email) {
+      formSubmitted = true;
+      console.log('Full Name:', fullName);
+      console.log('Email:', email);
+
+      // Hide the modal using Bootstrap's modal method
+      $('#exampleModal').modal('hide');
+    } else {
+      alert('Please fill in all the fields.');
+    }
+  });
+
+  // Optional: You can trigger additional logic after the modal is hidden
+  $("#exampleModal").on('hidden.bs.modal', function() {
+    if (formSubmitted) {
+      alert('Please check email');
+      formSubmitted = false; // Reset the flag
+    }
+  });
 });

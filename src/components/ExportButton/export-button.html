@@ -10,6 +10,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="export-button.css">
+    <!-- Add the jQuery CDN first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Link to the external JavaScript file -->
     <script src="export-button.js" defer></script>
     <title>Document</title>
@@ -40,12 +42,10 @@
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                         </div>
-                        <button type="submit" class="btn btn-outline-dark d-flex flex-row-reverse">Submit</button>
+                        <button type="submit" id="submitButton"
+                            class="btn btn-outline-dark d-flex flex-row-reverse">Submit</button>
                     </form>
                     <script src="export-button.js"></script>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div> -->
                 </div>
             </div>
         </div>
