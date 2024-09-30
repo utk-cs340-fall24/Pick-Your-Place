@@ -2,3 +2,13 @@ body {
   padding-top: 20px;
   padding-left: 20px;
 }
+
+.navbar-brand {
+  padding-left: 45rem;
+  flex: 1;
+  text-align: center;
+}
+
+.destinations {
+  padding-top: 10px;
+}
