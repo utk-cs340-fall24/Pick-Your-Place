@@ -1,0 +1,107 @@
+
+/* for check box*/
+label{
+  display: block;
+  padding-left: 259px;
+  text-indent: -15px;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -240px;
+  left: -30px;
+  accent-color: rgba(249, 250, 179, 0.238);
+}
+
+
+/* for cards */
+/* img {
+  width: 100px;
+  height: 300px;
+} */
+
+
+html {
+  box-sizing: border-box;
+  font-size: 100.5%;
+}
+
+.grid {
+  display: grid;
+  width: 18em;
+  grid-gap: 4rem;
+  grid-template-columns: 250px 250px 250px;
+  align-items: start;
+}
+
+.grid-item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+  height: 100%;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  height: 100%;
+}
+
+.card-img {
+  display: block;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+}
+
+
+.card-btn span {
+  margin-left: 10rem;
+  transition: 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  background-color: #c2cffc;
+}
+
+.card-btn:hover span,
+.card-btn:active span {
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+  body {
+    padding: 2rem;
+  }
+  .grid {
+    grid-gap: 2rem;
+  }
+}
+
+
+/*for search bar*/
+.search-bar {
+    margin: 20px;
+    max-width: 600px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
