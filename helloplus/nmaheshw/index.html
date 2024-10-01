@@ -18,19 +18,24 @@
     <title>Document</title>
   </head>
   <body>
-    <button
-      class="btn btn-light"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#staticBackdrop"
-      aria-controls="staticBackdrop"
-    >
-      <img
-        src="bucket.jpeg"
-        alt="Button image"
-        style="width: 70px; height: 100px; object-fit: cover"
-      />
-    </button>
+    <nav class="nav-header">
+      <div class="container-fluid">
+        <button
+          class="btn btn-light"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#staticBackdrop"
+          aria-controls="staticBackdrop"
+        >
+          <img
+            src="bucket.jpeg"
+            alt="Button image"
+            style="width: 70px; height: 100px; object-fit: cover"
+          />
+        </button>
+        <a class="navbar-brand" href="#">Pick Ur Place</a>
+      </div>
+    </nav>
 
     <div
       class="offcanvas offcanvas-start"
@@ -49,7 +54,18 @@
         ></button>
       </div>
       <div class="offcanvas-body">
-        <div>Here are the destinations that you have added to your list!</div>
+        <div>
+          Here are the destinations that you have added to your list!
+          <ul class="list-group">
+            <li class="list-group-item disabled" aria-disabled="true">
+              A disabled item
+            </li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
