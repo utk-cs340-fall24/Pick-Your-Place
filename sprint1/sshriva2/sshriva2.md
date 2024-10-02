@@ -1,7 +1,7 @@
 # Sprint 1
-Sanya Shrivastava
-sanya-shrivastava
-Pick-Your-Place
+- Sanya Shrivastava
+- sanya-shrivastava
+- Pick-Your-Place
 
 ## What you planned to do
 - Issue 14: planned to implement introduction page, included UI design, and button incorporation, (https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/14)
