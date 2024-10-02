@@ -1,0 +1,1317 @@
+france.css:
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   1) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   2) /* for check box*/
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   3) label{
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   4)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5)   padding-left: 259px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6)   text-indent: -15px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) input[type='checkbox'] {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10)   width: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11)   height: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  12)   padding: 0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13)   margin:0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14)   vertical-align: bottom;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15)   position: relative;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16)   top: -240px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17)   left: -30px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18)   accent-color: rgba(249, 250, 179, 0.238);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) /* for cards */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) /* img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25)   height: 300px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) } */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) html {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  30)   box-sizing: border-box;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  31)   font-size: 100.5%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  32) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  33) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) .grid {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35)   display: grid;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36)   width: 18em;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37)   grid-gap: 4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38)   grid-template-columns: 250px 250px 250px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39)   align-items: start;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) .grid-item {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43)   background-color: #fff;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44)   border-radius: 0.4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45)   overflow: hidden;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46)   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47)   cursor: pointer;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  52) .grid-item:hover {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  53)   transform: translateY(-0.5%);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  54)   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  55) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  56) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  57) .card {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  58)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  59) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61) .card-img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63)   object-fit: cover;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)   height: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)   opacity: 0.5;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70) .card-btn span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)   margin-left: 10rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) .card-btn:hover,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76) .card-btn:active {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  77)   background-color: #c2cffc;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  78) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  79) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  80) .card-btn:hover span,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  81) .card-btn:active span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  82)   margin-left: 1.5rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  83) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  84) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  85) @media only screen and (max-width: 60em) {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  86)   body {
+byte 8103...skipping...
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   1) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   2) /* for check box*/
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   3) label{
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   4)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5)   padding-left: 259px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6)   text-indent: -15px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) input[type='checkbox'] {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10)   width: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11)   height: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  12)   padding: 0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13)   margin:0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14)   vertical-align: bottom;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15)   position: relative;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16)   top: -240px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17)   left: -30px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18)   accent-color: rgba(249, 250, 179, 0.238);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) /* for cards */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) /* img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25)   height: 300px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) } */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) html {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  30)   box-sizing: border-box;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  31)   font-size: 100.5%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  32) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  33) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) .grid {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35)   display: grid;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36)   width: 18em;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37)   grid-gap: 4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38)   grid-template-columns: 250px 250px 250px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39)   align-items: start;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) .grid-item {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43)   background-color: #fff;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44)   border-radius: 0.4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45)   overflow: hidden;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46)   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47)   cursor: pointer;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  52) .grid-item:hover {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  53)   transform: translateY(-0.5%);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  54)   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  55) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  56) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  57) .card {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  58)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  59) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61) .card-img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63)   object-fit: cover;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)   height: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)   opacity: 0.5;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70) .card-btn span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)   margin-left: 10rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) .card-btn:hover,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76) .card-btn:active {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  77)   background-color: #c2cffc;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  78) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  79) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  80) .card-btn:hover span,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  81) .card-btn:active span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  82)   margin-left: 1.5rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  83) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  84) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  85) @media only screen and (max-width: 60em) {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  86)   body {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  87)     padding: 2rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  88)   }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  89)   .grid {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  90)     grid-gap: 2rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  91)   }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  92) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  93) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  94) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  95) /*for search bar*/
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  96) .search-bar {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  97)     margin: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  98)     max-width: 600px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  99) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 100) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 101) .search-box {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 102)     width: 100%;
+byte 9551...skipping...
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   1) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   2) /* for check box*/
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   3) label{
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   4)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5)   padding-left: 259px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6)   text-indent: -15px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) input[type='checkbox'] {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10)   width: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11)   height: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  12)   padding: 0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13)   margin:0;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14)   vertical-align: bottom;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15)   position: relative;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16)   top: -240px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17)   left: -30px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18)   accent-color: rgba(249, 250, 179, 0.238);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) /* for cards */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) /* img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25)   height: 300px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) } */
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) html {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  30)   box-sizing: border-box;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  31)   font-size: 100.5%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  32) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  33) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) .grid {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35)   display: grid;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36)   width: 18em;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37)   grid-gap: 4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38)   grid-template-columns: 250px 250px 250px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39)   align-items: start;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) .grid-item {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43)   background-color: #fff;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44)   border-radius: 0.4rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45)   overflow: hidden;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46)   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47)   cursor: pointer;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  52) .grid-item:hover {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  53)   transform: translateY(-0.5%);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  54)   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  55) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  56) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  57) .card {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  58)   height: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  59) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61) .card-img {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)   display: block;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63)   object-fit: cover;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)   width: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)   height: 100px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)   opacity: 0.5;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70) .card-btn span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)   margin-left: 10rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)   transition: 0.2s;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) .card-btn:hover,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76) .card-btn:active {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  77)   background-color: #c2cffc;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  78) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  79) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  80) .card-btn:hover span,
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  81) .card-btn:active span {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  82)   margin-left: 1.5rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  83) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  84) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  85) @media only screen and (max-width: 60em) {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  86)   body {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  87)     padding: 2rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  88)   }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  89)   .grid {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  90)     grid-gap: 2rem;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  91)   }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  92) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  93) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  94) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  95) /*for search bar*/
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  96) .search-bar {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  97)     margin: 20px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  98)     max-width: 600px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  99) }
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 100) 
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 101) .search-box {
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 102)     width: 100%;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 103)     padding: 10px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 104)     border: 1px solid #ccc;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 105)     border-radius: 5px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 106)     font-size: 16px;
+ab76ef75 src/france.css (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 107) }
+
+france.html:
+stylesheet"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+3072e9ec (Trinity Sanaa Bissahoyo 2024-09-24 06:43:45 -0400  33) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  34) <!--Search Bar Fucntion-->
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  35) <nav class="search-bar">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  36) <a class="navbar-brand">Look Up City</a>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  37) <form class="form-inline">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  39) </form>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  40) </nav>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  41) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  42) <div id="search_results">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  43) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  44)     <div class="result-items" data-bs-target="#Buenos-Aires" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  45)     <div class="result-items" data-bs-target="#Mendoza" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  46)     <div class="result-items" data-bs-target="#Colmer" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  47)     <div class="result-items" data-bs-target="#Paris" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  48)     <div class="result-items" data-bs-target="#Kyoto" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  49)     <div class="result-items" data-bs-target="#Tokyo" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  50)     <div class="result-items" data-bs-target="#Casablanca" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  51)     <div class="result-items" data-bs-target="#Rabat" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  52)     <div class="result-items" data-bs-target="#Los Angeles" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  53)     <div class="result-items" data-bs-target="#New-York" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  54) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  55) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  56) </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  57) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  58) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  59)             <script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  60)                 // Search bar function to filter results
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  61)                 document.getElementById('searchform').addEventListener('keyup', function () {
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  62)                     let input = document.getElementById('searchform').value.toLowerCase();
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  63)                     let items = document.querySelectorAll('.result-items');
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  64) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  65)                     items.forEach(function (item) {
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  66)                         if (item.innerHTML.toLowerCase().includes(input)) {
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  67)                             item.style.display = 'block'; // Show items that match the query
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  68)                         } else {
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  69)                             item.style.display = 'none'; // Hide items that don't match
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  70)                         }
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  71)                     });
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  72)                 });
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  73)             </script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  74) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+3072e9ec (Trinity Sanaa Bissahoyo 2024-09-24 06:43:45 -0400  33) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  34) <!--Search Bar Fucntion-->
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  35) <nav class="search-bar">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  36) <a class="navbar-brand">Look Up City</a>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  37) <form class="form-inline">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  39) </form>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  40) </nav>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  41) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  42) <div id="search_results">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  43) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  44)     <div class="result-items" data-bs-target="#Buenos-Aires" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  45)     <div class="result-items" data-bs-target="#Mendoza" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  46)     <div class="result-items" data-bs-target="#Colmer" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  47)     <div class="result-items" data-bs-target="#Paris" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  48)     <div class="result-items" data-bs-target="#Kyoto" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  49)     <div class="result-items" data-bs-target="#Tokyo" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  50)     <div class="result-items" data-bs-target="#Casablanca" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  51)     <div class="result-items" data-bs-target="#Rabat" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  52)     <div class="result-items" data-bs-target="#Los Angeles" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  53)     <div class="result-items" data-bs-target="#New-York" </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  54) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  55) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  56) </div>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  57) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  58) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  59)             <script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  60)                 // Search bar function to filter results
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  61)                 document.getElementById('searchform').addEventListener('keyup', functi
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+3072e9ec (Trinity Sanaa Bissahoyo 2024-09-24 06:43:45 -0400  33) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  34) <!--Search Bar Fucntion-->
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" >
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" c>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.mi>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/b>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></s>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+3072e9ec (Trinity Sanaa Bissahoyo 2024-09-24 06:43:45 -0400  33) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  34) <!--Search Bar Fucntion-->
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" >
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" c>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.mi>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/b>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cros>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boot>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scri>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+3072e9ec (Trinity Sanaa Bissahoyo 2024-09-24 06:43:45 -0400  33) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  34) <!--Search Bar Fucntion-->
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  35) <nav class="search-bar">
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cros>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boot>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scri>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cros>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boot>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js">>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scri>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  28) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  29) 
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  30) </head>
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400  31) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400  32) <body>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cros>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  11) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  12) <link rel="stylesheet" href="styles.css">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boot>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  14) <link rel="stylesheet" href="home.component.css" />
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  17) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  20) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  23) crossorigin="anonymous"></script>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  24) 
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  25) <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cros>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   1) <!DOCTYPE html>
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   2) <html lang="en">
+76e90468 (Trinity Sanaa Bissahoyo 2024-09-30 05:30:33 -0400   3) 
+b2a7b761 (Trinity Sanaa Bissahoyo 2024-09-11 11:07:41 -0400   4) <head>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   5) <meta charset="UTF-8">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+d6702327 (Trinity Sanaa Bissahoyo 2024-09-30 05:39:13 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+tbissaho:tesla4 ~/Pick-Your-Place> git blame src/france.html                                                                                    <- 11:10PM
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+byte 1171...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+byte 1270...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+byte 1944...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+byte 2591...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+byte 2839...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+byte 3206...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+byte 3572...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) <!--Search Bar Fucntion-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35) <nav class="search-bar">
+byte 3958...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) <!--Search Bar Fucntion-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35) <nav class="search-bar">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36) <a class="navbar-brand">Look Up City</a>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37) <form class="form-inline">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39) </form>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) </nav>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) <div id="search_results">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44) <div class="result-items" data-bs-target="#Mendoza" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45) <div class="result-items" data-bs-target="#Colmer" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46) <div class="result-items" data-bs-target="#Paris" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47) <div class="result-items" data-bs-target="#Kyoto" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48) <div class="result-items" data-bs-target="#Tokyo" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49) <div class="result-items" data-bs-target="#Casablanca" </div>
+byte 5407...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) <!--Search Bar Fucntion-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35) <nav class="search-bar">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36) <a class="navbar-brand">Look Up City</a>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37) <form class="form-inline">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39) </form>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) </nav>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) <div id="search_results">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44) <div class="result-items" data-bs-target="#Mendoza" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45) <div class="result-items" data-bs-target="#Colmer" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46) <div class="result-items" data-bs-target="#Paris" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47) <div class="result-items" data-bs-target="#Kyoto" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48) <div class="result-items" data-bs-target="#Tokyo" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49) <div class="result-items" data-bs-target="#Casablanca" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) <div class="result-items" data-bs-target="#Rabat" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) <div class="result-items" data-bs-target="#Los-Angeles" </div>
+byte 5657...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) <!--Search Bar Fucntion-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35) <nav class="search-bar">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36) <a class="navbar-brand">Look Up City</a>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37) <form class="form-inline">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39) </form>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) </nav>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) <div id="search_results">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44) <div class="result-items" data-bs-target="#Mendoza" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45) <div class="result-items" data-bs-target="#Colmer" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46) <div class="result-items" data-bs-target="#Paris" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47) <div class="result-items" data-bs-target="#Kyoto" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48) <div class="result-items" data-bs-target="#Tokyo" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49) <div class="result-items" data-bs-target="#Casablanca" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) <div class="result-items" data-bs-target="#Rabat" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) <div class="result-items" data-bs-target="#Los-Angeles" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  52) <div class="result-items" data-bs-target="#New-York" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  53) <!-- <div class="result-items" data-bs-target="#Buenos-Aires" </div> -->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  54) 
+byte 5986...skipping...
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   5) <meta charset="UTF-8">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   6) <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   7) <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel=>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   8) integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" cross>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400   9) <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  10) integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  11) crossorigin="anonymous"></script>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  13) <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/boots>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  14) <link rel="stylesheet" href="home.component.css" />
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  15) <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  16) integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  17) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  18) <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  19) integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  20) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  21) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  22) integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  23) crossorigin="anonymous"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  24) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  25) <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  26) <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"><>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  27) <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></scrip>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  28) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  29) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  34) <!--Search Bar Fucntion-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  35) <nav class="search-bar">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  36) <a class="navbar-brand">Look Up City</a>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  37) <form class="form-inline">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  38) <input id="searchform" class="search-box" type="search" placeholder="Search">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  39) </form>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  40) </nav>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  41) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  42) <div id="search_results">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  43) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  44) <div class="result-items" data-bs-target="#Mendoza" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  45) <div class="result-items" data-bs-target="#Colmer" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  46) <div class="result-items" data-bs-target="#Paris" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  47) <div class="result-items" data-bs-target="#Kyoto" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  48) <div class="result-items" data-bs-target="#Tokyo" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  49) <div class="result-items" data-bs-target="#Casablanca" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  50) <div class="result-items" data-bs-target="#Rabat" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  51) <div class="result-items" data-bs-target="#Los-Angeles" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  52) <div class="result-items" data-bs-target="#New-York" </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  53) <!-- <div class="result-items" data-bs-target="#Buenos-Aires" </div> -->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  54) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  55) </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  56) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  57) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  58)                             <script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  59)                                 // Search bar function to filter results
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74)                             <!--Cards-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74)                             <!--Cards-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) <div class="grid">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76)                                    
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  77) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  78)                                 <!--Mendoza, Argentina-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  79)                                 <div class="grid-item result-items">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  80)                                     <div class="card bg-dark text-white text-center">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74)                             <!--Cards-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) <div class="grid">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76)                                    
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74)                             <!--Cards-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('k>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').val>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items'>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input))>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items t>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items th>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  60)                                 document.getElementById('searchform').addEventListener('keyup', function () {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  61)                                     let input = document.getElementById('searchform').value.toLowerCase();
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  62)                                     let items = document.querySelectorAll('.result-items');
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  63) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  64)                                     items.forEach(function (item) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  65)                                         if (item.innerHTML.toLowerCase().includes(input)) {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  66)                                             item.style.display = 'block'; // Show items that match the query
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  67)                                         } else {
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  68)                                             item.style.display = 'none'; // Hide items that don't match
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  69)                                         }
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  70)                                     });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  71)                                 });
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  72)                             </script>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  73) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  74)                             <!--Cards-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  75) <div class="grid">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  76)                                    
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  77) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  78)                                 <!--Mendoza, Argentina-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  79)                                 <div class="grid-item result-items">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  80)                                     <div class="card bg-dark text-white text-center">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  81)                                         <img src="img/argentina/mendoza/Mendoza2.jpeg" class="card-img" alt="..." style="height: 100%; object-fit: cover;">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  82)                                         <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Mendoza"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  83)                                             aria-controls="offcanvasExample">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  84)                                             <!-- Default checkbox -->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  85)                                 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  86)                                             <h5 class="card-title">Mendoza, Argentina</h5>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  87)                                         </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  88)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  89)                                 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  90)                                     <div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  91)                                         <div class="form-check overlay"></div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  92)                                         <label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" object align="left"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  93)                                                 data-bs-dismiss="offcanvas" aria-label="Close" /></label>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  94)                                         <!--<label class="form-check-label" for="flexCheckDefault">Add to Bucket</label> if you want to add title to check box uneeded-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  95)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  96)                                 </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  97) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  98)                                 <!--Buenos Aires, Argentina-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400  99)                                 <!-- <div class="grid-item result-items">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 100)                                     <div class="card bg-dark text-white text-center">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 101)                                         <img src="img/argentina/buenos-aires/BA1.jpeg" class="card-img" alt="..."
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 102)                                             style="height: 100%; object-fit: cover;">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 103)                                         <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Buenos-Aires"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 104)                                             aria-controls="offcanvasExample">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 105)                                             <!-- Default checkbox
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 106)                                 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 107)                                             <h5 class="card-title">Buenos Aires, Argentina</h5>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 108)                                         </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 109)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 110)                                 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 111)                                     <div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 112)                                         <div class="form-check overlay"></div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 113)                                         <label><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" object align="left"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 114)                                                 data-bs-dismiss="offcanvas" aria-label="Close" /></label>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 115)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 116)                                 </div> -->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 117) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 118) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 119)                                 <!--Colmar, France-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 120)                                 <div class="grid-item result-items">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 121)                                     <div class="card bg-dark text-white text-center">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 122)                                         <img src="img/france/colmar/colmar.jpeg"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 123)                                             class="card-img" alt="..."
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 124)                                             style="height: 100%; object-fit: cover;">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 125)                                         <div class="card-img-overlay" data-bs-toggle="offcanvas"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 126)                                             data-bs-target="#Colmar" aria-controls="offcanvasExample">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 127)                                             <!-- Default checkbox -->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 128) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 129)                                             <h5 class="card-title">Colmar, France</h5>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 130)                                         </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 131)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 132) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 133)                                     <div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 134)                                         <div class="form-check overlay"></div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 135)                                         <label><input class="form-check-input" type="checkbox" value=""
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 136)                                                 id="flexCheckDefault" object align="left"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 137)                                                 data-bs-dismiss="offcanvas"
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 138)                                                 aria-label="Close" /></label>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 139)                                         <!--<label class="form-check-label" for="flexCheckDefault">Add to Bucket</label> if you want to add title to check box uneeded-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 140)                                     </div>
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 141)                                 </div> 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 142) 
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 143)                                 <!--Paris, France-->
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 144)                                 <div class="grid-item result-items">
+ab76ef75 (Trinity Sanaa Bissahoyo 2024-09-30 12:46:04 -0400 145)                                     <div class="card bg-dark text-white text-center">
+byte 17754
