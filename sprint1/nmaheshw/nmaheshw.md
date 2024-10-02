@@ -28,8 +28,9 @@ Pick-Your-Place
 ### What you accomplished
 (Give a description of the features you added or tasks you accomplished. Provide some detail here. This section will be a little longer than the bulleted lists above) 
 For header bar, I used the bootstrap navbar component to add a title to the page. I used CSS styling and imported a Google Font to make it look cleaner 
-and follow a brown color theme. In addition to that, I made the offcanvas that holds the list of destinations in the user's bucket list slightly more interactive 
-and visually pleasing by adding hover behavior. I also added a placeholder 'remove' button to every list item. In future sprints, we will work on adding functionality 
+and follow a brown color theme, while giving the bucket icon a polished transformation upon hover to promote more interactivity in the UI. In addition to that, I 
+made the offcanvas that holds the list of destinations in the user's bucket list slightly more interactive and visually pleasing by adding hover behavior. 
+I also added a placeholder 'remove' button to every list item. In future sprints, we will work on adding functionality 
 to this button. On the more artistic side, I digitally designed a new background for our software applications starter page. Thankfully, it turned out very cute!
 
 
