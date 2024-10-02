@@ -1,0 +1,181 @@
+export-button.css
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 1) #userForm {
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 2)     padding-bottom: 5%;
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 3) }
+
+export-button.html
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  1) <!DOCTYPE html>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  2) <html lang="en">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  3) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  4) <head>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  5)     <meta charset="UTF-8">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  7)     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  8)         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  9)     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 10)         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 11)         crossorigin="anonymous"></script>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 12)     <link rel="stylesheet" href="export-button.css">
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 13)     <!-- Add the jQuery CDN first -->
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 14)     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 15)     <!-- Link to the external JavaScript file -->
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 16)     <script src="export-button.js" defer></script>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 17)     <title>Document</title>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 18) </head>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 19) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 20) <body>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 21)     <!-- Button trigger modal -->
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 22)     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 23)         Get Travel List
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 24)     </button>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 25) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 26)     <!-- Modal -->
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 27)     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 28)         <!-- Vertically centered scrollable modal -->
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 29)         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 30)             <div class="modal-content">
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 31)                 <div class="modal-header">
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 32)                     <h5 class="modal-title" id="exampleModalLabel">Enter Your Information</h5>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 33)                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 34)                 </div>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 35)                 <div class="modal-body">
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 36)                     <form id="userForm">
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 37)                         <div class="mb-3">
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 38)                             <label for="fullName" class="form-label">Full Name</label>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 39)                             <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 40)                         </div>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 41)                         <div class="mb-3">
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 42)                             <label for="email" class="form-label">Email address</label>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 43)                             <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 44)                         </div>
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 45)                         <button type="submit" id="submitButton"
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 46)                             class="btn btn-outline-dark d-flex flex-row-reverse">Submit</button>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 47)                     </form>
+34a4dd19 (Bella Matasic 2024-09-24 09:47:24 -0400 48)                     <script src="export-button.js"></script>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 49)                 </div>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 50)             </div>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 51)         </div>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 52) </body>
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 53) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 54) </html>
+
+
+export-button.js
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  1) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  2) 
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  3) document.addEventListener("DOMContentLoaded", function() {
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  4)     // Function to load HTML from an external file
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  5)     function includeHTML(file, elementId) {
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  6)       fetch(file)
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  7)         .then(response => response.text())
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  8)         .then(data => {
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400  9)           document.getElementById(elementId).innerHTML = data;
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 10)           var scripts = document.getElementById(elementId).getElementsByTagName('script');
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 11)           for (var i = 0; i < scripts.length; i++) {
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 12)             eval(scripts[i].innerText);
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 13)           }
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 14)         })
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 15)         .catch(error => console.log('Error loading file:', error));
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 16)     }
+04eae715 (Bella Matasic 2024-09-24 08:22:16 -0400 17) });
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 18) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 19) $(document).ready(function(){
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 20)   let formSubmitted = false;
+04eae715 (Bella Matasic 2024-09-24 08:22:16 -0400 21) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 22)   // Prevent attaching multiple event listeners
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 23)   $("#userForm").off('submit');
+04eae715 (Bella Matasic 2024-09-24 08:22:16 -0400 24) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 25)   // Listen for the form submission
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 26)   $("#userForm").on('submit', function(event) {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 27)     event.preventDefault();
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 28)     
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 29)     // Get form data
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 30)     var formData = {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 31)       fullName: $('#fullName').val(),
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 32)       email: $('#email').val(),
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 33)     }
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 34) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 35)     console.log('Full Name:', formData.fullName);
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 36)     console.log('Email:', formData.email);
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 37) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 38) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 39)     // Check if the data is not empty (basic validation)
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 40)     if (fullName && email) {
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 41)       formSubmitted = true;
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 42) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 43)       // Hide the modal using Bootstrap's modal method
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 44)       $('#exampleModal').modal('hide');
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 45) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 46)       // Perform AJAX request to send email
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 47)       $.ajax({
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 48)         type: 'POST',
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 49)         url: 'sendEmail.php',
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 50)         data: formData,
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 51)         dataType: 'json',
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 52)         success: function(response) {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 53)           // Handle success response
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 54)         if (response.success) {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 55)           $('#response').html('<p>Email sent successfully!</p>');
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 56)           } else {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 57)             $('#response').html('<p>Error: ' + response.message + '</p>');
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 58)           }
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 59)         },
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 60)         error: function(jqXHR, textStatus, errorThrown) {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 61)           // Handle error response
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 62)           $('#response').html('<p>An error occurred: ' + textStatus + '</p>');
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 63)         }
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 64)       });
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 65)     } else {
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 66)       alert('Please fill in all the fields.');
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 67)     }
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 68)   });
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 69) 
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 70)   // Optional: You can trigger additional logic after the modal is hidden
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 71)   $("#exampleModal").on('hidden.bs.modal', function() {
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 72)     if (formSubmitted) {
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 73)       alert('Please check email');
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 74)       formSubmitted = false; // Reset the flag
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 75)     }
+42c1a6e0 (Bella Matasic 2024-09-30 14:09:54 -0400 76)   });
+68fb4729 (Bella Matasic 2024-09-19 09:41:06 -0400 77) });
+
+sendEmail.php
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  1) <?php
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  2) //Import PHPMailer classes into the global namespace
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  3) //These must be at the top of your script, not inside a function
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  4) use PHPMailer\PHPMailer\PHPMailer;
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  5) use PHPMailer\PHPMailer\SMTP;
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  6) use PHPMailer\PHPMailer\Exception;
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  7) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  8) //Load Composer's autoloader
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400  9) require 'vendor/autoload.php';
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 10) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 11) try {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 12)     // Server settings
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 13)     $mail->SMTPDebug = 2;                      // Enable verbose debug output
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 14)     $mail->isSMTP();                           // Send using SMTP
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 15)     $mail->Host       = 'smtp.gmail.com';    // Set the SMTP server to send through
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 16)     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 17)     $mail->Username   = 'your_email@example.com'; // SMTP username
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 18)     $mail->Password   = 'your_email_password';   // SMTP password
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 19)     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 20)     $mail->Port       = 587;                   // TCP port to connect to
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 21) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 22)     // Recipients
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 23)     $mail->setFrom('your_email@example.com', 'Your Name');
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 24)     $mail->addAddress('recipient@example.com', 'Recipient Name');  // Add a recipient
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 25) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 26)     // Content
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 27)     $mail->isHTML(true);  // Set email format to HTML
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 28)     $mail->Subject = 'Test Email using PHPMailer';
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 29)     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 30)     $mail->AltBody = 'This is the plain text body for non-HTML email clients';
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 31) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 32)     // Send email
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 33)     $mail->send();
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 34)     echo 'Message has been sent';
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 35) } catch (Exception $e) {
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 36)     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 37) }
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 38) 
+b6c63755 (Bella Matasic 2024-09-30 15:07:15 -0400 39) ?>
