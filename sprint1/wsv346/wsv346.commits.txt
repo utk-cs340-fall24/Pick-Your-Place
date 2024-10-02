@@ -1,0 +1,866 @@
+argentina.css:
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  1) .topSpots-accordion {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  2)     display: block; 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  3)     width: 100%;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  4) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  5) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  6) .centered-nested-accordian-img-container {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  7)     display: flex;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  8)     justify-content: center;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  9)     align-items: center;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 10)     width: 100%;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 11) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 12) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 13) .nested-accordion-img {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 14)     width: 200px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 15)     height: 200px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 16)     align-items: center;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 17) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 18) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 19) .add-remove-button {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 20)     display: block;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 21)     margin-left: auto;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 22) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 23) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 24) .nested-first {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 25)     padding: 5px;
+387e366a (jweste25 2024-09-29 21:51:14 -0400 26) }
+387e366a (jweste25 2024-09-29 21:51:14 -0400 27) 
+387e366a (jweste25 2024-09-29 21:51:14 -0400 28) .fixed-size-img {
+387e366a (jweste25 2024-09-29 21:51:14 -0400 29)     width: 100%;
+387e366a (jweste25 2024-09-29 21:51:14 -0400 30)     height: 200px;
+387e366a (jweste25 2024-09-29 21:51:14 -0400 31)     object-fit: cover;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 32) }
+
+index.css:
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  1) .bg-image {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  2)     background-size: cover;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  3)     background-position: center;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  4)     background-repeat: no-repeat;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  5)     min-height: 100vh;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  6)     position: relative;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  7)     color: rgb(255, 255, 255);
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  8)     text-shadow: 2px 2px 2px rgba(0,0,0,.2)
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  9) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 10) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 11) h1 {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 12)     color: white;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 13)     font-size: 4rem;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 14) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 15) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 16) .color-overlay {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 17)     position: absolute;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 18)     width: 100%;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 19)     height: 100%;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 20)     background-color: rgba(0,0,0,.7);
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 21) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 22) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 23) .btn {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 24)     position: absolute;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 25)     bottom: 20px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 26)     right: 20px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 27)     padding: 15px 30px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 28)     font-size: 18px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 29)     color: white;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 30)     background-color: darkgray;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 31)     border: none;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 32)     border-radius: 5px;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 33)     cursor: pointer;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 34) }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 35) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 36) .custom-btn:hover {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 37)     background-color: dimgray;
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 38) }
+
+argentina.html:
+760b372e (jweste25 2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25 2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25 2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400   4) <head>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400   5)   <meta charset="UTF-8" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400   6)   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400   7)   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400   8)     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400   9)   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  10)     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  11)     crossorigin="anonymous"></script>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  12)   <link rel="stylesheet" href="css/argentina.css" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  13)   <script type="module" src="js/argentina.js" defer></script>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  14)   <title>Argentina</title>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  15) </head>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  16) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  17) <body class="p-3">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  18)   <div class="container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  19)     <div class="row">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  20)       <!-- This is the structure for the placeholder Buenos Aires Card. -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  21)       <div class="col-md-6 mb-3">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  22)         <div class="card" style="width: 18rem" data-bs-toggle="offcanvas" data-bs-target="#BuenosAires"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  23)           aria-controls="offcanvasExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  24)           <img src="img/argentina/buenos-aires/BA1.jpeg" class="card-img-top fixed-size-img"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  25)             alt="Image of Buenos Aires" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  26)           <div class="card-body">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  27)             <p class="card-text">Buenos Aires, Argentina</p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  28)           </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  29)         </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  30)       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  31)     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  32)   </div>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  33) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  34)   <!-- This is the offCanvas for Buenos Aires. -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  35)   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="BuenosAires"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  36)     aria-labelledby="BuenosAiresOffCanvas">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  37)     <div class="offcanvas-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  38)       <h5 class="offcanvas-title" id="BuenosAiresOffCanvas">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  39)         Buenos Aires, Argentina
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  40)       </h5>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  41)       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  42)     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  43)     <div class="offcanvas-body">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  44)       <!-- Add to Bucket List Button -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  45)       <div class="d-flex justify-content-center align-items-center mb-3">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  46)         <button type="button" class="btn btn-outline-success w-100 add-remove-city">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  47)           Add City to Bucket List
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  48)         </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  49)       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  50)       <!-- This is the main accordion for each city's information -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  51)       <div class="accordion w-100" id="MainAccordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  52)         <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  53)           <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  54)             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  55)               aria-expanded="true" aria-controls="TopSpots">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  56)               Top Spots
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  57)             </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  58)           </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  59)           <div id="TopSpots" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  60)             <div class="accordion-body nested-first">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  61)               <!-- This is the nested accordion for Top Spots information -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  62)               <div class="accordion accordion-flush w-100" id="TopSpotsList">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  63)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  64)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  65)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  66)                       data-bs-target="#TopSpots-collapseOne" aria-expanded="false" aria-controls="TopSpots-collapseOne">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  67)                       Top Spot #1
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  68)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  69)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  70)                   <div id="TopSpots-collapseOne" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  71)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  72)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  73)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  74)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  75)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  76)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  77)                         This it the <b>first</b> top spot to visit and a blurb
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  78)                         about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  79)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  80)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  81)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  82)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  83)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  84)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  85)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  86)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  87)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  88)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  89)                       data-bs-target="#TopSpots-collapseTwo" aria-expanded="false" aria-controls="TopSpots-collapseTwo">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  90)                       Top Spot #2
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  91)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  92)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  93)                   <div id="TopSpots-collapseTwo" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  94)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  95)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  96)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  97)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  98)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  99)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 100)                         This it the <b>second</b> top spot to visit and a
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 101)                         blurb about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 102)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 103)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 104)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 105)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 106)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 107)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 108)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 109)               </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 110)             </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 111)           </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 112)         </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 113)         <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 114)           <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 115)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 116)               data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 117)               Places to Eat
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 118)             </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 119)           </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 120)           <div id="PlacesToEat" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 121)             <div class="accordion-body nested-first">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 122)               <!-- This is the nested accordion for Places To Eat information -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 123)               <div class="accordion accordion-flush w-100" id="PlacesToEatList">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 124)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 125)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 126)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 127)                       data-bs-target="#PlacesToEat-collapseOne" aria-expanded="false"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 128)                       aria-controls="PlacesToEat-collapseOne">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 129)                       Place #1
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 130)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 131)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 132)                   <div id="PlacesToEat-collapseOne" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 133)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 134)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 135)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 136)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 137)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 138)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 139)                         This it the <b>first</b> place to eat and a blurb
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 140)                         about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 141)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 142)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 143)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 144)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 145)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 146)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 147)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 148)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 149)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 150)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 151)                       data-bs-target="#PlacesToEat-collapseTwo" aria-expanded="false"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 152)                       aria-controls="PlacesToEat-collapseTwo">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 153)                       Place #2
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 154)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 155)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 156)                   <div id="PlacesToEat-collapseTwo" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 157)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 158)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 159)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 160)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 161)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 162)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 163)                         This it the <b>second</b> place to eat and a blurb
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 164)                         about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 165)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 166)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 167)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 168)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 169)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 170)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 171)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 172)               </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 173)             </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 174)           </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 175)         </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 176)         <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 177)           <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 178)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 179)               aria-expanded="false" aria-controls="Lodging">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 180)               Lodging
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 181)             </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 182)           </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 183)           <div id="Lodging" class="accordion-collapse collapse" data-bs-parent="#MainAccordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 184)             <div class="accordion-body nested-first">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 185)               <!-- This is the nested accordion for Lodging information -->
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 186)               <div class="accordion accordion-flush w-100" id="LodgingList">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 187)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 188)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 189)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 190)                       data-bs-target="#Lodging-collapseOne" aria-expanded="false" aria-controls="Lodging-collapseOne">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 191)                       Lodging #1
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 192)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 193)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 194)                   <div id="Lodging-collapseOne" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 195)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 196)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 197)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 198)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 199)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 200)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 201)                         This it the <b>first</b> lodge and a blurb about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 202)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 203)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 204)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 205)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 206)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 207)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 208)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 209)                 <div class="accordion-item">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 210)                   <h2 class="accordion-header">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 211)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 212)                       data-bs-target="#Lodging-collapseTwo" aria-expanded="false" aria-controls="Lodging-collapseTwo">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 213)                       Lodging #2
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 214)                     </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 215)                   </h2>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 216)                   <div id="Lodging-collapseTwo" class="accordion-collapse collapse"
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 217)                     data-bs-parent="#accordionFlushExample">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 218)                     <div class="accordion-body topSpots-accordion">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 219)                       <div class="centered-nested-accordian-img-container">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 220)                         <img src="img/main/under.jpeg" class="nested-accordion-img" />
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 221)                       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 222)                       <p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 223)                         This it the <b>second</b> lodge and a blurb about why.
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 224)                       </p>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 225)                       <button class="add-remove-button btn btn-outline-success">
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 226)                         Add
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 227)                       </button>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 228)                     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 229)                   </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 230)                 </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 231)               </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 232)             </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 233)           </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 234)         </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 235)       </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 236)     </div>
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 237)   </div>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 238) </body>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 239) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 240) </html>
+
+dropdowns.html:
+5986abc0 (jweste25          2024-09-30 11:56:39 -0400 14)   <link href="css/dropdowns.css" rel="stylesheet">
+
+index.html:
+760b372e (jweste25          2024-09-17 22:41:29 -0400  1) <!DOCTYPE html>
+760b372e (jweste25          2024-09-17 22:41:29 -0400  2) <html lang="en">
+760b372e (jweste25          2024-09-17 22:41:29 -0400  3) <head>
+760b372e (jweste25          2024-09-17 22:41:29 -0400  4)     <meta charset="UTF-8">
+760b372e (jweste25          2024-09-17 22:41:29 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+760b372e (jweste25          2024-09-17 22:41:29 -0400  7) 
+760b372e (jweste25          2024-09-17 22:41:29 -0400 13) <body>
+760b372e (jweste25          2024-09-17 22:41:29 -0400 17) 
+760b372e (jweste25          2024-09-17 22:41:29 -0400 24) </body>
+
+france.html:
+760b372e (jweste25                2024-09-17 22:41:29 -0400   1) <!DOCTYPE html>
+760b372e (jweste25                2024-09-17 22:41:29 -0400   2) <html lang="en">
+760b372e (jweste25                2024-09-17 22:41:29 -0400   3) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400   4) <head>
+b9faf6e7 (jweste25                2024-09-30 12:59:12 -0400  12) <link rel="stylesheet" href="css/france.css">
+760b372e (jweste25                2024-09-17 22:41:29 -0400  30) </head>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  31) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400  32) <body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400  33) 
+760b372e (jweste25                2024-09-17 22:41:29 -0400 509) </body>
+760b372e (jweste25                2024-09-17 22:41:29 -0400 510) 
+
+morocco.html:
+760b372e (jweste25 2024-09-17 22:41:29 -0400  1) <!DOCTYPE html>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  2) <html lang="en">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  3) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400  4) <head>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  5)     <meta charset="UTF-8">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  7)     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+760b372e (jweste25 2024-09-17 22:41:29 -0400  8)         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  9)     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+760b372e (jweste25 2024-09-17 22:41:29 -0400 10)         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+760b372e (jweste25 2024-09-17 22:41:29 -0400 11)         crossorigin="anonymous"></script>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 12)         <link rel="stylesheet" href="styles.css">
+760b372e (jweste25 2024-09-17 22:41:29 -0400 13)     <title>Document</title>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 14) </head>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 15) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 16) <body>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 17) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 18) </body>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 19) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 20) </html>
+
+us.html:
+760b372e (jweste25 2024-09-17 22:41:29 -0400  1) <!DOCTYPE html>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  2) <html lang="en">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  3) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400  4) <head>
+760b372e (jweste25 2024-09-17 22:41:29 -0400  5)     <meta charset="UTF-8">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  7)     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+760b372e (jweste25 2024-09-17 22:41:29 -0400  8)         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+760b372e (jweste25 2024-09-17 22:41:29 -0400  9)     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+760b372e (jweste25 2024-09-17 22:41:29 -0400 10)         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+760b372e (jweste25 2024-09-17 22:41:29 -0400 11)         crossorigin="anonymous"></script>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 12)         <link rel="stylesheet" href="styles.css">
+760b372e (jweste25 2024-09-17 22:41:29 -0400 13)     <title>Document</title>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 14) </head>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 15) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 16) <body>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 17) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 18) </body>
+760b372e (jweste25 2024-09-17 22:41:29 -0400 19) 
+760b372e (jweste25 2024-09-17 22:41:29 -0400 20) </html>
+
+argentina.js:
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  1) document.addEventListener('DOMContentLoaded', function () {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  2)     //Provides the Add and Remove button for the entire city
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  3)     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  4) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  5)     addRemoveCityButtons.forEach(function (button) {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  6)         button.addEventListener('click', function () {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  7)             if (button.classList.contains("btn-outline-success")) {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  8)                 button.classList.remove("btn-outline-success");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400  9)                 button.classList.add("btn-outline-danger");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 10)                 button.textContent = "Remove City from Bucket List";
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 11)             } else {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 12)                 button.classList.remove("btn-outline-danger");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 13)                 button.classList.add("btn-outline-success");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 14)                 button.textContent = "Add City to Bucket List";
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 15)             }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 16)         });
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 17)     })
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 18) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 19)     //Provides the Add and Remove button for the city information in the nested accordion
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 20)     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 21) 
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 22)     addRemoveButtons.forEach(function (button) {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 23)         button.addEventListener('click', function () {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 24)             if (button.classList.contains("btn-outline-success")) {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 25)                 button.classList.remove("btn-outline-success");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 26)                 button.classList.add("btn-outline-danger");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 27)                 button.textContent = "Remove";
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 28)             } else {
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 29)                 button.classList.remove("btn-outline-danger");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 30)                 button.classList.add("btn-outline-success");
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 31)                 button.textContent = "Add";
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 32)             }
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 33)         });
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 34)     });
+27e6ec98 (jweste25 2024-09-29 15:56:14 -0400 35) });
+
+data.js:
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   1) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   2)  * To import: import { allCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   3)  * Source: https://worldpopulationreview.com
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   4)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   5) export const allCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   6)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   7)         name: "Buenos Aires",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   8)         country: "Argentina",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400   9)         population: "15,618,288",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  10)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  11)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  12)         name: "Mendoza",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  13)         country: "Argentina",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  14)         population: "1,242,319",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  15)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  16)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  17)         name: "Colmar",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  18)         country: "France",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  19)         population: "71,163",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  20)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  21)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  22)         name: "Paris",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  23)         country: "France",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  24)         population: "11,276,701",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  25)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  26)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  27)         name: "Kyoto",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  28)         country: "Japan",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  29)         population: "1,459,640",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  30)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  31)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  32)         name: "Tokyo",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  33)         country: "Japan",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  34)         population: "8,336,599",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  35)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  36)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  37)         name: "Casablanca",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  38)         country: "Morocco",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  39)         population: "3,950,408",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  40)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  41)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  42)         name: "Rabat",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  43)         country: "Morocco",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  44)         population: "1,989,197",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  45)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  46)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  47)         name: "Los Angeles",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  48)         country: "US",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  49)         population: "3,795,936",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  50)         state: "California",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  51)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  52)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  53)         name: "New York",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  54)         country: "US",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  55)         population: "8,097,282",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  56)         state: "New York",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  57)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  58) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  59) 
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  60) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  61)  * To import: import { argentinaCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  62)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  63) export const argentinaCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  64)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  65)         name: "Buenos Aires",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  66)         country: "Argentina",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  67)         population: "15,618,288",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  68)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  69)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  70)                 name: "BA-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  71)                 blurb: "BA-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  72)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  73)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  74)                 name: "BA-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  75)                 blurb: "BA-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  76)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  77)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  78)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  79)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  80)                 name: "BA-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  81)                 blurb: "BA-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  82)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  83)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  84)                 name: "BA-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  85)                 blurb: "BA-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  86)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  87)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  88)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  89)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  90)                 name: "BA-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  91)                 blurb: "BA-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  92)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  93)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  94)                 name: "BA-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  95)                 blurb: "BA-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  96)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  97)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  98)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400  99)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 100)         name: "Mendoza",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 101)         country: "Argentina",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 102)         population: "1,242,319",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 103)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 104)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 105)                 name: "M-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 106)                 blurb: "M-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 107)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 108)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 109)                 name: "M-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 110)                 blurb: "M-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 111)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 112)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 113)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 114)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 115)                 name: "M-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 116)                 blurb: "M-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 117)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 118)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 119)                 name: "M-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 120)                 blurb: "M-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 121)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 122)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 123)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 124)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 125)                 name: "M-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 126)                 blurb: "M-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 127)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 128)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 129)                 name: "M-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 130)                 blurb: "M-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 131)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 132)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 133)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 134) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 135) 
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 136) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 137)  * To import: import { franceCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 138)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 139) export const franceCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 140)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 141)         name: "Colmar",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 142)         country: "France",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 143)         population: "71,163",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 144)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 145)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 146)                 name: "F-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 147)                 blurb: "F-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 148)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 149)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 150)                 name: "F-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 151)                 blurb: "F-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 152)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 153)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 154)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 155)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 156)                 name: "F-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 157)                 blurb: "F-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 158)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 159)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 160)                 name: "F-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 161)                 blurb: "F-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 162)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 163)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 164)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 165)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 166)                 name: "F-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 167)                 blurb: "F-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 168)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 169)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 170)                 name: "F-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 171)                 blurb: "F-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 172)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 173)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 174)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 175)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 176)         name: "Paris",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 177)         country: "France",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 178)         population: "11,276,701",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 179)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 180)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 181)                 name: "P-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 182)                 blurb: "P-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 183)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 184)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 185)                 name: "P-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 186)                 blurb: "P-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 187)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 188)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 189)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 190)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 191)                 name: "P-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 192)                 blurb: "P-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 193)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 194)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 195)                 name: "P-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 196)                 blurb: "P-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 197)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 198)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 199)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 200)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 201)                 name: "P-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 202)                 blurb: "P-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 203)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 204)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 205)                 name: "P-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 206)                 blurb: "P-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 207)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 208)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 209)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 210) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 211) 
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 212) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 213)  * To import: import { japanCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 214)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 215) export const japanCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 216)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 217)         name: "Kyoto",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 218)         country: "Japan",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 219)         population: "1,459,640",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 220)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 221)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 222)                 name: "K-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 223)                 blurb: "K-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 224)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 225)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 226)                 name: "K-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 227)                 blurb: "K-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 228)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 229)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 230)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 231)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 232)                 name: "K-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 233)                 blurb: "K-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 234)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 235)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 236)                 name: "K-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 237)                 blurb: "K-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 238)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 239)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 240)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 241)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 242)                 name: "K-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 243)                 blurb: "K-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 244)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 245)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 246)                 name: "K-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 247)                 blurb: "K-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 248)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 249)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 250)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 251)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 252)         name: "Tokyo",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 253)         country: "Japan",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 254)         population: "8,336,599",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 255)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 256)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 257)                 name: "T-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 258)                 blurb: "T-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 259)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 260)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 261)                 name: "T-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 262)                 blurb: "T-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 263)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 264)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 265)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 266)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 267)                 name: "T-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 268)                 blurb: "T-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 269)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 270)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 271)                 name: "T-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 272)                 blurb: "T-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 273)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 274)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 275)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 276)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 277)                 name: "T-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 278)                 blurb: "T-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 279)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 280)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 281)                 name: "T-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 282)                 blurb: "T-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 283)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 284)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 285)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 286) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 287) 
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 288) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 289)  * To import: import { moroccoCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 290)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 291) export const moroccoCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 292)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 293)         name: "Casablanca",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 294)         country: "Morocco",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 295)         population: "3,950,408",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 296)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 297)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 298)                 name: "CM-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 299)                 blurb: "CM-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 300)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 301)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 302)                 name: "CM-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 303)                 blurb: "CM-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 304)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 305)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 306)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 307)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 308)                 name: "CM-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 309)                 blurb: "CM-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 310)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 311)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 312)                 name: "CM-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 313)                 blurb: "CM-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 314)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 315)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 316)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 317)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 318)                 name: "CM-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 319)                 blurb: "CM-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 320)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 321)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 322)                 name: "CM-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 323)                 blurb: "CM-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 324)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 325)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 326)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 327)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 328)         name: "Rabat",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 329)         country: "Morocco",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 330)         population: "1,989,197",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 331)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 332)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 333)                 name: "R-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 334)                 blurb: "R-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 335)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 336)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 337)                 name: "R-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 338)                 blurb: "R-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 339)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 340)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 341)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 342)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 343)                 name: "R-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 344)                 blurb: "R-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 345)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 346)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 347)                 name: "R-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 348)                 blurb: "R-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 349)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 350)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 351)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 352)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 353)                 name: "R-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 354)                 blurb: "R-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 355)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 356)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 357)                 name: "R-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 358)                 blurb: "R-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 359)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 360)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 361)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 362) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 363) 
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 364) /**
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 365)  * To import: import { argentinaCities } from "./data.js";
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 366)  */
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 367) export const usCities = [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 368)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 369)         name: "Los Angeles",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 370)         country: "US",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 371)         population: "3,795,936",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 372)         state: "California",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 373)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 374)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 375)                 name: "LA-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 376)                 blurb: "LA-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 377)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 378)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 379)                 name: "LA-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 380)                 blurb: "LA-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 381)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 382)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 383)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 384)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 385)                 name: "LA-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 386)                 blurb: "LA-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 387)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 388)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 389)                 name: "LA-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 390)                 blurb: "LA-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 391)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 392)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 393)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 394)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 395)                 name: "LA-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 396)                 blurb: "LA-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 397)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 398)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 399)                 name: "LA-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 400)                 blurb: "LA-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 401)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 402)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 403)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 404)     {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 405)         name: "New York",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 406)         country: "US",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 407)         population: "8,097,282",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 408)         state: "New York",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 409)         top_spots: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 410)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 411)                 name: "NY-TS1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 412)                 blurb: "NY-TS1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 413)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 414)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 415)                 name: "NY-TS2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 416)                 blurb: "NY-TS2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 417)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 418)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 419)         places_to_eat: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 420)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 421)                 name: "NY-PE1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 422)                 blurb: "NY-PE1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 423)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 424)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 425)                 name: "NY-PE2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 426)                 blurb: "NY-PE2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 427)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 428)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 429)         lodging: [
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 430)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 431)                 name: "NY-L1",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 432)                 blurb: "NY-L1 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 433)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 434)             {
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 435)                 name: "NY-L2",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 436)                 blurb: "NY-L2 blurb",
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 437)             },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 438)         ],
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 439)     },
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 440) ];
+0dcc18a6 (jweste25 2024-09-29 21:51:25 -0400 441) 
