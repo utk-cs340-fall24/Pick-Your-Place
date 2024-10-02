@@ -1,6 +1,8 @@
+# Sprint 1
+
 Trinity Bissahoyo, Tbissaho, Pick Ur Place
 
-# What you planned to do
+## What you planned to do
 
 - Create search bar function for cities[#16](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/16)
 - Connect image overlay onto cards[#15](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/15)
