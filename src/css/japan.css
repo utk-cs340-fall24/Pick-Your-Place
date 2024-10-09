@@ -2,42 +2,6 @@
 
 /*Header and bucket icon positioning/styling*/
 
-/*.nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 30px;
-}
-
-.nav-header {
-  margin: auto;
-  font-size: 60px !important;
-  font-family: "Urbanist", sans-serif;
-  font-weight: lighter;
-  color: brown !important;
-}
-
-.navbar-brand-hr {
-  width: 98%;
-  margin: 0 auto;
-  background-color: orange;
-  border: none;
-  height: 5px;
-}
-
-.bucket-icon {
-  transition: transform 0.3s ease;
-  padding: 0;
-  background-color: white;
-  border: none;
-  margin-left: auto;
-}
-
-.bucket-icon:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}*/
-
 .nav-header {
   display: flex;
   align-items: center;
@@ -55,7 +19,7 @@
 }
 
 .navbar-brand-hr {
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   background-color: orange;
   border: none;
