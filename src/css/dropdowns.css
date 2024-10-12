@@ -1,65 +1,93 @@
 /* Sanya */
 .bg-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2)
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* FORMATTING GREETING */
+#greeting {
+  color: black;
+  padding: 15px;
+  background-color: skyblue;
+  font-size: 25px;
+  font-family: "Urbanist";
+  font-weight: lighter;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+/* END FORMATTING OF GREETING*/
+
 .title_page_header {
-    color: white;
-    font-size: 4rem;
+  color: white;
+  font-size: 4rem;
 }
 
 .color-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 27, 32, 0.826);
 }
 
 .btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: darkgray;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: darkgray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .custom-btn:hover {
-    background-color: dimgray;
+  background-color: dimgray;
 }
 
-.pickurcounty_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 4rem;   
+.pickurcountry_header {
+  padding-top: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  font-family: "Urbanist";
 }
+
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.dropdown-button {  
-    position: inherit;
-    padding: 20px 40px;
-    font-size: 24px;
-    width: 300px;
-    background-color: darkgray;
-    cursor: pointer;
-    text-align: center;
+.dropdown-button {
+  position: inherit;
+  padding: 12px 14px;
+  font-size: 28px;
+  width: 250px;
+  background-color: beige;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Urbanist";
+  border: none;
+  border-radius: 15px; /*rounding out button*/
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-button:hover {
+  background-color: lightskyblue;
+  transform: scale(1.15);
 }
 
 /* Sanya */
