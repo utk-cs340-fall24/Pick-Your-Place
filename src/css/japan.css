@@ -2,20 +2,21 @@
 
 /*Header and bucket icon positioning/styling*/
 
-.nav-header {
+/* .nav-header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Align items to the ends */
+  justify-content: space-between; Align items to the ends
   padding: 30px;
-  background-color: beige; /* Add background color for better visibility */
-}
+  background-color: beige; Add background color for better visibility
+} 
+
 
 .nav-header .header-text a {
   font-size: 60px !important;
   font-family: "Urbanist", sans-serif;
   font-weight: lighter;
   color: brown !important;
-  text-decoration: none; /* Remove underline from link */
+  text-decoration: none; Remove underline from link
 }
 
 .navbar-brand-hr {
@@ -29,11 +30,11 @@
 .bucket-icon {
   transition: transform 0.3s ease;
   padding: 0;
-  background-color: transparent; /* Make background transparent */
+  background-color: transparent; Make background transparent
   border: none;
 }
 
 .bucket-icon:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
+} */
