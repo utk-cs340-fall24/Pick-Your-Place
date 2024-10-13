@@ -1,38 +1,65 @@
 .bg-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 2px rgba(0,0,0,.2)
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    color: white;
-    font-size: 4rem;
+/*formatting greeting*/
+.opening-greeting {
+  margin-top: -50px;
+  background-color: rgba(23, 36, 41, 0.826);
+  border-radius: 5px;
+  width: 100%;
+  height: 130px;
+}
+
+#greeting {
+  color: whitesmoke;
+  margin: 35px auto;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Urbanist";
+  font-weight: lighter;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  font-style: italic;
 }
 
 .color-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 27, 32, 0.826);
 }
+
+/*.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}*/
 
 .btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: darkgray;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 25px;
+  font-family: "Urbanist";
+  color: white;
+  background-color: darkgray;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.custom-btn:hover {
-    background-color: dimgray;
+.btn:hover {
+  background-color: navy !important;
+  transform: scale(1.05);
 }
