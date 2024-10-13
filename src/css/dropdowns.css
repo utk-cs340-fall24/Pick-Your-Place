@@ -9,19 +9,6 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* FORMATTING GREETING */
-#greeting {
-  color: black;
-  padding: 15px;
-  background-color: skyblue;
-  font-size: 25px;
-  font-family: "Urbanist";
-  font-weight: lighter;
-  word-spacing: 6px;
-  letter-spacing: 3px;
-  font-style: italic;
-}
-
 /* END FORMATTING OF GREETING*/
 
 .title_page_header {
@@ -72,13 +59,15 @@
 }
 
 .dropdown-button {
+  color: white;
   position: inherit;
   padding: 12px 14px;
   font-size: 28px;
   width: 250px;
-  background-color: beige;
+  background-color: dimgray;
   cursor: pointer;
   text-align: center;
+  letter-spacing: 3px;
   font-family: "Urbanist";
   border: none;
   border-radius: 15px; /*rounding out button*/
@@ -86,8 +75,8 @@
 }
 
 .dropdown-button:hover {
-  background-color: lightskyblue;
-  transform: scale(1.15);
+  background-color: navy;
+  transform: scale(1.05);
 }
 
 /* Sanya */

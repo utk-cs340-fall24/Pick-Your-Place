@@ -4,13 +4,11 @@ function getGreeting() {
   let greeting;
 
   if (curHour >= 4 && curHour < 12) {
-    greeting = "Good morning";
+    greeting = "Good morning, pick ur place!";
   } else if (curHour >= 12 && curHour < 17) {
-    greeting = "Good afternoon";
-  } else if (curHour >= 17 && curHour < 20) {
-    greeting = "Good evening";
+    greeting = "Good afternoon, pick ur place!";
   } else {
-    greeting = "Good night";
+    greeting = "Good evening, pick ur place!";
   }
 
   document.getElementById("greeting").textContent = greeting;
