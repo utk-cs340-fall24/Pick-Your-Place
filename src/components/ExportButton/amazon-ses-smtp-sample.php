@@ -8,27 +8,30 @@ use PHPMailer\PHPMailer\Exception;
 // If necessary, modify the path in the require statement below to refer to the
 // location of your Composer autoload.php file.
 require 'vendor/autoload.php';
+require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/Exception.php';
+require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/PHPMailer.php';
+require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/SMTP.php';
 
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
-$sender = 'sender@example.com';
-$senderName = 'Sender Name';
+$sender = 'PickUrPlace904@gmail.com';
+$senderName = 'PickUrPlace Team';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-$recipient = 'recipient@example.com';
+$recipient = 'PickUrPlace904@gmail.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
-$usernameSmtp = 'smtp_username';
+$usernameSmtp = 'AKIAU5LH5V5QZPX7Z7IG';
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
-$configurationSet = 'ConfigSet';
+// $configurationSet = 'ConfigSet';
 
 // If you're using Amazon SES in a region other than US West (Oregon),
 // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
 // endpoint in the appropriate region.
-$host = 'email-smtp.us-west-2.amazonaws.com';
+$host = 'email-smtp.us-east-2.amazonaws.com';
 $port = 587;
 
 // The subject line of the email
@@ -76,6 +79,7 @@ try {
 function fetchSMTPPasswordFromSecureStorage() {
 /* IMPLEMENT THIS METHOD */
 // For example, you might fetch it from a secure location or AWS Secrets Manager: https://aws.amazon.com/secrets-manager/
+    return 'BM1CSFmMkzlRqyK+oX74XIGneD3Hg1BLrZ7Oej6vjw+X';
 }
 
 ?>
