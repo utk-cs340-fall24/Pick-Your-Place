@@ -1,0 +1,20 @@
+- Manually installed PHP and JSON to import composser and then figured out another way around this problem since hydra does not allow sudo commands
+- Manually installed PHPMailer
+- When trying to setup server connection, could not create an App Password in gmail account since depreciated September 30, 2024
+- Workaround with App Password requires an organization to have Google Workspace Account to meet Google's requirements for SMPT Server access
+- Found out Google Workspace has sunset SMPT on 09/24/2024
+- Moved to AWS Platfrom to setup AWS Basic Free Plan and finding out how to send emails programmatically through Amazon SES SMTP
+- Had to find a work around to send and email with AWS without custom domain
+
+- Did a large amount of research on mail service
+- Manually installed PHPMailer
+- Created a gmail account for out project
+- Signed up for AWS Basic Free Plan
+- Had to learn Amazon Simple Service
+- Setup SES account
+- Sending email with AWS SES without custom domain
+- Created an email address identity
+- Tested sending emails in Amazon SES with the simulator
+- Created SMPT credentials
+- Varified STARTTLS Port
+- Learned sending emails programmatically through the Amazon SES SMTP interface
