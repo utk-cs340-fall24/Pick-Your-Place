@@ -5,6 +5,7 @@
 - Found out Google Workspace has sunset SMPT on 09/24/2024
 - Moved to AWS Platfrom to setup AWS Basic Free Plan and finding out how to send emails programmatically through Amazon SES SMTP
 - Had to find a work around to send and email with AWS without custom domain
+- Tested and found out that with AWS I need to add a composer.json file
 
 - Did a large amount of research on mail service
 - Manually installed PHPMailer
@@ -17,4 +18,5 @@
 - Tested sending emails in Amazon SES with the simulator
 - Created SMPT credentials
 - Varified STARTTLS Port
+-
 - Learned sending emails programmatically through the Amazon SES SMTP interface
