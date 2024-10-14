@@ -1,3 +1,13 @@
+<!-- 
+ SMTP endpoint address: 
+ email-smtp.us-east-2.amazonaws.com
+ email-smtp-fips.us-east-2.amazonaws.com  
+
+Amazon SES SMTP interface port number:
+STARTTLS Port
+25, 587 or 2587
+-->
+
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -6,11 +16,17 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
 require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
 try {
     // Server settings
-    $mail->SMTPDebug = 2;                      // Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                           // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
