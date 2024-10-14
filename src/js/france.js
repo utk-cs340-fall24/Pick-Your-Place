@@ -1,8 +1,7 @@
-import { argentinaCities } from "./data.js";
+import { franceCities } from "./data.js";
 
 function createBucketList(cities) {
     const bucketList = {};
-
     // Group cities by country
     cities.forEach(city => {
         if (!bucketList[city.country]) {
@@ -25,8 +24,8 @@ function renderBucketList(bucketList) {
     }
 }
 
-function populateBuenosAiresOffCanvas(city) {
-    const offCanvasTitle = document.getElementById("BuenosAiresOffCanvas");
+function populateColmarOffCanvas(city) {
+    const offCanvasTitle = document.getElementById("ColmarOffCanvas");
     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
 
     //Populate Top Spots
@@ -108,10 +107,10 @@ function populateBuenosAiresOffCanvas(city) {
     });
 }
 
-function populateMendozaOffCanvas(city) {
-    const offCanvasTitle = document.getElementById("MendozaOffCanvas");
+function populateParisOffCanvas(city) {
+    const offCanvasTitle = document.getElementById("ParisOffCanvas");
     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
- 
+    
     //Populate Top Spots
     const topSpotsList = document.getElementById("TopSpotsList_2");
     topSpotsList.innerHTML = ""; // Clear previous content
@@ -192,9 +191,8 @@ function populateMendozaOffCanvas(city) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const bucketList = createBucketList(argentinaCities); 
+    const bucketList = createBucketList(franceCities); 
     renderBucketList(bucketList); 
-    // Function to add a city to the bucket list
     function addCityToBucketList(city, country) {
         const bucketList = document.querySelector('.oc-bucket-list-group');
         const listItem = document.createElement('li');
@@ -221,9 +219,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Event listener for Buenos Aires checkbox
-    const buenosAiresCheckbox = document.getElementById('BuenosAiresCheckbox');
-    buenosAiresCheckbox.addEventListener('change', function () {
+    // Event listener for Colmar checkbox
+    const ColmarCheckbox = document.getElementById('ColmarCheckbox');
+    ColmarCheckbox.addEventListener('change', function () {
         const city = this.getAttribute('data-city');
         const country = this.getAttribute('data-country');
 
@@ -236,9 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Event listener for Mendoza checkbox
-    const MendozaCheckbox = document.getElementById('MendozaCheckbox');
-    MendozaCheckbox.addEventListener('change', function () {
+    // Event listener for Paris checkbox
+    const ParisCheckbox = document.getElementById('ParisCheckbox');
+    ParisCheckbox.addEventListener('change', function () {
         const city = this.getAttribute('data-city');
         const country = this.getAttribute('data-country');
 
@@ -251,9 +249,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     
+    
     //Provides the Add and Remove button for the entire city
-    populateBuenosAiresOffCanvas(argentinaCities[0]);
-    populateMendozaOffCanvas(argentinaCities[1]);
+    populateColmarOffCanvas(franceCities[0]);
+    populateParisOffCanvas(franceCities[1]);
     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
 
     addRemoveCityButtons.forEach(function (button) {
