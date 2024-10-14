@@ -83,7 +83,7 @@
           wonderful trip!
         </p>
         <hr class="destinations-hr" />
-        <ul class="list-group oc-bucket-list-group">
+        <ul class="list-group oc-bucket-list-group" id = "bucket-list">
           <li
             class="list-group-item oc-bucket-list-group-item"
             aria-disabled="false"
@@ -139,8 +139,8 @@
           <div>
             <div class="form-check overlay">
               <label class="city-card-check-box">
-                <input class="form-check-input city-card-input" type="checkbox" value="" id="flexCheckDefault"
-                  object-align="left" data-bs-dismiss="offcanvas" aria-label="Close" />
+                <input class="form-check-input city-card-input" type="checkbox" id="BuenosAiresCheckbox"
+                  data-city="Buenos Aires" data-country="Argentina" />
               </label>
             </div>
           </div>
@@ -161,11 +161,10 @@
           <div>
             <div class="form-check overlay" onclick="added_alert(add_city_message)">
               <label class="city-card-check-box">
-                <input class="form-check-input city-card-input" type="checkbox" value="" id="flexCheckDefault"
-                  object-align="left" data-bs-dismiss="offcanvas" aria-label="Close" />
+                <input class="form-check-input city-card-input" type="checkbox" id="MendozaCheckbox"
+                  data-city="Mendoza" data-country="Argentina" />
               </label>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -221,7 +220,7 @@
             <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Top Spots information -->
-                <div class="accordion accordion-flush w-100" id="TopSpotsList">
+                <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -287,7 +286,7 @@
                 Places to Eat
               </button>
             </h2>
-            <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="PlacesToEatList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Places To Eat information -->
                 <div class="accordion accordion-flush w-100" id="PlacesToEatList">
@@ -350,7 +349,7 @@
                 Lodging
               </button>
             </h2>
-            <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="LodgingList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Lodging information -->
                 <div class="accordion accordion-flush w-100" id="LodgingList">
@@ -458,7 +457,7 @@
             <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Top Spots information -->
-                <div class="accordion accordion-flush w-100" id="TopSpotsList">
+                <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -517,7 +516,7 @@
                 Places to Eat
               </button>
             </h2>
-            <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="PlacesToEatList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Places To Eat information -->
                 <div class="accordion accordion-flush w-100" id="PlacesToEatList">
@@ -580,7 +579,7 @@
                 Lodging
               </button>
             </h2>
-            <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="LodgingList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Lodging information -->
                 <div class="accordion accordion-flush w-100" id="LodgingList">
@@ -635,7 +634,9 @@
         </div>
       </div>
     </div>
- 
+    </body>
+    
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/argentina.js"></script>
   </body>
-  
   </html>
