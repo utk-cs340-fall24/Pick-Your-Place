@@ -177,3 +177,70 @@
 .nested-first {
   padding: 5px;
 }
+
+/*for search bar*/
+.search-bar {
+    margin: 20px;
+    max-width: -600px;
+    padding-left: 100px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-check {
+    position: absolute;
+}
+
+/* for added alert function */
+#alert_box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+    z-index: 1100;
+}
+
+.alert{
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1100;
+}
+
+.alert::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(248, 201, 144);
+    animation: anim 3s linear forwards;
+    z-index: 1100;
+}
+
+.alert.remove::after{
+    background: red;
+}
+
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}

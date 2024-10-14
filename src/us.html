@@ -20,6 +20,7 @@
     ></script>
     <link rel="stylesheet" href="css/main.css" />
     <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/search_bar.js" defer></script>
     <title>Document</title>
   </head>
 
@@ -107,6 +108,17 @@
     </div>
   </div>
 
+<!--alert button-->
+<div id="alert_box"></div>
+
+
+<!--Search Bar Fucntion-->
+<nav class="search-bar">
+  <form class="form-inline">
+    <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+  </form>
+</nav>
+
   <!-- This is the container of country city cards. -->
   <div class="container p-3">
     <div class="row">
@@ -118,7 +130,7 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Los Angeles, CA</h5>
           </div>
-        </div>
+        
   
         <div>
           <div class="form-check overlay">
@@ -128,7 +140,9 @@
             </label>
           </div>
         </div>
+        </div>
       </div>
+      
       <!-- This is the New York card -->
       <div class="col-md-3 mb-3">
         <div class="card bg-dark text-white text-center result-items">
@@ -137,7 +151,7 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">New York, NY</h5>
           </div>
-        </div>
+       
   
         <div>
           <div class="form-check overlay">
@@ -146,6 +160,7 @@
                 object-align="left" data-bs-dismiss="offcanvas" aria-label="Close" />
             </label>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -219,7 +234,7 @@
                         This it the <b>first</b> top spot to visit and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
                         Add
                       </button>
                     </div>
@@ -242,7 +257,7 @@
                         This it the <b>second</b> top spot to visit and a
                         blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
                         Add
                       </button>
                     </div>
@@ -282,7 +297,7 @@
                         This it the <b>first</b> place to eat and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
                         Add
                       </button>
                     </div>
@@ -306,7 +321,7 @@
                         This it the <b>second</b> place to eat and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
                         Add
                       </button>
                     </div>
@@ -343,7 +358,7 @@
                       <p>
                         This it the <b>first</b> lodge and a blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
                         Add
                       </button>
                     </div>
@@ -365,7 +380,7 @@
                       <p>
                         This it the <b>second</b> lodge and a blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
                         Add
                       </button>
                     </div>
@@ -447,7 +462,7 @@
                         This it the <b>first</b> top spot to visit and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
                         Add
                       </button>
                     </div>
@@ -470,7 +485,7 @@
                         This it the <b>second</b> top spot to visit and a
                         blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
                         Add
                       </button>
                     </div>
@@ -510,7 +525,7 @@
                         This it the <b>first</b> place to eat and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
                         Add
                       </button>
                     </div>
@@ -534,7 +549,7 @@
                         This it the <b>second</b> place to eat and a blurb
                         about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
                         Add
                       </button>
                     </div>
@@ -571,7 +586,7 @@
                       <p>
                         This it the <b>first</b> lodge and a blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
                         Add
                       </button>
                     </div>
@@ -593,7 +608,7 @@
                       <p>
                         This it the <b>second</b> lodge and a blurb about why.
                       </p>
-                      <button class="add-remove-button btn btn-outline-success">
+                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
                         Add
                       </button>
                     </div>
