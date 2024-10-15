@@ -1,43 +1,478 @@
-greeting.js
+//dropdowns.css
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  3)   background-size: cover;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  4)   background-position: center;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  5)   background-repeat: no-repeat;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  6)   min-height: 100vh;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  7)   position: relative;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  8)   color: rgb(255, 255, 255);
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  9)   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 12) /* END FORMATTING OF GREETING*/
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 13) 
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 15)   color: white;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 16)   font-size: 4rem;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 20)   position: absolute;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 21)   width: 100%;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 22)   height: 100%;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 23)   background-color: rgba(16, 27, 32, 0.826);
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 27)   position: absolute;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 28)   bottom: 20px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 29)   right: 20px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 30)   padding: 15px 30px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 31)   font-size: 18px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 32)   color: white;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 33)   background-color: darkgray;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 34)   border: none;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 35)   border-radius: 5px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 36)   cursor: pointer;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 40)   background-color: dimgray;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 43) .pickurcountry_header {
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 44)   padding-top: 80px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 45)   margin: auto;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 46)   display: flex;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 47)   justify-content: center;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 48)   align-items: center;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 49)   color: rgb(255, 255, 255);
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 50)   font-size: 4rem;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 51)   font-family: "Urbanist";
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 53) 
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 55)   display: flex;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 56)   justify-content: center;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 57)   align-items: center;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 58)   height: 100vh;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 59) }
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 60) 
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 61) .dropdown-button {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 62)   color: white;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 63)   position: inherit;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 64)   padding: 12px 14px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 65)   font-size: 28px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 66)   width: 250px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 67)   background-color: dimgray;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 68)   cursor: pointer;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 69)   text-align: center;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 70)   letter-spacing: 3px;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 71)   font-family: "Urbanist";
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 72)   border: none;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 73)   border-radius: 15px; /*rounding out button*/
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 74)   transition: background-color 0.3s, transform 0.3s;
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 77) .dropdown-button:hover {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 78)   background-color: navy;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 79)   transform: scale(1.05);
+
+//dropdowns.html
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  3)   <head>
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  4)     <meta charset="UTF-8" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  5)     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  8)     <link rel="preconnect" href="https://fonts.googleapis.com" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400  9)     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 10)     <link
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 11)       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 12)       rel="stylesheet"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 13)     />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 14)     <link rel="stylesheet" href="css/japan.css" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 16)     <link
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 17)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 18)       rel="stylesheet"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 19)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 20)       crossorigin="anonymous"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 21)     />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 22)     <script
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 23)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 24)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 25)       crossorigin="anonymous"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 26)     ></script>
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 27)     <link href="css/dropdowns.css" rel="stylesheet" />
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 28)     <title>dropdown</title>
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 29)   </head>
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 31)   <body>
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 32)     <div
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 33)       class="bg-image"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 34)       style="background-image: url('img/main/globe_design.jpg'); height: 100vh"
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 35)     >
+6b0b98fa (Nia M    2024-10-12 18:16:18 -0400 36)       <div class="color-overlay justify-content-center align-items-start pt-4">
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 38)           <button
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 39)             class="btn-secondary dropdown-toggle dropdown-button"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 40)             type="button"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 41)             data-bs-toggle="dropdown"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 42)             aria-expanded="false"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 43)           >
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 44)             Countries
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 45)           </button>
+
+//index.html
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  3)   <head>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  4)     <meta charset="UTF-8" />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  5)     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  7)     <link rel="preconnect" href="https://fonts.googleapis.com" />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  8)     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  9)     <link
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 10)       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 11)       rel="stylesheet"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 12)     />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 13)     <link
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 14)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 15)       rel="stylesheet"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 16)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 17)       crossorigin="anonymous"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 18)     />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 19)     <script
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 20)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 21)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 22)       crossorigin="anonymous"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 23)     ></script>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 24)     <link href="css/index.css" rel="stylesheet" />
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 26)   </head>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 27)   <body>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 28)     <div
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 29)       class="bg-image"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 30)       style="background-image: url('img/main/globe_design.jpg'); height: 100vh"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 31)     >
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 32)       <div
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 33)         class="color-overlay d-flex justify-content-center align-items-center title_page_header"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 34)       >
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 35)         <div class="opening-greeting">
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 36)           <h1 id="greeting"></h1>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 38)         <script src="js/greeting.js"></script>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 39)         <!--<h1>Pick Ur Place</h1>-->
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 40)       </div>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 42)     <button
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 43)       class="btn btn-primary"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 44)       onclick="window.location.href='dropdowns.html';"
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 45)     >
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 46)       Explore!
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 47)     </button>
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 49)   </body>
+
+//index.css
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  2)   background-size: cover;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  3)   background-position: center;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  4)   background-repeat: no-repeat;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  5)   min-height: 100vh;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  6)   position: relative;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  7)   color: rgb(255, 255, 255);
+7e87248f (Nia M    2024-10-13 18:43:58 -0400  8)   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 11) /*formatting greeting*/
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 12) .opening-greeting {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 13)   margin-top: -50px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 14)   background-color: rgba(23, 36, 41, 0.826);
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 15)   border-radius: 5px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 16)   width: 100%;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 17)   height: 130px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 18) }
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 19) 
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 20) #greeting {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 21)   color: whitesmoke;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 22)   margin: 35px auto;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 23)   text-align: center;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 24)   font-size: 50px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 25)   font-family: "Urbanist";
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 26)   font-weight: lighter;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 27)   word-spacing: 6px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 28)   letter-spacing: 3px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 29)   font-style: italic;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 33)   position: absolute;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 34)   width: 100%;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 35)   height: 100%;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 36)   background-color: rgba(16, 27, 32, 0.826);
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 39) /*.color-overlay {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 40)   position: absolute;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 41)   width: 100%;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 42)   height: 100%;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 43)   background-color: rgba(0, 0, 0, 0.7);
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 44) }*/
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 45) 
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 47)   position: absolute;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 48)   bottom: 20px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 49)   right: 20px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 50)   padding: 15px 30px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 51)   font-size: 25px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 52)   font-family: "Urbanist";
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 53)   color: white;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 54)   background-color: darkgray;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 55)   border: none;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 56)   border-radius: 5px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 57)   letter-spacing: 3px;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 58)   cursor: pointer;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 59)   transition: background-color 0.3s, transform 0.3s;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 62) .btn:hover {
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 63)   background-color: navy !important;
+7e87248f (Nia M    2024-10-13 18:43:58 -0400 64)   transform: scale(1.05);
+
+//argentina.html
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   4)   <head>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   5)     <meta charset="UTF-8" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   6)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   7)     <link rel="preconnect" href="https://fonts.googleapis.com" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   8)     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   9)     <link
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  10)       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  11)       rel="stylesheet"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  12)     />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  13)     <link
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  14)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  15)       rel="stylesheet"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  16)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  17)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  18)     />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  19)     <script
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  20)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  21)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  22)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  23)     ></script>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  24)     <link rel="stylesheet" href="css/argentina.css" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  25)     <link rel="stylesheet" href="css/main.css" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  29)     <title>Argentina</title>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  30)   </head>
+f488b2ac (Nia M                   2024-10-09 11:27:19 -0400  32)   <body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  33)     <!--nav bar-->
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  34)     <nav class="nav-header">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  35)       <div
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  36)         class="container-fluid d-flex align-items-center justify-content-between"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  37)       >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  38)         <button
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  39)           class="bucket-icon"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  40)           type="button"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  41)           data-bs-toggle="offcanvas"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  42)           data-bs-target="#staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  43)           aria-controls="staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  44)         >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  45)           <img
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  47)             alt="bucket image"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  48)             style="width: 70px; height: 100px; object-fit: cover"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  49)           />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  50)         </button>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  51)         <div class="header-text">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  52)           <a href="dropdowns.html">PICK UR PLACE</a>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  53)         </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  54)       </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  55)     </nav>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  56)     <hr class="navbar-brand-hr" />
+
+//morocco.html
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   3)   <head>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   4)     <meta charset="UTF-8" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   5)     <link rel="preconnect" href="https://fonts.googleapis.com" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   6)     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   7)     <link
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   8)       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   9)       rel="stylesheet"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  10)     />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  12)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  13)     <link
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  14)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  15)       rel="stylesheet"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  16)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  17)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  18)     />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  19)     <script
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  20)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  21)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  22)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  23)     ></script>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  24)     <link rel="stylesheet" href="css/main.css" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  28)   </head>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  30)   <body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  31)     <!--nav bar-->
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  32)     <nav class="nav-header">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  33)       <div
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  34)         class="container-fluid d-flex align-items-center justify-content-between"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  35)       >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  36)         <button
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  37)           class="bucket-icon"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  38)           type="button"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  39)           data-bs-toggle="offcanvas"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  40)           data-bs-target="#staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  41)           aria-controls="staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  42)         >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  43)           <img
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  45)             alt="bucket image"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  46)             style="width: 70px; height: 100px; object-fit: cover"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  47)           />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  48)         </button>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  49)         <div class="header-text">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  50)           <a href="dropdowns.html">PICK UR PLACE</a>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  51)         </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  52)       </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  53)     </nav>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  54)     <hr class="navbar-brand-hr" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400 628)   </body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400 632) </html>
+
+//us.html
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   3)   <head>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   4)     <meta charset="UTF-8" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   5)     <link rel="preconnect" href="https://fonts.googleapis.com">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   6) <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   7) <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   9)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  10)     <link
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  11)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  12)       rel="stylesheet"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  13)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  14)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  15)     />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  16)     <script
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  17)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  18)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  19)       crossorigin="anonymous"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  20)     ></script>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  21)     <link rel="stylesheet" href="css/main.css" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  25)   </head>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  27)   <body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  28)   <!--nav bar-->
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  29)   </body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  30)     <nav class="nav-header">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  31)       <div
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  32)         class="container-fluid d-flex align-items-center justify-content-between"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  33)       >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  34)         <button
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  35)           class="bucket-icon"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  36)           type="button"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  37)           data-bs-toggle="offcanvas"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  38)           data-bs-target="#staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  39)           aria-controls="staticBackdrop"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  40)         >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  41)           <img
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  43)             alt="bucket image"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  44)             style="width: 70px; height: 100px; object-fit: cover"
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  45)           />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  46)         </button>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  47)         <div class="header-text">
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  48)           <a href="dropdowns.html">PICK UR PLACE</a>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  49)         </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  50)       </div>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  51)     </nav>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  52)     <hr class="navbar-brand-hr" />
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400 624)   </body>
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400 628) </html>
+
+//morocco.html
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   1) .nav-header {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   2)   display: flex;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   3)   align-items: center;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   4)   justify-content: space-between; /* Align items to the ends */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   5)   padding: 30px;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   6)   background-color: beige; /* Add background color for better visibility */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   7) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   8) 
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   9) .nav-header .header-text a {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  10)   font-size: 60px !important;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  11)   font-family: "Urbanist", sans-serif;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  12)   font-weight: lighter;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  13)   color: brown !important;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  14)   text-decoration: none; /* Remove underline from link */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  15) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  16) 
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  17) .navbar-brand-hr {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  18)   width: 100%;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  19)   margin: 0 auto;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  20)   background-color: orange;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  21)   border: none;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  22)   height: 5px;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  23) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  24) 
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  25) .bucket-icon {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  26)   transition: transform 0.3s ease;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  27)   padding: 0;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  28)   background-color: transparent; /* Make background transparent */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  29)   border: none;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  30) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  31) 
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  32) .bucket-icon:hover {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  33)   transform: scale(1.2);
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  34)   cursor: pointer;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  35) }
 
 
-index.html
+//japan.html
+29a29034 (Nia M                   2024-10-09 10:37:37 -0400  34)       <div
+29a29034 (Nia M                   2024-10-09 10:37:37 -0400  35)         class="container-fluid d-flex align-items-center justify-content-between"
+29a29034 (Nia M                   2024-10-09 10:37:37 -0400  36)       >
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  51)           <a href="dropdowns.html">PICK UR PLACE</a>
 
-index.css
+//japan.css
+29a29034 (Nia M    2024-10-09 10:37:37 -0400  4) 
+29a29034 (Nia M    2024-10-09 10:37:37 -0400  6)   display: flex;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400  7)   align-items: center;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400  9)   padding: 30px;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 13) 
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 14) .nav-header .header-text a {
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 15)   font-size: 60px !important;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 16)   font-family: "Urbanist", sans-serif;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 17)   font-weight: lighter;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 18)   color: brown !important;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 20) }
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 21) 
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 22) .navbar-brand-hr {
+1b316064 (Nia M    2024-10-09 11:24:27 -0400 23)   width: 100%;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 24)   margin: 0 auto;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 25)   background-color: orange;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 26)   border: none;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 27)   height: 5px;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 28) }
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 29) 
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 30) .bucket-icon {
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 31)   transition: transform 0.3s ease;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 32)   padding: 0;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 34)   border: none;
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 35) }
+29a29034 (Nia M    2024-10-09 10:37:37 -0400 36) 
 
+//main.css
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   1) .nav-header {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   2)   display: flex;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   3)   align-items: center;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   4)   justify-content: space-between; /* Align items to the ends */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   5)   padding: 30px;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   6)   background-color: beige; /* Add background color for better visibility */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   7) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   8)
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400   9) .nav-header .header-text a {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  10)   font-size: 60px !important;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  11)   font-family: "Urbanist", sans-serif;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  12)   font-weight: lighter;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  13)   color: brown !important;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  14)   text-decoration: none; /* Remove underline from link */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  15) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  16)
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  17) .navbar-brand-hr {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  18)   width: 100%;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  19)   margin: 0 auto;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  20)   background-color: orange;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  21)   border: none;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  22)   height: 5px;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  23) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  24)
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  25) .bucket-icon {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  26)   transition: transform 0.3s ease;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  27)   padding: 0;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  28)   background-color: transparent; /* Make background transparent */
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  29)   border: none;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  30) }
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  31)
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  32) .bucket-icon:hover {
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  33)   transform: scale(1.2);
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  34)   cursor: pointer;
+1b316064 (Nia M                   2024-10-09 11:24:27 -0400  35) }
 
-dropdown.html
-
-dropdown.css
-
-
-
-argentina.html
-
-argentina.css
-
-
-
-france.html
-
-france.css
-
-
-
-morocco.html
-
-morocco.css
-
-
-
-us.html
-
-us.css
-
-
-
-japan.html
-
-japan.css
-
-
+//greeting.js
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  1) function getGreeting() {
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  2)   const now = new Date();
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  3)   const curHour = now.getHours();
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  4)   let greeting;
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  5)
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  6)   if (curHour >= 4 && curHour < 12) {
+7e87248f (Nia M 2024-10-13 18:43:58 -0400  7)     greeting = "Good morning, pick ur place!";
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400  8)   } else if (curHour >= 12 && curHour < 17) {
+7e87248f (Nia M 2024-10-13 18:43:58 -0400  9)     greeting = "Good afternoon, pick ur place!";
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 10)   } else {
+7e87248f (Nia M 2024-10-13 18:43:58 -0400 11)     greeting = "Good evening, pick ur place!";
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 12)   }
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 13)
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 14)   document.getElementById("greeting").textContent = greeting;
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 15) }
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 16)
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 17) // Call the function when the page loads
+6b0b98fa (Nia M 2024-10-12 18:16:18 -0400 18) window.onload = getGreeting;
