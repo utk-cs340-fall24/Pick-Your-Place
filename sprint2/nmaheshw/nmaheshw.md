@@ -8,7 +8,7 @@ Pick-Your-Place
 - Fix navbar functionality [#25] (https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/25)
 - Place the navbar at the top of each country's page in the application [#26] (https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/26)
 - Add greeting to Pick Your Place page (first page of app) [#27] (https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/27)
-
+https://github.com/utk-cs340-fall24/Pick-Your-Place/edit/main/sprint2/nmaheshw/nmaheshw.md
 ### What you did not do
 - I completed all the issues that were opened for me.
 
@@ -23,16 +23,17 @@ it with the 'pick your place' phrase.
 - Add greeting to Pick Your Place page (first page of app) [#27] (https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/27)
 
 
-****UPDATE THIS LIST***
 ### Files you worked on
+- Pick-Your-Place/src/css/main.css
 - Pick-Your-Place/src/index.html
-- Pick-Your-Place/src/index.css
+- Pick-Your-Place/src/css/index.css
 - Pick-Your-Place/src/dropdowns.html
-- Pick-Your-Place/src/dropdowns.css
+- Pick-Your-Place/src/css/dropdowns.css
 - Pick-Your-Place/src/japan.html
 - Pick-Your-Place/src/css/japan.css
-- Pick-Your-Place/src/argentina.html
+- Pick-Your-Place/src/morocco.html
 - Pick-Your-Place/src/us.html
+- Pick-Your-Place/src/js/greeting.js 
 
 ### What you accomplished
 (Give a description of the features you added or tasks you accomplished. Provide some detail here. This section will be a little longer than the bulleted lists above) 
