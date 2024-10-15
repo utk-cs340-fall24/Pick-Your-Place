@@ -1,0 +1,1503 @@
+argentina.js:
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   1) import { argentinaCities } from "./data.js";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   2) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   3) function createBucketList(cities) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   4)     const bucketList = {};
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   5) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   6)     // Group cities by country
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   7)     cities.forEach(city => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   8)         if (!bucketList[city.country]) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   9)             bucketList[city.country] = []; // Create an array for the country if it doesn't exist
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  10)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  11)         bucketList[city.country].push(city.name); // Add city to the country's array
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  12)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  13) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  14)     return bucketList; // Return the grouped bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  15) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  16) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  17) function renderBucketList(bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  18)     const bucketListContainer = document.getElementById('bucket-list');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  19)     bucketListContainer.innerHTML = ''; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  20) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  21)     for (const country in bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  22)         const countryHeader = document.createElement('h3');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  23)         countryHeader.textContent = country; // Country name
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  24)         bucketListContainer.appendChild(countryHeader);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  25)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  26) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  27) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  28) function populateBuenosAiresOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  29)     const offCanvasTitle = document.getElementById("BuenosAiresOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  30)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  31) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  32)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  33)     const topSpotsList = document.getElementById("TopSpotsList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  34)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  35)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  36)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  37)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  38)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  39)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  40)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  41)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  42)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  43)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  44)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  45)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  46)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  47)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  48)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  49)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  50)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  51)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  52)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  53)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  54)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  55)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  56)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  57) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  58)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  59)     const placesToEatList = document.getElementById("PlacesToEatList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  60)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  61)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  62)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  63)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  64)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  65)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  66)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  67)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  68)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  69)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  70)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  71)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  72)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  73)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  74)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  75)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  76)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  77)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  78)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  79)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  80)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  81)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  82)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  83) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  84)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  85)     const lodgingList = document.getElementById("LodgingList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  86)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  87)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  88)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  89)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  90)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  91)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  92)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  93)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  94)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  95)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  96)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  97)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  98)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  99)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 100)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 101)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 102)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 103)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 104)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 105)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 106)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 107)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 108)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 109) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 110) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 111) function populateMendozaOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 112)     const offCanvasTitle = document.getElementById("MendozaOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 113)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 114)  
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 115)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 116)     const topSpotsList = document.getElementById("TopSpotsList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 117)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 118)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 119)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 120)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 121)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 122)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 123)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 124)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 125)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 126)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 127)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 128)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 129)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 130)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 131)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 132)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 133)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 134)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 135)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 136)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 137)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 138)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 139)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 140) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 141)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 142)     const placesToEatList = document.getElementById("PlacesToEatList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 143)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 144)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 145)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 146)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 147)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 148)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 149)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 150)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 151)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 152)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 153)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 154)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 155)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 156)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 157)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 158)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 159)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 160)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 161)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 162)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 163)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 164)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 165)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 166) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 167)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 168)     const lodgingList = document.getElementById("LodgingList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 169)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 170)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 171)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 172)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 173)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 174)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 175)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 176)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 177)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 178)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 179)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 180)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 181)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 182)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 183)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 184)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 185)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 186)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 187)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 188)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 189)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 190)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 191)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 192) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 193) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 195)     const bucketList = createBucketList(argentinaCities); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 196)     renderBucketList(bucketList); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 197)     // Function to add a city to the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 198)     function addCityToBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 199)         const bucketList = document.querySelector('.oc-bucket-list-group');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 200)         const listItem = document.createElement('li');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 201)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 202)         listItem.innerHTML = `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 203)             <span>${city}, ${country}</span>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 204)             <button class="btn-delete-list-item">Remove</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 205)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 206)         bucketList.appendChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 207) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 208)         // Add event listener to remove the city from the list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 209)         listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 210)             bucketList.removeChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 211)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 212)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 213) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 214)     // Function to remove a city from the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 215)     function removeCityFromBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 216)         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 217)         bucketListItems.forEach(function (item) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 218)             if (item.querySelector('span').textContent === `${city}, ${country}`) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 219)                 item.remove();
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 220)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 221)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 222)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 223) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 224)     // Event listener for Buenos Aires checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 225)     const buenosAiresCheckbox = document.getElementById('BuenosAiresCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 226)     buenosAiresCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 227)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 228)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 229) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 230)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 231)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 232)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 233)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 234)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 235)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 236)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 237)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 238) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 239)     // Event listener for Mendoza checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 240)     const MendozaCheckbox = document.getElementById('MendozaCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 241)     MendozaCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 242)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 243)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 244) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 245)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 246)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 247)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 248)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 249)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 250)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 251)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 252)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 253)     
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 255)     populateBuenosAiresOffCanvas(argentinaCities[0]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 256)     populateMendozaOffCanvas(argentinaCities[1]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 290) 
+
+france.js:
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   1) import { franceCities } from "./data.js";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   2) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   3) function createBucketList(cities) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   4)     const bucketList = {};
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   5)     // Group cities by country
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   6)     cities.forEach(city => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   7)         if (!bucketList[city.country]) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   8)             bucketList[city.country] = []; // Create an array for the country if it doesn't exist
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   9)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  10)         bucketList[city.country].push(city.name); // Add city to the country's array
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  11)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  12) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  13)     return bucketList; // Return the grouped bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  14) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  15) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  16) function renderBucketList(bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  17)     const bucketListContainer = document.getElementById('bucket-list');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  18)     bucketListContainer.innerHTML = ''; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  19) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  20)     for (const country in bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  21)         const countryHeader = document.createElement('h3');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  22)         countryHeader.textContent = country; // Country name
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  23)         bucketListContainer.appendChild(countryHeader);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  24)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  25) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  26) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  27) function populateColmarOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  28)     const offCanvasTitle = document.getElementById("ColmarOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  29)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  30) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  31)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  32)     const topSpotsList = document.getElementById("TopSpotsList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  33)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  34)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  35)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  36)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  37)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  38)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  39)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  40)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  41)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  42)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  43)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  44)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  45)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  46)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  47)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  48)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  49)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  50)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  51)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  52)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  53)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  54)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  55)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  56) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  57)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  58)     const placesToEatList = document.getElementById("PlacesToEatList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  59)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  60)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  61)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  62)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  63)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  64)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  65)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  66)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  67)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  68)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  69)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  70)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  71)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  72)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  73)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  74)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  75)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  76)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  77)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  78)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  79)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  80)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  81)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  82) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  83)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  84)     const lodgingList = document.getElementById("LodgingList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  85)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  86)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  87)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  88)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  89)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  90)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  91)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  92)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  93)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  94)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  95)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  96)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  97)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  98)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  99)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 100)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 101)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 102)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 103)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 104)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 105)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 106)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 107)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 108) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 109) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 110) function populateParisOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 111)     const offCanvasTitle = document.getElementById("ParisOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 112)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 113)     
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 114)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 115)     const topSpotsList = document.getElementById("TopSpotsList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 116)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 117)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 118)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 119)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 120)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 121)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 122)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 123)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 124)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 125)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 126)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 127)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 128)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 129)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 130)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 131)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 132)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 133)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 134)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 135)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 136)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 137)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 138)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 139) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 140)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 141)     const placesToEatList = document.getElementById("PlacesToEatList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 142)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 143)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 144)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 145)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 146)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 147)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 148)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 149)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 150)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 151)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 152)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 153)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 154)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 155)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 156)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 157)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 158)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 159)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 160)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 161)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 162)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 163)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 164)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 165) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 166)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 167)     const lodgingList = document.getElementById("LodgingList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 168)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 169)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 170)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 171)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 172)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 173)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 174)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 175)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 176)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 177)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 178)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 179)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 180)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 181)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 182)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 183)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 184)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 185)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 186)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 187)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 188)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 189)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 190)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 191) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 192) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 193) document.addEventListener('DOMContentLoaded', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 194)     const bucketList = createBucketList(franceCities); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 195)     renderBucketList(bucketList); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 196)     function addCityToBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 197)         const bucketList = document.querySelector('.oc-bucket-list-group');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 198)         const listItem = document.createElement('li');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 199)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 200)         listItem.innerHTML = `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 201)             <span>${city}, ${country}</span>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 202)             <button class="btn-delete-list-item">Remove</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 203)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 204)         bucketList.appendChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 205) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 206)         // Add event listener to remove the city from the list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 207)         listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 208)             bucketList.removeChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 209)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 210)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 211) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 212)     // Function to remove a city from the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 213)     function removeCityFromBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 214)         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 215)         bucketListItems.forEach(function (item) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 216)             if (item.querySelector('span').textContent === `${city}, ${country}`) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 217)                 item.remove();
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 218)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 219)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 220)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 221) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 222)     // Event listener for Colmar checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 223)     const ColmarCheckbox = document.getElementById('ColmarCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 224)     ColmarCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 225)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 226)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 227) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 228)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 229)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 230)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 231)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 232)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 233)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 234)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 235)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 236) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 237)     // Event listener for Paris checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 238)     const ParisCheckbox = document.getElementById('ParisCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 239)     ParisCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 240)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 241)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 242) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 243)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 244)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 245)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 246)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 247)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 248)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 249)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 250)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 251)     
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 252)     
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 253)     //Provides the Add and Remove button for the entire city
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 254)     populateColmarOffCanvas(franceCities[0]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 255)     populateParisOffCanvas(franceCities[1]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 256)     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 257) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 258)     addRemoveCityButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 259)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 260)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 261)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 262)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 263)                 button.textContent = "Remove City from Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 264)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 265)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 266)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 267)                 button.textContent = "Add City to Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 268)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 269)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 270)     })
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 271) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 272)     //Provides the Add and Remove button for the city information in the nested accordion
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 273)     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 274) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 275)     addRemoveButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 276)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 277)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 278)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 279)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 280)                 button.textContent = "Remove";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 281)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 282)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 283)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 284)                 button.textContent = "Add";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 285)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 286)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 287)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 288) });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 289) 
+
+japan.js:
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   1) import { japanCities } from "./data.js";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   2) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   3) function createBucketList(cities) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   4)     const bucketList = {};
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   5)     // Group cities by country
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   6)     cities.forEach(city => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   7)         if (!bucketList[city.country]) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   8)             bucketList[city.country] = []; // Create an array for the country if it doesn't exist
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   9)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  10)         bucketList[city.country].push(city.name); // Add city to the country's array
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  11)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  12) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  13)     return bucketList; // Return the grouped bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  14) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  15) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  16) function renderBucketList(bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  17)     const bucketListContainer = document.getElementById('bucket-list');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  18)     bucketListContainer.innerHTML = ''; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  19) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  20)     for (const country in bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  21)         const countryHeader = document.createElement('h3');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  22)         countryHeader.textContent = country; // Country name
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  23)         bucketListContainer.appendChild(countryHeader);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  24)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  25) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  26) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  27) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  28) function populateKyotoOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  29)     const offCanvasTitle = document.getElementById("KyotoOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  30)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  31) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  32)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  33)     const topSpotsList = document.getElementById("TopSpotsList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  34)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  35)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  36)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  37)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  38)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  39)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  40)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  41)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  42)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  43)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  44)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  45)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  46)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  47)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  48)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  49)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  50)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  51)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  52)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  53)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  54)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  55)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  56)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  57) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  58)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  59)     const placesToEatList = document.getElementById("PlacesToEatList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  60)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  61)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  62)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  63)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  64)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  65)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  66)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  67)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  68)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  69)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  70)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  71)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  72)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  73)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  74)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  75)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  76)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  77)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  78)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  79)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  80)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  81)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  82)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  83) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  84)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  85)     const lodgingList = document.getElementById("LodgingList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  86)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  87)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  88)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  89)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  90)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  91)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  92)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  93)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  94)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  95)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  96)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  97)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  98)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  99)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 100)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 101)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 102)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 103)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 104)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 105)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 106)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 107)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 108)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 109) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 110) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 111) function populateTokyoOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 112)     const offCanvasTitle = document.getElementById("TokyoOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 113)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 114) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 115)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 116)     const topSpotsList = document.getElementById("TopSpotsList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 117)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 118)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 119)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 120)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 121)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 122)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 123)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 124)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 125)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 126)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 127)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 128)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 129)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 130)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 131)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 132)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 133)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 134)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 135)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 136)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 137)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 138)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 139)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 140) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 141)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 142)     const placesToEatList = document.getElementById("PlacesToEatList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 143)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 144)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 145)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 146)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 147)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 148)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 149)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 150)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 151)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 152)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 153)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 154)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 155)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 156)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 157)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 158)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 159)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 160)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 161)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 162)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 163)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 164)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 165)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 166) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 167)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 168)     const lodgingList = document.getElementById("LodgingList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 169)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 170)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 171)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 172)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 173)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 174)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 175)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 176)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 177)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 178)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 179)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 180)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 181)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 182)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 183)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 184)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 185)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 186)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 187)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 188)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 189)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 190)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 191)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 192) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 193) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 194) document.addEventListener('DOMContentLoaded', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 195)     const bucketList = createBucketList(japanCities); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 196)     renderBucketList(bucketList); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 197)     function addCityToBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 198)         const bucketList = document.querySelector('.oc-bucket-list-group');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 199)         const listItem = document.createElement('li');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 200)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 201)         listItem.innerHTML = `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 202)             <span>${city}, ${country}</span>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 203)             <button class="btn-delete-list-item">Remove</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 204)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 205)         bucketList.appendChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 206) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 207)         // Add event listener to remove the city from the list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 208)         listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 209)             bucketList.removeChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 210)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 211)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 212) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 213)     // Function to remove a city from the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 214)     function removeCityFromBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 215)         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 216)         bucketListItems.forEach(function (item) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 217)             if (item.querySelector('span').textContent === `${city}, ${country}`) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 218)                 item.remove();
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 219)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 220)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 221)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 222) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 223)     // Event listener for Kyoto checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 224)     const KyotoCheckbox = document.getElementById('KyotoCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 225)     KyotoCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 226)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 227)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 228) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 229)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 230)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 231)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 232)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 233)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 234)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 235)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 236)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 237) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 238)     // Event listener for Tokyo checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 239)     const TokyoCheckbox = document.getElementById('TokyoCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 240)     TokyoCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 241)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 242)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 243) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 244)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 245)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 246)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 247)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 248)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 249)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 250)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 251)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 252)     //Provides the Add and Remove button for the entire city
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 253)     populateKyotoOffCanvas(japanCities[0]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 254)     populateTokyoOffCanvas(japanCities[1]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 255)     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 256) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 257)     addRemoveCityButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 258)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 259)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 260)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 261)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 262)                 button.textContent = "Remove City from Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 263)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 264)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 265)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 266)                 button.textContent = "Add City to Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 267)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 268)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 269)     })
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 270) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 271)     //Provides the Add and Remove button for the city information in the nested accordion
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 272)     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 273) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 274)     addRemoveButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 275)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 276)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 277)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 278)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 279)                 button.textContent = "Remove";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 280)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 281)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 282)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 283)                 button.textContent = "Add";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 284)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 285)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 286)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 287) });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 288) 
+
+morocco.js:
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   1) import { moroccoCities } from "./data.js";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   2) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   3) function createBucketList(cities) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   4)     const bucketList = {};
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   5) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   6)     // Group cities by country
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   7)     cities.forEach(city => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   8)         if (!bucketList[city.country]) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   9)             bucketList[city.country] = []; // Create an array for the country if it doesn't exist
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  10)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  11)         bucketList[city.country].push(city.name); // Add city to the country's array
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  12)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  13) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  14)     return bucketList; // Return the grouped bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  15) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  16) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  17) function renderBucketList(bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  18)     const bucketListContainer = document.getElementById('bucket-list');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  19)     bucketListContainer.innerHTML = ''; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  20) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  21)     for (const country in bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  22)         const countryHeader = document.createElement('h3');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  23)         countryHeader.textContent = country; // Country name
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  24)         bucketListContainer.appendChild(countryHeader);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  25)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  26) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  27) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  28) function populateCasablancaOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  29)     const offCanvasTitle = document.getElementById("CasablancaOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  30)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  31) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  32)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  33)     const topSpotsList = document.getElementById("TopSpotsList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  34)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  35)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  36)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  37)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  38)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  39)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  40)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  41)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  42)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  43)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  44)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  45)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  46)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  47)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  48)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  49)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  50)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  51)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  52)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  53)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  54)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  55)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  56)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  57) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  58)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  59)     const placesToEatList = document.getElementById("PlacesToEatList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  60)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  61)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  62)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  63)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  64)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  65)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  66)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  67)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  68)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  69)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  70)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  71)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  72)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  73)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  74)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  75)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  76)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  77)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  78)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  79)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  80)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  81)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  82)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  83) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  84)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  85)     const lodgingList = document.getElementById("LodgingList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  86)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  87)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  88)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  89)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  90)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  91)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  92)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  93)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  94)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  95)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  96)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  97)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  98)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  99)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 100)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 101)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 102)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 103)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 104)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 105)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 106)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 107)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 108)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 109) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 110) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 111) function populateRabatOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 112)     const offCanvasTitle = document.getElementById("RabatOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 113)     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 114) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 115)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 116)     const topSpotsList = document.getElementById("TopSpotsList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 117)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 118)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 119)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 120)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 121)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 122)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 123)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 124)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 125)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 126)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 127)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 128)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 129)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 130)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 131)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 132)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 133)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 134)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 135)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 136)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 137)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 138)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 139)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 140) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 141)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 142)     const placesToEatList = document.getElementById("PlacesToEatList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 143)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 144)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 145)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 146)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 147)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 148)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 149)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 150)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 151)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 152)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 153)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 154)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 155)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 156)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 157)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 158)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 159)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 160)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 161)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 162)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 163)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 164)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 165)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 166) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 167)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 168)     const lodgingList = document.getElementById("LodgingList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 169)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 170)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 171)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 172)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 173)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 174)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 175)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 176)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 177)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 178)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 179)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 180)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 181)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 182)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 183)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 184)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 185)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 186)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 187)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 188)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 189)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 190)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 191)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 192) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 193) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 194) document.addEventListener('DOMContentLoaded', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 195)     const bucketList = createBucketList(moroccoCities); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 196)     renderBucketList(bucketList);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 197)     function addCityToBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 198)         const bucketList = document.querySelector('.oc-bucket-list-group');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 199)         const listItem = document.createElement('li');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 200)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 201)         listItem.innerHTML = `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 202)             <span>${city}, ${country}</span>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 203)             <button class="btn-delete-list-item">Remove</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 204)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 205)         bucketList.appendChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 206) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 207)         // Add event listener to remove the city from the list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 208)         listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 209)             bucketList.removeChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 210)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 211)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 212) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 213)     // Function to remove a city from the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 214)     function removeCityFromBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 215)         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 216)         bucketListItems.forEach(function (item) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 217)             if (item.querySelector('span').textContent === `${city}, ${country}`) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 218)                 item.remove();
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 219)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 220)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 221)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 222) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 223)     // Event listener for Casablanca checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 224)     const CasablancaCheckbox = document.getElementById('CasablancaCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 225)     CasablancaCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 226)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 227)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 228) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 229)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 230)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 231)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 232)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 233)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 234)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 235)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 236)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 237) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 238)     // Event listener for Rabat checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 239)     const RabatCheckbox = document.getElementById('RabatCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 240)     RabatCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 241)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 242)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 243) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 244)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 245)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 246)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 247)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 248)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 249)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 250)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 251)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 252)     //Provides the Add and Remove button for the entire city
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 253)     populateCasablancaOffCanvas(moroccoCities[0]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 254)     populateRabatOffCanvas(moroccoCities[1]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 255)     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 256) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 257)     addRemoveCityButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 258)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 259)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 260)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 261)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 262)                 button.textContent = "Remove City from Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 263)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 264)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 265)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 266)                 button.textContent = "Add City to Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 267)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 268)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 269)     })
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 270) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 271)     //Provides the Add and Remove button for the city information in the nested accordion
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 272)     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 273) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 274)     addRemoveButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 275)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 276)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 277)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 278)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 279)                 button.textContent = "Remove";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 280)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 281)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 282)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 283)                 button.textContent = "Add";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 284)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 285)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 286)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 287) });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 288) 
+
+us.js:
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   1) import { usCities } from "./data.js";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   2) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   3) function createBucketList(cities) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   4)     const bucketList = {};
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   5) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   6)     // Group cities by country
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   7)     cities.forEach(city => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   8)         if (!bucketList[city.country]) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400   9)             bucketList[city.country] = []; // Create an array for the country if it doesn't exist
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  10)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  11)         bucketList[city.country].push(city.name); // Add city to the country's array
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  12)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  13) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  14)     return bucketList; // Return the grouped bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  15) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  16) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  17) function renderBucketList(bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  18)     const bucketListContainer = document.getElementById('bucket-list');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  19)     bucketListContainer.innerHTML = ''; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  20) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  21)     for (const country in bucketList) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  22)         const countryHeader = document.createElement('h3');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  23)         countryHeader.textContent = country; // Country name
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  24)         bucketListContainer.appendChild(countryHeader);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  25)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  26) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  27) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  28) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  29) function populateLosAngelesOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  30)     const offCanvasTitle = document.getElementById("LosAngelesOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  31)     offCanvasTitle.textContent = `${city.name}, ${city.state}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  32) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  33)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  34)     const topSpotsList = document.getElementById("TopSpotsList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  35)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  36)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  37)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  38)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  39)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  40)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  41)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  42)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  43)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  44)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  45)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  46)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  47)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  48)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  49)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  50)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  51)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  52)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  53)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  54)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  55)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  56)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  57)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  58) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  59)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  60)     const placesToEatList = document.getElementById("PlacesToEatList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  61)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  62)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  63)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  64)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  65)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  66)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  67)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  68)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  69)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  70)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  71)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  72)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  73)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  74)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  75)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  76)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  77)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  78)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  79)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  80)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  81)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  82)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  83)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  84) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  85)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  86)     const lodgingList = document.getElementById("LodgingList_1");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  87)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  88)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  89)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  90)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  91)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  92)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  93)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  94)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  95)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  96)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  97)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  98)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400  99)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 100)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 101)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 102)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 103)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 104)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 105)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 106)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 107)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 108)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 109)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 110) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 111) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 112) function populateNewYorkOffCanvas(city) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 113)     const offCanvasTitle = document.getElementById("NewYorkOffCanvas");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 114)     offCanvasTitle.textContent = `${city.name}, ${city.state}, ${city.country}`;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 115) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 116)     //Populate Top Spots
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 117)     const topSpotsList = document.getElementById("TopSpotsList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 118)     topSpotsList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 119)     city.top_spots.forEach((spots, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 120)         topSpotsList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 121)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 122)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 123)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 124)                         data-bs-target="#TopSpots-collapse${index}" aria-expanded="false" aria-controls="TopSpots-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 125)                         ${spots.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 126)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 127)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 128)                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 129)                     data-bs-parent="#TopSpotsList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 130)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 131)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 132)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 133)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 134)                         <p>${spots.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 135)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 136)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 137)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 138)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 139)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 140)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 141) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 142)     // Populate Places to Eat
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 143)     const placesToEatList = document.getElementById("PlacesToEatList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 144)     placesToEatList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 145)     city.places_to_eat.forEach((place, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 146)         placesToEatList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 147)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 148)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 149)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 150)                         data-bs-target="#PlacesToEat-collapse${index}" aria-expanded="false" aria-controls="PlacesToEat-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 151)                         ${place.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 152)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 153)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 154)                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 155)                     data-bs-parent="#PlacesToEatList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 156)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 157)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 158)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 159)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 160)                         <p>${place.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 161)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 162)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 163)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 164)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 165)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 166)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 167) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 168)     // Populate Lodging
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 169)     const lodgingList = document.getElementById("LodgingList_2");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 170)     lodgingList.innerHTML = ""; // Clear previous content
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 171)     city.lodging.forEach((lodge, index) => {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 172)         lodgingList.innerHTML += `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 173)             <div class="accordion-item">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 174)                 <h2 class="accordion-header">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 175)                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 176)                         data-bs-target="#Lodging-collapse${index}" aria-expanded="false" aria-controls="Lodging-collapse${index}">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 177)                         ${lodge.name}
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 178)                     </button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 179)                 </h2>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 180)                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 181)                     data-bs-parent="#LodgingList">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 182)                     <div class="accordion-body topSpots-accordion">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 183)                     <div class="centered-nested-accordian-img-container">
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 184)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 185)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 186)                         <p>${lodge.blurb}</p>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 187)                         <button class="add-remove-button btn btn-outline-success">Add</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 188)                     </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 189)                 </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 190)             </div>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 191)        `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 192)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 193) }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 194) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 195) document.addEventListener('DOMContentLoaded', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 196)     const bucketList = createBucketList(usCities); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 197)     renderBucketList(bucketList); 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 198)     // Function to add a city to the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 199)     function addCityToBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 200)         const bucketList = document.querySelector('.oc-bucket-list-group');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 201)         const listItem = document.createElement('li');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 202)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 203)         listItem.innerHTML = `
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 204)             <span>${city}, ${country}</span>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 205)             <button class="btn-delete-list-item">Remove</button>
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 206)         `;
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 207)         bucketList.appendChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 208) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 209)         // Add event listener to remove the city from the list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 210)         listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 211)             bucketList.removeChild(listItem);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 212)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 213)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 214) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 215)     // Function to remove a city from the bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 216)     function removeCityFromBucketList(city, country) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 217)         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 218)         bucketListItems.forEach(function (item) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 219)             if (item.querySelector('span').textContent === `${city}, ${country}`) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 220)                 item.remove();
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 221)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 222)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 223)     }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 224) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 225)     // Event listener for Los Angeles checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 226)     const LosAngelesCheckbox = document.getElementById('LosAngelesCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 227)     LosAngelesCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 228)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 229)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 230) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 231)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 232)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 233)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 234)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 235)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 236)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 237)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 238)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 239) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 240)     // Event listener for New York checkbox
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 241)     const NewYorkCheckbox = document.getElementById('NewYorkCheckbox');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 242)     NewYorkCheckbox.addEventListener('change', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 243)         const city = this.getAttribute('data-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 244)         const country = this.getAttribute('data-country');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 245) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 246)         if (this.checked) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 247)             // Add city to bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 248)             addCityToBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 249)         } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 250)             // Remove city from bucket list
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 251)             removeCityFromBucketList(city, country);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 252)         }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 253)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 254)     
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 255) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 256)     //Provides the Add and Remove button for the entire city
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 257)     populateLosAngelesOffCanvas(usCities[0]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 258)     populateNewYorkOffCanvas(usCities[1]);
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 259)     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 260) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 261)     addRemoveCityButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 262)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 263)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 264)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 265)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 266)                 button.textContent = "Remove City from Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 267)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 268)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 269)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 270)                 button.textContent = "Add City to Bucket List";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 271)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 272)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 273)     })
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 274) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 275)     //Provides the Add and Remove button for the city information in the nested accordion
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 276)     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 277) 
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 278)     addRemoveButtons.forEach(function (button) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 279)         button.addEventListener('click', function () {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 280)             if (button.classList.contains("btn-outline-success")) {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 281)                 button.classList.remove("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 282)                 button.classList.add("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 283)                 button.textContent = "Remove";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 284)             } else {
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 285)                 button.classList.remove("btn-outline-danger");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 286)                 button.classList.add("btn-outline-success");
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 287)                 button.textContent = "Add";
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 288)             }
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 289)         });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 290)     });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 291) });
+d79be818 (sanya-shrivastava 2024-10-14 10:46:09 -0400 292) 
+
+argentina.html:
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400  86)         <ul class="list-group oc-bucket-list-group" id = "bucket-list">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 142)                 <input class="form-check-input city-card-input" type="checkbox" id="BuenosAiresCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 143)                   data-city="Buenos Aires" data-country="Argentina" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 164)                 <input class="form-check-input city-card-input" type="checkbox" id="MendozaCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 165)                   data-city="Mendoza" data-country="Argentina" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 223)                 <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 289)             <div id="PlacesToEatList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 352)             <div id="LodgingList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 460)                 <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 519)             <div id="PlacesToEatList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 582)             <div id="LodgingList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 638)     
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 639)     <script type="module" src="js/data.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 640)     <script type="module" src="js/argentina.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 641)   </body>
+
+france2.html:
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400  84)           <ul class="list-group oc-bucket-list-group" id = "bucket-list">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 139)               <input class="form-check-input city-card-input" type="checkbox" id="ColmarCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 140)                 data-city="Colmar" data-country="France" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 161)               <input class="form-check-input city-card-input" type="checkbox" id="ParisCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 162)                 data-city="Paris" data-country="France" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 221)               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 283)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 346)               <div class="accordion accordion-flush w-100" id="LodgingList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 449)               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 511)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 574)               <div class="accordion accordion-flush w-100" id="LodgingList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 627)   <script type="module" src="js/data.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 628)   <script type="module" src="js/france.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 629)   </body>
+
+japan.html:
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400  85)           <ul class="list-group oc-bucket-list-group" id = "bucket-list">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 140)               <input class="form-check-input city-card-input" type="checkbox" id="KyotoCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 141)                 data-city="Kyoto" data-country="Japan" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 162)               <input class="form-check-input city-card-input" type="checkbox" id="TokyoCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 163)                 data-city="Tokyo" data-country="Japan" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 222)               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 284)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 347)               <div class="accordion accordion-flush w-100" id="LodgingList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 450)               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 512)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 575)               <div class="accordion accordion-flush w-100" id="LodgingList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 628)   <script type="module" src="js/data.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 629)   <script type="module" src="js/japan.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 630)   </body>
+
+morocco.html:
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400  84)           <ul class="list-group oc-bucket-list-group" id = "bucket-list">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 141)               <input class="form-check-input city-card-input" type="checkbox" id="CasablancaCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 142)                 data-city="Casablanca" data-country="Morocco" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 163)               <input class="form-check-input city-card-input" type="checkbox" id="RabatCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 164)                 data-city="Rabat" data-country="Morocco" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 223)               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 285)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 348)               <div class="accordion accordion-flush w-100" id="LodgingList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 451)               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 513)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 576)               <div class="accordion accordion-flush w-100" id="LodgingList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 629)   <script type="module" src="js/data.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 630)   <script type="module" src="js/morocco.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 631)   </body>
+
+us.html:
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400  82)         <ul class="list-group oc-bucket-list-group" id = "bucket-list">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 138)               <input class="form-check-input city-card-input" type="checkbox" id="LosAngelesCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 139)                 data-city="Los Angeles" data-country="United States" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 159)               <input class="form-check-input city-card-input" type="checkbox" id="NewYorkCheckbox"
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 160)                 data-city="New York" data-country="United States" />
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 173)       <h5 class="offcanvas-title" id="LosAngelesOffCanvas">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 219)               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 281)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 344)               <div class="accordion accordion-flush w-100" id="LodgingList_1">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 447)               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 509)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 572)               <div class="accordion accordion-flush w-100" id="LodgingList_2">
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 625)   <script type="module" src="js/data.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 626)   <script type="module" src="js/us.js"></script>
+d79be818 (sanya-shrivastava       2024-10-14 10:46:09 -0400 627)   </body>
