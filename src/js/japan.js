@@ -48,7 +48,7 @@ function populateKyotoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@ function populateKyotoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="spot">eats</button>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@ function populateKyotoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@ function populateTokyoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@ function populateTokyoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@ function populateTokyoOffCanvas(city) {
                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
-                        <button class="add-remove-button btn btn-outline-success">Add</button>
+                        <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
                     </div>
                 </div>
             </div>
@@ -252,6 +252,27 @@ document.addEventListener('DOMContentLoaded', function () {
     //Provides the Add and Remove button for the entire city
     populateKyotoOffCanvas(japanCities[0]);
     populateTokyoOffCanvas(japanCities[1]);
+  let alert_box = document.getElementById('alert_box');
+
+    function added_alert(msg){
+        let alert = document.createElement('div');
+        alert.classList.add('alert');
+        alert.innerHTML = msg;
+        alert_box.appendChild(alert);
+
+        if (msg.includes('Removed')) {
+            alert.classList.add('remove');
+        }
+
+
+        setTimeout(() => {
+        alert.remove();
+        },3000);
+
+        
+    }
+    
+    //Provides the Add and Remove button for the entire city
     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
 
     addRemoveCityButtons.forEach(function (button) {
@@ -260,10 +281,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.classList.remove("btn-outline-success");
                 button.classList.add("btn-outline-danger");
                 button.textContent = "Remove City from Bucket List";
+                added_alert("City Added!");
             } else {
                 button.classList.remove("btn-outline-danger");
                 button.classList.add("btn-outline-success");
                 button.textContent = "Add City to Bucket List";
+                added_alert('City Removed');
             }
         });
     })
@@ -277,10 +300,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.classList.remove("btn-outline-success");
                 button.classList.add("btn-outline-danger");
                 button.textContent = "Remove";
+                
+                let type = button.getAttribute('data-type-button');
+                if (type == 'spot') {
+                    added_alert("Attraction Added");
+                } else if (type == 'eats') {
+                    added_alert("Food Place Added");
+                } else if (type == 'lodging') {
+                    added_alert("Lodging Added");
+                }
             } else {
                 button.classList.remove("btn-outline-danger");
                 button.classList.add("btn-outline-success");
                 button.textContent = "Add";
+
+                let type = button.getAttribute('data-type-button');
+                if (type == 'spot') {
+                    added_alert("Attraction Removed");
+                } else if (type == 'eats') {
+                    added_alert("Food Place Removed");
+                } else if (type == 'lodging') {
+                    added_alert("Lodging Removed");
+                }
             }
         });
     });
