@@ -1,0 +1,278 @@
+main.css
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 180) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 181) /*for search bar*/
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 182) .search-bar {
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 183)     margin: 20px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 184)     max-width: -600px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 185)     padding-left: 100px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 186) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 187) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 188) .search-box {
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 189)     width: 100%;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 190)     padding: 10px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 191)     border: 1px solid #ccc;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 192)     border-radius: 5px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 193)     font-size: 16px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 194) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 195) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 196) .form-check {
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 197)     position: absolute;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 198) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 199) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 200) /* for added alert function */
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 201) #alert_box{
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 202)     position: absolute;
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 203)     top: 10px;
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 204)     right: 475px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 205)     display: flex;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 206)     align-items: flex-end;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 207)     flex-direction: column;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 208)     overflow: hidden;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 209)     padding: 20px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 210)     z-index: 1100;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 211) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 212) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 213) .alert{
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 214)     width: 200px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 215)     height: 60px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 216)     background: #fff;
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 217)     font-weight: 600;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 218)     margin: 15px 0;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 219)     box-shadow: 0 0 20px rgba(0,0,0,0.3);
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 220)     display: flex;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 221)     align-items: center;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 222)     position: relative;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 223)     z-index: 1100;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 224) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 225) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 226) .alert::after{
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 227)     content: '';
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 228)     position: absolute;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 229)     left: 0;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 230)     bottom: 0;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 231)     width: 100%;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 232)     height: 5px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 233)     background: rgb(248, 201, 144);
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 234)     animation: anim 3s linear forwards;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 235)     z-index: 1100;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 236) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 237) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 238) .alert.remove::after{
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 239)     background: red;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 240) }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 241) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 242) @keyframes anim {
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 243)     100%{
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 244)         width: 0;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 245)     }
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 246) }
+
+Argentina.html
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  26)     <!-- <script type="module" src="js/main.js" defer></script> -->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  27)     <script type="module" src="js/search_bar.js" defer></script>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  28)     
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 115) <!--alert button-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 116) <div id="alert_box"></div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 117) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 118) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 119) <!--Search Bar Fucntion-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 120) <nav class="search-bar">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 121)   <form class="form-inline">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 122)     <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 123)   </form>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 124) </nav>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 125) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 137)           
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 147)           </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 149) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 150) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 159)           
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 162)             <div class="form-check overlay" onclick="added_alert(add_city_message)">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 178)           Buenos Aires, Argentina
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 241)                         <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 264)                         <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 304)                         <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 328)                         <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 365)                         <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 387)                         <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+7c1937c6 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:48 -0400 634)   
+
+france.html
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  26)     <!-- <script type="module" src="js/main.js" defer></script> -->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  27)     <script type="module" src="js/search_bar.js" defer></script>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 113) <!--alert button-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 114) <div id="alert_box"></div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 115)     
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 116) <!--Search Bar Fucntion-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 117)     <nav class="search-bar">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 118)       <form class="form-inline">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 119)         <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 120)       </form>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 121)     </nav>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 122) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 134)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 144)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 146) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 147) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 156)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 166)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 239)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 262)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 302)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 326)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 363)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 385)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 467)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 490)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 530)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 554)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 591)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 613)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+
+japan.html
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  27)     <!-- <script type="module" src="js/main.js" defer></script> -->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  28)     <script type="module" src="js/search_bar.js" defer></script>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 114) <!--alert button-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 115) <div id="alert_box"></div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 116) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 117) <!--Search Bar Fucntion-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 118) <nav class="search-bar">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 119)   <form class="form-inline">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 120)     <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 121)   </form>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 122) </nav>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 123) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 135)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 145)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 147) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 148) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 157)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 167)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 240)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 263)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 303)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 327)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 364)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 386)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 468)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 491)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 531)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 555)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 592)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 614)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+
+morocco.html
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  25)     <!-- <script type="module" src="js/main.js" defer></script> -->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  26)     <script type="module" src="js/search_bar.js" defer></script>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 113) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 114) <!--alert button-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 115) <div id="alert_box"></div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 116) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 117) <!--Search Bar Fucntion-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 118) <nav class="search-bar">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 119)   <form class="form-inline">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 120)     <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 121)   </form>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 122) </nav>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 123) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 124) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 136)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 146)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 148) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 149) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 158)         
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 168)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 241)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 264)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 304)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 328)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 365)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 387)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 469)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 492)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 532)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 556)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 593)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 615)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+
+us.html
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  22)     <!-- <script type="module" src="js/main.js" defer></script> -->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400  23)     <script type="module" src="js/search_bar.js" defer></script>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 111) <!--alert button-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 112) <div id="alert_box"></div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 113) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 114) 
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 115) <!--Search Bar Fucntion-->
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 116) <nav class="search-bar">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 117)   <form class="form-inline">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 118)     <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 119)   </form>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 120) </nav>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 121) 
+e0ab2b38 (Trinity Sanaa Bissahoyo 2024-10-14 10:29:00 -0400 133)         
+e0ab2b38 (Trinity Sanaa Bissahoyo 2024-10-14 10:29:00 -0400 143)         </div>
+e0ab2b38 (Trinity Sanaa Bissahoyo 2024-10-14 10:29:00 -0400 145)       
+e0ab2b38 (Trinity Sanaa Bissahoyo 2024-10-14 10:29:00 -0400 154)        
+e0ab2b38 (Trinity Sanaa Bissahoyo 2024-10-14 10:29:00 -0400 164)         </div>
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 237)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 260)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 300)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 324)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 361)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 383)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 465)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 488)                       <button class="add-remove-button btn btn-outline-success" data-type="spot">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 528)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 552)                       <button class="add-remove-button btn btn-outline-success" data-type="eats">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 589)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 611)                       <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+
+
+Argentina.js, Japan.js, morocco.js, us.js, france.js
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  51)                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400  77)                         <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 103)                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 134)                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 160)                         <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 186)                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 257)    let alert_box = document.getElementById('alert_box');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 258) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 259)     function added_alert(msg){
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 260)         let alert = document.createElement('div');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 261)         alert.classList.add('alert');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 262)         alert.innerHTML = msg;
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 263)         alert_box.appendChild(alert);
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 264) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 265)         if (msg.includes('Removed')) {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 266)             alert.classList.add('remove');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 267)         }
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 268) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 269) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 270)         setTimeout(() => {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 271)         alert.remove();
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 272)         },3000);
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 273) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 274)         
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 275)     }
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 276)     
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 277)     //Provides the Add and Remove button for the entire city
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 286)                 added_alert("City Added!");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 291)                 added_alert('City Removed');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 305)                 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 306)                 let type = button.getAttribute('data-type-button');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 307)                 if (type == 'spot') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 308)                     added_alert("Attraction Added");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 309)                 } else if (type == 'eats') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 310)                     added_alert("Food Place Added");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 311)                 } else if (type == 'lodging') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 312)                     added_alert("Lodging Added");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 313)                 }
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 318) 
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 319)                 let type = button.getAttribute('data-type-button');
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 320)                 if (type == 'spot') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 321)                     added_alert("Attraction Removed");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 322)                 } else if (type == 'eats') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 323)                     added_alert("Food Place Removed");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 324)                 } else if (type == 'lodging') {
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 325)                     added_alert("Lodging Removed");
+2781f872 (Trinity Sanaa Bissahoyo 2024-10-14 22:07:00 -0400 326)                 }
