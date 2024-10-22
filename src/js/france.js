@@ -1,4 +1,5 @@
 import { franceCities } from "./data.js";
+import { userBucketList } from "./main.js";
 
 function createBucketList(cities) {
     const bucketList = {};
@@ -12,6 +13,7 @@ function createBucketList(cities) {
 
     return bucketList; // Return the grouped bucket list
 }
+
 
 function renderBucketList(bucketList) {
     const bucketListContainer = document.getElementById('bucket-list');
@@ -193,24 +195,24 @@ function populateParisOffCanvas(city) {
 document.addEventListener('DOMContentLoaded', function () {
     const bucketList = createBucketList(franceCities); 
     renderBucketList(bucketList); 
-    function addCityToBucketList(city, country) {
-        const bucketList = document.querySelector('.oc-bucket-list-group');
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
-        listItem.innerHTML = `
-            <span>${city}, ${country}</span>
-            <button class="btn-delete-list-item">Remove</button>
-        `;
-        bucketList.appendChild(listItem);
+    // function addCityToBucketList(city, country) {
+    //     const bucketList = document.querySelector('.oc-bucket-list-group');
+    //     const listItem = document.createElement('li');
+    //     listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+    //     listItem.innerHTML = `
+    //         <span>${city}, ${country}</span>
+    //         <button class="btn-delete-list-item">Remove</button>
+    //     `;
+    //     bucketList.appendChild(listItem);
 
-        // Add event listener to remove the city from the list
-        listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
-            bucketList.removeChild(listItem);
-        });
-    }
+    //     // Add event listener to remove the city from the list
+    //     listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+    //         bucketList.removeChild(listItem);
+    //     });
+    // }
 
-    // Function to remove a city from the bucket list
-    function removeCityFromBucketList(city, country) {
+    // Function to remove a city from the bucket list from the display
+    function removeCityFromDOM(city, country) {
         const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
         bucketListItems.forEach(function (item) {
             if (item.querySelector('span').textContent === `${city}, ${country}`) {
@@ -219,36 +221,75 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Event listener for Colmar checkbox
-    const ColmarCheckbox = document.getElementById('ColmarCheckbox');
-    ColmarCheckbox.addEventListener('change', function () {
-        const city = this.getAttribute('data-city');
-        const country = this.getAttribute('data-country');
-
-        if (this.checked) {
-            // Add city to bucket list
-            addCityToBucketList(city, country);
-        } else {
-            // Remove city from bucket list
-            removeCityFromBucketList(city, country);
+    function addCityToBL(city, country) {
+        const cityObject = franceCities.find(item => item.name == city && item.country == country);
+        if(cityObject) {
+            userBucketList.push(cityObject);
         }
-    });
+    }
 
-    // Event listener for Paris checkbox
-    const ParisCheckbox = document.getElementById('ParisCheckbox');
-    ParisCheckbox.addEventListener('change', function () {
-        const city = this.getAttribute('data-city');
-        const country = this.getAttribute('data-country');
-
-        if (this.checked) {
-            // Add city to bucket list
-            addCityToBucketList(city, country);
-        } else {
-            // Remove city from bucket list
-            removeCityFromBucketList(city, country);
+    function removeCityFromBL(city, country) {
+        const index = userBucketList.findIndex(item => item.name === city && item.country === country);
+        console.log(index);
+        if(index !== -1 ) {
+            userBucketList.splice(index, 1);
+            removeCityFromDOM(city, country);
         }
-    });
+    }
+
+    console.log(userBucketList);
+    // // Event listener for Colmar checkbox
+    // const ColmarCheckbox = document.getElementById('ColmarCheckbox');
+    // ColmarCheckbox.addEventListener('click', function () {
+    //     const city = this.getAttribute('data-city');
+    //     const country = this.getAttribute('data-country');
+    //     if (this.checked) {
+    //         // Add city to bucket list
+    //         addCityToBL(city, country);
+    //         console.log(userBucketList);
+    //     } else {
+    //         // Remove city from bucket list
+    //         removeCityFromBL(city, country);
+    //         console.log(userBucketList);
+    //     }
+    // });
+
+    // // Event listener for Paris checkbox
+    // const ParisCheckbox = document.getElementById('ParisCheckbox');
+    // ParisCheckbox.addEventListener('click', function () {
+    //     const city = this.getAttribute('data-city');
+    //     const country = this.getAttribute('data-country');
+
+    //     if (this.checked) {
+    //         // Add city to bucket list
+    //         addCityToBL(city, country);
+    //         console.log(userBucketList);
+    //     } else {
+    //         // Remove city from bucket list
+    //         removeCityFromBL(city, country);
+    //         console.log(userBucketList);
+    //     }
+    // });
     
+    function addCityCardCheckboxListener(checkboxId) {
+        const checkbox = document.getElementById(checkboxId);
+        checkbox.addEventListener('click', function () {
+            const city = this.getAttribute('data-city');
+            const country = this.getAttribute('data-country');
+            if (this.checked) {
+                // Add city to bucket list
+                addCityToBL(city, country);
+                console.log(userBucketList);
+            } else {
+                // Remove city from bucket list
+                removeCityFromBL(city, country);
+                console.log(userBucketList);
+            }
+        });
+    }
+
+    addCityCardCheckboxListener("ColmarCheckbox");
+    addCityCardCheckboxListener("ParisCheckbox");
     
     //Provides the Add and Remove button for the entire city
     populateColmarOffCanvas(franceCities[0]);
