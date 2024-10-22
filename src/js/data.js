@@ -45,13 +45,13 @@ export const allCities = [
     },
     {
         name: "Los Angeles",
-        country: "US",
+        country: "United States",
         population: "3,795,936",
         state: "California",
     },
     {
         name: "New York",
-        country: "US",
+        country: "United States",
         population: "8,097,282",
         state: "New York",
     },
@@ -157,7 +157,7 @@ export const franceCities = [
             {
                 name: "F-TS1",
                 blurb: "F-TS1 blurb",
-                isSelected: false,
+                isSelected: true,
             },
             {
                 name: "F-TS2",
@@ -174,14 +174,14 @@ export const franceCities = [
             {
                 name: "F-PE2",
                 blurb: "F-PE2 blurb",
-                isSelected: false,
+                isSelected: true,
             },
         ],
         lodging: [
             {
                 name: "F-L1",
                 blurb: "F-L1 blurb",
-                isSelected: false,
+                isSelected: true,
             },
             {
                 name: "F-L2",
@@ -411,12 +411,12 @@ export const moroccoCities = [
 ];
 
 /**
- * To import: import { argentinaCities } from "./data.js";
+ * To import: import { usCities } from "./data.js";
  */
 export const usCities = [
     {
         name: "Los Angeles",
-        country: "US",
+        country: "United States",
         population: "3,795,936",
         state: "California",
         top_spots: [
@@ -458,7 +458,7 @@ export const usCities = [
     },
     {
         name: "New York",
-        country: "US",
+        country: "United States",
         population: "8,097,282",
         state: "New York",
         top_spots: [

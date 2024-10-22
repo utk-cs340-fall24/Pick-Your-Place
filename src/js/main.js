@@ -73,5 +73,3 @@ function added_alert(msg){
         });
     });
 });
-
-export const userBucketList = [];
