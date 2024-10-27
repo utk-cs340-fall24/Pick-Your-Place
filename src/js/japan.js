@@ -21,8 +21,8 @@ function populateKyotoOffCanvas(city) {
                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#TopSpotsList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${spots.img}" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
@@ -47,8 +47,8 @@ function populateKyotoOffCanvas(city) {
                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#PlacesToEatList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${place.img}" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">eats</button>
@@ -73,8 +73,8 @@ function populateKyotoOffCanvas(city) {
                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#LodgingList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${lodge.img}" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
@@ -104,8 +104,8 @@ function populateTokyoOffCanvas(city) {
                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#TopSpotsList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${spots.img}" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
@@ -130,8 +130,8 @@ function populateTokyoOffCanvas(city) {
                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#PlacesToEatList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${place.img}" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
@@ -156,8 +156,8 @@ function populateTokyoOffCanvas(city) {
                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#LodgingList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${lodge.img}" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
