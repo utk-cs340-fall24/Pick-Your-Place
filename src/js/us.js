@@ -1,30 +1,6 @@
 import { usCities } from "./data.js";
-
-function createBucketList(cities) {
-    const bucketList = {};
-
-    // Group cities by country
-    cities.forEach(city => {
-        if (!bucketList[city.country]) {
-            bucketList[city.country] = []; // Create an array for the country if it doesn't exist
-        }
-        bucketList[city.country].push(city.name); // Add city to the country's array
-    });
-
-    return bucketList; // Return the grouped bucket list
-}
-
-function renderBucketList(bucketList) {
-    const bucketListContainer = document.getElementById('bucket-list');
-    bucketListContainer.innerHTML = ''; // Clear previous content
-
-    for (const country in bucketList) {
-        const countryHeader = document.createElement('h3');
-        countryHeader.textContent = country; // Country name
-        bucketListContainer.appendChild(countryHeader);
-    }
-}
-
+import * as bucketListFunctions from "./bucket_list.js";
+const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
 
 function populateLosAngelesOffCanvas(city) {
     const offCanvasTitle = document.getElementById("LosAngelesOffCanvas");
@@ -42,11 +18,11 @@ function populateLosAngelesOffCanvas(city) {
                         ${spots.name}
                     </button>
                 </h2>
-                <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
+                <div id="TopSpots-collapse${index}" class="accordi-collapse collapse"
                     data-bs-parent="#TopSpotsList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${spots.img}" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
@@ -71,8 +47,8 @@ function populateLosAngelesOffCanvas(city) {
                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#PlacesToEatList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${place.img}" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
@@ -97,8 +73,8 @@ function populateLosAngelesOffCanvas(city) {
                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#LodgingList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${lodge.img}" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
@@ -128,8 +104,8 @@ function populateNewYorkOffCanvas(city) {
                 <div id="TopSpots-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#TopSpotsList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${spots.img}" class="nested-accordion-img" />
                     </div>
                         <p>${spots.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="spot">Add</button>
@@ -154,8 +130,8 @@ function populateNewYorkOffCanvas(city) {
                 <div id="PlacesToEat-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#PlacesToEatList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${place.img}" class="nested-accordion-img" />
                     </div>
                         <p>${place.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="eats">Add</button>
@@ -180,8 +156,8 @@ function populateNewYorkOffCanvas(city) {
                 <div id="Lodging-collapse${index}" class="accordion-collapse collapse"
                     data-bs-parent="#LodgingList">
                     <div class="accordion-body topSpots-accordion">
-                    <div class="centered-nested-accordian-img-container">
-                      <img src="img/main/under.jpeg" class="nested-accordion-img" />
+                    <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+                      <img src="${lodge.img}" class="nested-accordion-img" />
                     </div>
                         <p>${lodge.blurb}</p>
                         <button class="add-remove-button btn btn-outline-success" data-type-button="lodging">Add</button>
@@ -193,66 +169,11 @@ function populateNewYorkOffCanvas(city) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const bucketList = createBucketList(usCities); 
-    renderBucketList(bucketList); 
-    // Function to add a city to the bucket list
-    function addCityToBucketList(city, country) {
-        const bucketList = document.querySelector('.oc-bucket-list-group');
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
-        listItem.innerHTML = `
-            <span>${city}, ${country}</span>
-            <button class="btn-delete-list-item">Remove</button>
-        `;
-        bucketList.appendChild(listItem);
+    populateBucketList();
 
-        // Add event listener to remove the city from the list
-        listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
-            bucketList.removeChild(listItem);
-        });
-    }
-
-    // Function to remove a city from the bucket list
-    function removeCityFromBucketList(city, country) {
-        const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
-        bucketListItems.forEach(function (item) {
-            if (item.querySelector('span').textContent === `${city}, ${country}`) {
-                item.remove();
-            }
-        });
-    }
-
-    // Event listener for Los Angeles checkbox
-    const LosAngelesCheckbox = document.getElementById('LosAngelesCheckbox');
-    LosAngelesCheckbox.addEventListener('change', function () {
-        const city = this.getAttribute('data-city');
-        const country = this.getAttribute('data-country');
-
-        if (this.checked) {
-            // Add city to bucket list
-            addCityToBucketList(city, country);
-        } else {
-            // Remove city from bucket list
-            removeCityFromBucketList(city, country);
-        }
-    });
-
-    // Event listener for New York checkbox
-    const NewYorkCheckbox = document.getElementById('NewYorkCheckbox');
-    NewYorkCheckbox.addEventListener('change', function () {
-        const city = this.getAttribute('data-city');
-        const country = this.getAttribute('data-country');
-
-        if (this.checked) {
-            // Add city to bucket list
-            addCityToBucketList(city, country);
-        } else {
-            // Remove city from bucket list
-            removeCityFromBucketList(city, country);
-        }
-    });
+    addCityCardCheckboxListener("LosAngelesCheckbox", usCities);
+    addCityCardCheckboxListener("NewYorkCheckbox", usCities);
     
-
     //Provides the Add and Remove button for the entire city
     populateLosAngelesOffCanvas(usCities[0]);
     populateNewYorkOffCanvas(usCities[1]);
