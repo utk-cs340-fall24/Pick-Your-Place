@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 
     // Check if the data is not empty (basic validation)
-    if (fullName && email) {
+    if (formData.fullName && formData.email) {
       formSubmitted = true;
 
       // Hide the modal using Bootstrap's modal method
@@ -46,21 +46,18 @@ $(document).ready(function(){
       // Perform AJAX request to send email
       $.ajax({
         type: 'POST',
-        url: 'sendEmail.php',
+        url: 'send-email.php',
         data: formData,
         dataType: 'json',
         success: function(response) {
-          // Handle success response
-        if (response.success) {
-          $('#response').html('<p>Email sent successfully!</p>');
-          } else {
-            $('#response').html('<p>Error: ' + response.message + '</p>');
-          }
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          // Handle error response
-          $('#response').html('<p>An error occurred: ' + textStatus + '</p>');
-        }
+          console.log("Success:", response);
+      },
+      success: function(response) {
+        console.log(response.message); // Displays the success or error message from the response
+    },
+    error: function(xhr) {
+      console.log("An error occurred: " + xhr.responseText); // Handles any AJAX error
+  },
       });
     } else {
       alert('Please fill in all the fields.');
