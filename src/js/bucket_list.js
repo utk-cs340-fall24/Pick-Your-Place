@@ -68,8 +68,22 @@ export function populateBucketList() {
 
             listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
                 removeCityFromBL(cityObject.name, cityObject.country);
+                // Generate checkboxId by removing spaces
+                const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+                const checkbox = document.getElementById(checkboxId);
+                if (checkbox) {
+                    checkbox.checked = false; // Uncheck the checkbox
+                }
             });
         }
+
+         // Ensure checkbox is checked if city is in the bucket list
+         const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+         const checkbox = document.getElementById(checkboxId);
+         if (checkbox) {
+             checkbox.checked = true; // Check the checkbox
+         }
+ 
         
     });
 }
