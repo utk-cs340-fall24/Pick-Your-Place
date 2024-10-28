@@ -21,9 +21,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/argentina.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <script type="module" src="js/main.js" defer></script> -->
     <script type="module" src="js/search_bar.js" defer></script>
     
     <title>Argentina</title>
@@ -54,6 +52,13 @@
       </div>
     </nav>
     <hr class="navbar-brand-hr" />
+
+     <!-- Country Title -->
+    <div class="container text-center mt-4">
+      <h1 id="countryTitle">Argentina</h1> 
+    </div>
+
+
     <div
     class="offcanvas offcanvas-start oc-bucket-list"
     data-bs-backdrop="static"
@@ -66,7 +71,7 @@
         class="offcanvas-title oc-bucket-list-title"
         id="staticBackdropLabel"
       >
-        MY BUCKET LIST
+        YOUR BUCKET LIST
       </h5>
       <button
         type="button"
@@ -84,29 +89,6 @@
         </p>
         <hr class="destinations-hr" />
         <ul class="list-group oc-bucket-list-group" id = "bucket-list">
-          <li
-            class="list-group-item oc-bucket-list-group-item"
-            aria-disabled="false"
-          >
-            <span>Tokyo: Top Spot 1</span>
-            <button class="btn-delete-list-item">Remove</button>
-          </li>
-          <li class="list-group-item oc-bucket-list-group-item">
-            <span>Tokyo: Top Spot 2</span>
-            <button class="btn-delete-list-item">Remove</button>
-          </li>
-          <li class="list-group-item oc-bucket-list-group-item">
-            <span>Tokyo: Top Spot 3</span>
-            <button class="btn-delete-list-item">Remove</button>
-          </li>
-          <li class="list-group-item oc-bucket-list-group-item">
-            <span>Kyoto: Top Spot 1</span>
-            <button class="btn-delete-list-item">Remove</button>
-          </li>
-          <li class="list-group-item oc-bucket-list-group-item">
-            <span>Kyoto: Top Spot 2</span>
-            <button class="btn-delete-list-item">Remove</button>
-          </li>
         </ul>
       </div>
     </div>
@@ -279,10 +261,10 @@
                 Places to Eat
               </button>
             </h2>
-            <div id="PlacesToEatList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Places To Eat information -->
-                <div class="accordion accordion-flush w-100" id="PlacesToEatList">
+                <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -342,10 +324,10 @@
                 Lodging
               </button>
             </h2>
-            <div id="LodgingList_1" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Lodging information -->
-                <div class="accordion accordion-flush w-100" id="LodgingList">
+                <div class="accordion accordion-flush w-100" id="LodgingList_1">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -509,10 +491,10 @@
                 Places to Eat
               </button>
             </h2>
-            <div id="PlacesToEatList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Places To Eat information -->
-                <div class="accordion accordion-flush w-100" id="PlacesToEatList">
+                <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -572,10 +554,10 @@
                 Lodging
               </button>
             </h2>
-            <div id="LodgingList_2" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
               <div class="accordion-body nested-first">
                 <!-- This is the nested accordion for Lodging information -->
-                <div class="accordion accordion-flush w-100" id="LodgingList">
+                <div class="accordion accordion-flush w-100" id="LodgingList_2">
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

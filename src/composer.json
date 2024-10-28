@@ -1,0 +1,19 @@
+{
+    "name": "bmatasic/pick-your-place",
+    "description": "A project for finding the best location tips.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Bmatasic\\PickYourPlace\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bella Matasic",
+            "email": "bmatasic@vols.utk.edu"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
