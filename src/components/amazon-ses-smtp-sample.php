@@ -1,21 +1,16 @@
 <?php
 
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// If necessary, modify the path in the require statement below to refer to the
+
 // location of your Composer autoload.php file.
-require 'vendor/autoload.php';
-require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/Exception.php';
-require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/PHPMailer.php';
-require 'cosc340/Pick-Your-Place/src/components/ExportButton/PHPMailer-master/src/SMTP.php';
+require '../vendor/autoload.php';
 
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
-$sender = 'PickUrPlace904@gmail.com';
-$senderName = 'PickUrPlace Team';
+$sender = 'pickurplacedomainidentitity@gmail.com';
+$senderName = 'Pick Your Place Team';
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
@@ -23,6 +18,7 @@ $recipient = 'PickUrPlace904@gmail.com';
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 $usernameSmtp = 'AKIAU5LH5V5QZPX7Z7IG';
+$passwordSmtp = 'BM1CSFmMkzlRqyK+oX74XIGneD3Hg1BLrZ7Oej6vjw+X';
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment or remove the next line.
@@ -55,7 +51,7 @@ try {
     $mail->isSMTP();
     $mail->setFrom($sender, $senderName);
     $mail->Username   = $usernameSmtp;
-    $mail->Password   = fetchSMTPPasswordFromSecureStorage();
+    $mail->Password   = $passwordSmtp;
     $mail->Host       = $host;
     $mail->Port       = $port;
     $mail->SMTPAuth   = true;
@@ -76,10 +72,3 @@ try {
 } catch (Exception $e) {
     echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
 }
-function fetchSMTPPasswordFromSecureStorage() {
-/* IMPLEMENT THIS METHOD */
-// For example, you might fetch it from a secure location or AWS Secrets Manager: https://aws.amazon.com/secrets-manager/
-    return 'BM1CSFmMkzlRqyK+oX74XIGneD3Hg1BLrZ7Oej6vjw+X';
-}
-
-?>
