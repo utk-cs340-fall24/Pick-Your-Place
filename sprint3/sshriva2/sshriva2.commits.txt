@@ -1,1 +1,94 @@
-insert info here
+argentina.html:
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  56)      <!-- Country Title -->
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  57)     <div class="container text-center mt-4">
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  58)       <h1 id="countryTitle">Argentina</h1> 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59)     </div>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  60) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  61) 
+
+france2.html:
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  54) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55)      <!-- Country Title -->
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  56)     <div class="container text-center mt-4">
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  57)       <h1 id="countryTitle">France</h1> 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  58)     </div>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59) 
+
+japan.html:
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  56)      <!-- Country Title -->
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  57)      <div class="container text-center mt-4">
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  58)       <h1 id="countryTitle">Japan</h1> 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59)     </div>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  60) 
+
+morroco.html:
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  54) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55)      <!-- Country Title -->
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  56)      <div class="container text-center mt-4">
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  57)       <h1 id="countryTitle">Morocco</h1> 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  58)     </div>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59) 
+
+us.html:
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  54) 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55)      <!-- Country Title -->
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  56)     <div class="container text-center mt-4">
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  57)       <h1 id="countryTitle">United States</h1> 
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  58)     </div>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59) 
+
+bucket_list.js:
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  71)                 // Generate checkboxId by removing spaces
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  72)                 const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  73)                 const checkbox = document.getElementById(checkboxId);
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  74)                 if (checkbox) {
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  75)                     checkbox.checked = false; // Uncheck the checkbox
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  76)                 }
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  79) 
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  80)          // Ensure checkbox is checked if city is in the bucket list
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  81)          const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  82)          const checkbox = document.getElementById(checkboxId);
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  83)          if (checkbox) {
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  84)              checkbox.checked = true; // Check the checkbox
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  85)          }
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400  86)  
+
+data.js:
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 472)                 name: "Hollywood Sign",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 473)                 img: "img/us/los-angeles/TS1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 474)                 blurb: "The Hollywood Sign, perched on Mount Lee in the Hollywood Hills, is a world-famous symbol of the entertainment industry. Originally created in 1923 as Hollywoodland for a real estate promotion, it has since become an iconic landmark of Los Angeles. While the sign itself is fenced off, visitors can enjoy great views from various spots like Griffith Observatory, Lake Hollywood Park, and along hiking trails in Griffith Park. The area offers scenic photo opportunities, and the sign remains a must-see for anyone exploring Hollywood.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 478)                 name: "Universal Studios",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 479)                 img: "img/us/los-angeles/TS2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 480)                 blurb: "Universal Studios Hollywood is a famous film studio and theme park in Los Angeles, known for combining thrilling attractions with a behind-the-scenes look at the entertainment industry. Visitors can enjoy rides and shows inspired by popular movies and TV shows, like Jurassic World, Harry Potter, and Transformers, immersing themselves in cinematic worlds with state-of-the-art technology. The park also offers the iconic Studio Tour, where guests can explore real film sets and see special effects demonstrations. With shopping, dining, and a lively atmosphere on the adjacent Universal CityWalk, Universal Studios Hollywood is a must-visit for fans of movies and theme parks alike.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 486)                 name: "Bestia",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 487)                 img: "img/us/los-angeles/PTE1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 488)                 blurb: "Located in LA's Arts District, Bestia is a trendy, industrial-style Italian restaurant known for its lively atmosphere and open kitchen. The menu features handmade pastas like Bottarga and Pork Sausage, alongside wood-fired pizzas, charcuterie boards, and seasonal vegetables. Their butterscotch budino dessert is a fan favorite. Due to its popularity, reservations are highly recommended and often book up weeks in advance. Bestia’s vibrant crowd makes it a top choice for food enthusiasts and social gatherings.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 492)                 name: "Republique",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 493)                 img: "img/us/los-angeles/PTE2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 494)                 blurb: "Located on La Brea Avenue in a historic building, Republique offers a French-inspired dining experience in a beautiful space with high ceilings, large windows, and a mix of modern and rustic decor. The menu is varied, covering breakfast through dinner, with popular dishes like the Croque Madame, roasted chicken, and seasonal vegetables, as well as an impressive selection of pastries and baked goods. Reservations are recommended, especially for dinner, as the bustling yet relaxed atmosphere makes it ideal for both casual meals and special occasions.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 500)                 name: "The Hollywood Roosevelt",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 501)                 img: "img/us/los-angeles/LO1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 502)                 blurb: "Located on Hollywood Boulevard near the Walk of Fame, The Hollywood Roosevelt is a historic luxury hotel that opened in 1927, blending old Hollywood charm with modern amenities. It features elegant rooms, a stylish pool area, and classic dining options like 25 Degrees for gourmet burgers. Known for its vintage vibe and rich history, the hotel has hosted numerous celebrities over the years, creating a glamorous, lively atmosphere enjoyed by tourists and locals alike.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 506)                 name: "Shutters on the Beach",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 507)                 img: "img/us/los-angeles/LO2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 508)                 blurb: "Located on Santa Monica Beach, Shutters on the Beach is a coastal luxury hotel offering a quintessential California experience with charming shingle-style architecture and stunning ocean views. The hotel features spacious rooms with classic coastal decor, a relaxing spa, and a beautiful outdoor pool, along with direct beach access just steps from the Santa Monica Pier and Third Street Promenade. With its relaxed, elegant vibe, Shutters is ideal for couples and families seeking a beachside getaway.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 520)                 name: "The Statue of Liberty",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 521)                 img: "img/us/new-york/TS1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 522)                 blurb: "The Statue of Liberty is an iconic symbol of freedom and democracy located on Liberty Island in New York Harbor. Gifted to the United States by France in 1886, the statue was designed by French sculptor Frédéric Auguste Bartholdi and represents Libertas, the Roman goddess of freedom. Standing at 305 feet tall from the base to the tip of the torch, it features a copper exterior that has developed a distinctive green patina over time. The statue holds a torch in her right hand, symbolizing enlightenment, and a tablet inscribed with the date of the American Declaration of Independence in her left. As one of the most recognized landmarks in the world, the Statue of Liberty serves as a welcoming beacon for immigrants and a powerful reminder of the values of liberty and opportunity that the United States represents. Visitors can explore the island, learn about the statue's history at the museum, and even climb to the crown for panoramic views of the harbor and Manhattan skyline.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 526)                 name: "The Empire State Building",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 527)                 img: "img/us/new-york/TS2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 528)                 blurb: "The Empire State Building is an iconic skyscraper located in Midtown Manhattan, New York City, and is one of the most recognizable landmarks in the world. Completed in 1931, this Art Deco masterpiece stands 1,454 feet tall, including its antenna, and has 102 floors. Designed by architect William F. Lamb, the building was the tallest in the world until 1970 and remains a symbol of American ingenuity and ambition. Visitors can access observatories on the 86th and 102nd floors, offering breathtaking panoramic views of the New York City skyline and beyond. The building is also renowned for its stunning lighting displays, which change colors to commemorate holidays and events. As a cultural icon, the Empire State Building has appeared in numerous films and television shows, further cementing its status as a must-visit destination for tourists and locals alike.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 534)                 name: "Katz's Delicatessen",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 535)                 img: "img/us/new-york/PTE1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 536)                 blurb: "Katz's Delicatessen is a legendary Jewish deli located on the Lower East Side of Manhattan, renowned for its mouthwatering pastrami sandwiches and rich history. Established in 1888, this iconic eatery has become a must-visit for both locals and tourists. The menu features classic deli items, but the pastrami on rye is the standout, served with mustard and piled high. Guests can enjoy the vibrant atmosphere, filled with the chatter of patrons and the hustle of the staff, while they immerse themselves in the deli's storied past, which includes appearances in films and television shows. Katz's is not just a meal; it's an experience that captures the essence of New York's culinary heritage.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 540)                 name: "Le Bernardin",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 541)                 img: "img/us/new-york/PTE2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 542)                 blurb: "Le Bernardin is a Michelin-starred French seafood restaurant that stands as a pinnacle of fine dining in New York City. Located in Midtown Manhattan, it is celebrated for its exquisite dishes crafted by Chef Éric Ripert, who emphasizes fresh ingredients and meticulous technique. The restaurant offers a prix fixe menu that showcases a variety of seafood preparations, including their renowned poached lobster and delicate tuna tartare. The elegant decor, complete with soft lighting and a refined ambiance, sets the stage for a memorable dining experience. With its commitment to culinary excellence and impeccable service, Le Bernardin is a destination for food lovers seeking a taste of sophistication in the heart of the city.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 548)                 name: "The Standard, High Line",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 549)                 img: "img/us/new-york/LO1.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 550)                 blurb: "The Standard, High Line is a trendy hotel located in the Meatpacking District, offering stunning views of the Hudson River and the Manhattan skyline. With its modern design and chic decor, the hotel features spacious rooms equipped with floor-to-ceiling windows that provide ample natural light. Guests can enjoy the rooftop bar, Le Bain, which boasts a lively atmosphere and sweeping views of the city, as well as a vibrant dining scene with farm-to-table options at The Standard Grill. The hotel is conveniently situated near popular attractions like the High Line Park and Chelsea Market, making it an ideal base for exploring New York City.",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 554)                 name: "The Langham, New York, Fifth Avenue",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 555)                 img: "img/us/new-york/LO2.jpeg",
+50f0e749 (sanya-shrivastava 2024-10-27 20:19:19 -0400 556)                 blurb: "The Langham, New York, Fifth Avenue is a luxurious hotel that combines modern elegance with exceptional service. Located just steps away from iconic landmarks such as the Empire State Building and Bryant Park, the hotel offers spacious rooms with stylish furnishings and upscale amenities. Guests can indulge in fine dining at the on-site restaurant, Ai Fiori, which serves Italian and French cuisine, or unwind at the chic Chuan Body + Soul spa. The Langham's central location, coupled with its commitment to providing a first-class experience, makes it a favorite among travelers seeking both comfort and sophistication in the heart of Manhattan.",
