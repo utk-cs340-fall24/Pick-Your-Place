@@ -30,8 +30,6 @@ https://github.com/utk-cs340-fall24/Pick-Your-Place/edit/main/sprint3/nmaheshw/n
 
 ### Files you worked on
 - Pick-Your-Place/src/css/main.css
-- Pick-Your-Place/src/japan.html
-- Pick-Your-Place/src/css/japan.css
 - Pick-Your-Place/src/js/data.js 
 - Pick-Your-Place/src/js/search_bar.js 
 - Pick-Your-Place/src/js/ajax.js 

@@ -1,1 +1,443 @@
-insert info here
+===============
+src/css/main.css
+===============
+
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   1) /*Country at the top of our page*/
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   2) #countryTitle {
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   3)   font-family: "Urbanist";
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   4)   font-weight: bold;
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   5)   font-size: 50px;
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   6)   letter-spacing: 4px;
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   7) }
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400   8) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400   9) .nav-header {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  10)   display: flex;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  11)   align-items: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  12)   justify-content: space-between; /* Align items to the ends */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  13)   padding: 30px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  14)   background-color: beige; /* Add background color for better visibility */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  15) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  16) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  17) .nav-header .header-text a {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  18)   font-size: 60px !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  19)   font-family: "Urbanist", sans-serif;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  20)   font-weight: lighter;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  21)   color: brown !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  22)   text-decoration: none; /* Remove underline from link */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  23) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  24) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  25) .navbar-brand-hr {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  26)   width: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  27)   margin: 0 auto;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  28)   background-color: orange;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  29)   border: none;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  30)   height: 5px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  31) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  32) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  33) .bucket-icon {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  34)   transition: transform 0.3s ease;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  35)   padding: 0;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  36)   background-color: transparent; /* Make background transparent */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  37)   border: none;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  38) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  39) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  40) .bucket-icon:hover {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  41)   transform: scale(1.2);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  42)   cursor: pointer;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  43) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  44) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  45) /*Offcanvas for destinations list*/
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  46) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  47) .oc-bucket-list {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  48)   background-color: beige !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  49)   border: none !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  50)   padding: 15px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  51) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  52) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  53) .oc-bucket-list-header {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  54)   background-color: beige !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  55) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  56) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  57) .oc-bucket-list-title {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  58)   font-family: "Urbanist" !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  59)   font-size: 30px !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  60)   font-weight: lighter;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  61) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  62) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  63) .destinations-offcanvas-label {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  64)   font-family: "Urbanist";
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  65)   background-color: beige;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  66)   padding-left: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  67)   padding-right: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  68)   font-size: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  69) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  70) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  71) .destinations-hr {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  72)   width: 93%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  73)   margin: 0 auto;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  74)   background-color: rgb(63, 44, 21);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  75)   border: none;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  76)   height: 1px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  77) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  78) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  79) .list-offcanvas {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  80)   background-color: beige !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  81) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  82) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  83) .oc-bucket-list-group {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  84)   padding: 10px !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  85) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  86) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  87) .oc-bucket-list-group-item {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  88)   display: flex !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  89)   font-family: "Urbanist";
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  90)   justify-content: space-between;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  91)   align-items: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  92)   transition: background-color 0.3s ease, color 0.3s ease;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  93)   padding: 10px !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  94)   background-color: rgb(248, 201, 144) !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  95)   cursor: pointer !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  96)   border: 1px solid white !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  97)   transition: background-color 0.3s ease, transform 0.3s ease;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  98) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400  99) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 100) .list-group-item-span {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 101)   flex-grow: 1;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 102) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 103) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 104) /* Styles for list items */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 105) .oc-bucket-list-group-item:hover {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 106)   background-color: bisque !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 107)   transform: scale(1.02) !important;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 108) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 109) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 110) .btn-delete-list-item {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 111)   margin-left: auto;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 112)   padding-left: 3px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 113)   text-align: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 114)   color: whitesmoke;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 115)   background-color: rgb(165, 121, 68);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 116)   border: none;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 117)   border-radius: 5px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 118)   transition: background-color 0.2s ease, transform 0.2s ease;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 119) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 120) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 121) .btn-delete-list-item:hover {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 122)   background-color: rgb(75, 52, 25);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 123)   transform: scale(1.02);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 124) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 125) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 126) /*City Cards*/
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 127) .fixed-size-img {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 128)   width: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 129)   height: 200px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 130)   object-fit: cover;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 131) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 132) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 133) .city-card {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 134)   width: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 135)   height: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 136)   opacity: 0.5;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 137) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 138) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 139) .result-items {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 140)   height: 16em;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 141)   width: 18em;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 142) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 143) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 144) .city-card-check-box {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 145)   display: block;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 146)   padding-left: 17.9em;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 147) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 148) 
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 149) .city-card-input {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 150)   width: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 151)   height: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 152)   padding: 0;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 153)   margin: 0;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 154)   vertical-align: bottom;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 155)   position: relative;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 156)   top: -240px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 157)   left: -30px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 158)   accent-color: rgba(249, 250, 179, 0.238);
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 159) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 160) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 161) /*Accordions*/
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 162) .topSpots-accordion {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 163)   display: block;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 164)   width: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 165) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 166) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 167) .centered-nested-accordian-img-container {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 168)   display: flex;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 169)   justify-content: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 170)   align-items: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 171)   width: 100%;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 172) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 173) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 174) .nested-accordion-img {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 176)   height: 200px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 177)   align-items: center;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 178) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 179) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 180) .add-remove-button {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 181)   display: block;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 182)   margin-left: auto;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 183) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 184) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 185) .nested-first {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 186)   padding: 5px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 187) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 188) 
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 189) /* Search bar */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 190) .search-bar {
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 191)     margin: 20px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 192)     max-width: -600px;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 194) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 195) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 196) .search-box {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 197)   width: 100%;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 198)   padding: 10px;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 199)   border: 1px solid #ccc;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 200)   border-radius: 5px;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 201)   font-size: 16px;
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 202) }
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 203) 
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 204) .card {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 205)   margin: 1%; /* Add margin for spacing */
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 206) }
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400 207) 
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400 208) /*Hide the non-matching cards*/
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 209) .card.hidden {
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400 210)   opacity: 0; 
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400 211)   pointer-events: none; /*blocks any interaction*/
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 212) }
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 213) 
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 214) /* Keep the matching card in position */
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 215) .card.match {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 216)   opacity: 1; /* Ensure matching card is visible */
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 217)   position: absolute; /* Position it relative to the card container */
+104bec77 (Nia M                   2024-10-29 08:53:04 -0400 218)   top: 320px; /*Position it below the search bar*/
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 219)   left: 100px; /* Position from the left */
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 220)   z-index: 10; /* Ensure it appears above other cards */
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 221) }
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 222) 
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 223) .form-check {
+ac17bb04 (Nia M                   2024-10-22 10:04:44 -0400 224)   position: absolute;
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 225) }
+
+===============
+src/js/ajax.js
+===============
+
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  1) import {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  2)   argentinaCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  3)   franceCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  4)   japanCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  5)   moroccoCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  6)   usCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  7) } from "./data.js";
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  8)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400  9) const allData = [
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 10)   ...argentinaCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 11)   ...franceCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 12)   ...japanCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 13)   ...moroccoCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 14)   ...usCities,
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 15) ];
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 16)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 17) document
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 18)   .getElementById("sendBucketList")
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 19)   .addEventListener("click", function () {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 20)     //sendBucketList is a button that serves as the trigger when clicked
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 21)     sendBucketList(allData);
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 22)   });
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 23)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 24) function sendBucketList(data) {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 25)   fetch("process_bucket_list.php", {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 26)     method: "POST",
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 27)     headers: {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 28)       "Content-Type": "application/json",
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 29)     },
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 30)     body: JSON.stringify(data),
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 31)   })
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 32)     .then((response) => {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 33)       if (response.status === 200) {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 34)         return response.json(); // Parses JSON response if successful
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 35)       } else {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 36)         throw new Error("Network response was not ok.");
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 37)       }
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 38)     })
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 39)     .then((data) => console.log("Data sent successfully:", data))
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 40)     .catch((error) => console.error("Error:", error));
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 41) }
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 42)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 43) //this needs to go in process-bucket-list.php:
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 44) /*
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 45)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 46) <?php
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 47) header("Content-Type: application/json");
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 48)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 49) // Decode the JSON input
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 50) $cityData = json_decode(file_get_contents("php://input"), true);
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 51)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 52) if ($cityData) {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 53)     // Process or save data as needed, e.g., store in a database
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 54)     echo json_encode(["status" => "success", "message" => "Data received"]);
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 55) } else {
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 56)     http_response_code(400);
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 57)     echo json_encode(["status" => "error", "message" => "Invalid data"]);
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 58) }
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 59) ?>
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 60)
+641ad5b6 (Nia M 2024-10-25 09:37:50 -0400 61) */
+
+===============
+src/js/data.js
+===============
+
+^8554bba (Nia M                   2024-10-15 10:47:59 -0400 263) export const japanCities = [
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 264)     {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 269)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 270)           name: "Nijo (Nijojo) Castle",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 271)           img: "img/japan/kyoto/TS1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 272)           blurb: `Nijo Castle (Nijojo) is a UNESCO World Heritage Site that showcases the architectural 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 273)                   splendor of the Edo period, featuring beautiful gardens and stunning wooden structures. 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 274)                   Visitors can stroll through its historic halls, admire intricate wall paintings, and 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 275)                   experience the unique nightingale floors that chirp underfoot.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 276)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 277)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 278)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 279)           name: "The Kyoto Railway Museum",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 280)           img: "img/japan/kyoto/TS2.jpeg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 281)           blurb: `The Kyoto Railway Museum offers an immersive journey through Japan's rich 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 282)             railway history, showcasing an impressive collection of trains and interactive exhibits. 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 283)             Visitors can explore vintage locomotives, learn about the evolution of rail travel, 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 284)             and even experience a simulated train ride.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 285)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 286)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 289)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 290)           name: "Fire Ramen Kyoto - Menbaka",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 291)           img: "img/japan/kyoto/PE1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 292)           blurb: ` A unique dining experience that combines delicious ramen with a dramatic flair, 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 293)           as chefs ignite the broth for a spectacular presentation. Guests can enjoy rich, flavorful 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 294)           noodles while witnessing the captivating fire show-- a must-visit spot for 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 295)           adventurous food lovers.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 296)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 297)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 298)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 299)           name: "Matsuzakagyu What's Kyoto Muromachi",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 300)           img: "img/japan/kyoto/PE2.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 301)           blurb: `Specializes in exquisite Matsuzaka beef, renowned for its exceptional 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 302)           marbling and flavor, providing a gourmet experience in 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 303)           the heart of Kyoto. Diners can savor a variety of dishes prepared with this premium 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 304)           beef, all within a sophisticated setting that highlights the essence of Japanese cuisine.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 305)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 306)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 309)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 310)           name: "Sora Niwa Terrace Kyoto",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 311)           img: "img/japan/kyoto/L1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 312)           blurb: `A stylish hotel that combines modern comfort with 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 313)           traditional Japanese aesthetics, offering guests a serene retreat in the heart of the city.
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 314)            With spacious rooms, a tranquil garden terrace, and easily accessible local attractions, it 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 315)            is ideal for both relaxation and cultural immersion.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 316)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 317)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 318)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 319)           name: "Hiiragiya Hotel",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 320)           img: "img/japan/kyoto/L2.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 321)           blurb: `A renowned ryokan that embodies the elegance of Kyoto’s traditional 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 322)           hospitality, offering guests a unique blend of luxurious comfort and rich cultural heritage. 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 323)           It provides an unforgettable experience in an environment reflective of the charm of old Japan.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 324)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 325)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 327)     },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 328)     {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 333)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 334)           name: "Shinjuku Gyoen National Garden",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 335)           img: "img/japan/tokyo/TS1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 336)           blurb: `A serene urban oasis that beautifully blends traditional Japanese, English, 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 337)           and French garden landscapes. Visitors can enjoy relaxing strolls through its lush 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 338)           greenery and vibrant seasonal flowers as a peaceful escape from the 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 339)           busy city.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 340)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 341)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 342)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 343)           name: "TeamLab Borderless Art Museum",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 344)           img: "img/japan/tokyo/TS2.jpeg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 345)           blurb: `An innovative digital art museum that immerses visitors 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 346)           in a captivating world of interactive installations and stunning visual displays. Its 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 347)           dynamic exhibits offer a unique and engaging experience for art enthusiasts and 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 348)           curious minds alike`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 349)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 350)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 353)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 354)           name: "Tsuta Ramen",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 355)           img: "img/japan/tokyo/PE1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 356)           blurb: `A Michelin-starred noodle shop celebrated for its delicate 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 357)           flavors and handcrafted noodles, offering a unique take on traditional ramen with 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 358)           a rich truffle oil-infused broth. Guests can savor a bowl of this culinary 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 359)           masterpiece in a cozy setting, where each dish reflects a commitment to quality and artistry.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 360)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 361)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 362)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 363)           name: "Ginza Kojyu",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 364)           img: "img/japan/tokyo/PE2.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 365)           blurb: `Ginza Kojyu is a prestigious kaiseki restaurant that showcases the artistry 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 366)           of Japanese haute cuisine, featuring seasonal ingredients and beautifully presented 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 367)           dishes. Diners are treated to an exquisite multi-course meal in an elegant atmosphere, 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 368)           making it a memorable experience for those seeking a taste of luxury in Tokyo.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 369)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 370)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 373)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 374)           name: "The Peninsula Tokyo",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 375)           img: "img/japan/tokyo/L1.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 376)           blurb: `The Peninsula Tokyo is a luxurious hotel that combines modern elegance with 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 377)           traditional Japanese hospitality, offering stunning views of the Imperial Palace. 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 378)           Guests can enjoy spacious rooms, exquisite dining options, and a tranquil spa, 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 379)           making it a perfect retreat in the heart of the city.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 380)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 381)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 382)         {
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 383)           name: "Shinjuku Granbell Hotel",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 384)           img: "img/japan/tokyo/L2.jpg",
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 385)           blurb: `Shinjuku Granbell Hotel features stylish, contemporary accommodations with
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 386)            breathtaking views of Tokyo's skyline, making it an ideal base for exploring the 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 387)            vibrant Shinjuku district. With chic design, a rooftop bar, and easy access to 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 388)            transport, it caters to both business and leisure travelers seeking comfort and 
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 389)            convenience.`,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 390)           isSelected: false,
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 391)         },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 393)     },
+66e994e7 (Nia M                   2024-10-29 08:23:28 -0400 394)   ];
+
+
+====================
+src/js/search_bar.js
+====================
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  1) document.getElementById("searchform");
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  2) document.addEventListener("keyup", function () {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  3)   let input = document.getElementById("searchform").value.toLowerCase();
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  4)   let items = document.querySelectorAll(".result-items");
+^8554bba (Nia M 2024-10-15 10:47:59 -0400  5)
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  6)   items.forEach(function (item) {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  7)     if (item.innerHTML.toLowerCase().includes(input)) {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  8)       //item.style.display = "block"; // Show items that match the query
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400  9)       item.classList.remove("hidden");
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 10)       item.classList.add("match");
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 11)     } else {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 12)       //item.style.display = "none"; // Hide items that don't match
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 13)       item.classList.remove("match");
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 14)       item.classList.add("hidden");
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 15)     }
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 16)   });
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 17)
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 18)   // Reset all cards to original positions if input is empty
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 19)   if (input === "") {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 20)     items.forEach(function (item) {
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 21)       item.classList.remove("hidden"); // Show all items
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 22)       item.classList.remove("match"); // Remove match class
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 23)     });
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 24)   }
+ac17bb04 (Nia M 2024-10-22 10:04:44 -0400 25) });
+
