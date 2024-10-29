@@ -244,7 +244,7 @@ export const franceCities = [
             {
                 name: "Kimpton St Honoré Paris",
                 img: "img/france/paris/lodge_1.jpg",
-                blurb: "P-L1 blurb",
+                blurb: "Kimpton St Honoré Paris is steps from the Opera Garnier, Faubourg St Honoré, and Tuileries Gardens. At Montecito, the hotel restaurant, guests can dine in a spacious area with a lush patio viewed through bay windows. The hotel also features a serene spa, an indoor heated pool, and treatments for ultimate relaxation. The Sequoia rooftop bar offers panoramic views of Paris.",
                 isSelected: false,
             },
             {
