@@ -161,100 +161,100 @@ export const argentinaCities = [
 * To import: import { franceCities } from "./data.js";
 */
 export const franceCities = [
-  {
-      name: "Colmar",
-      country: "France",
-      population: "71,163",
-      top_spots: [
-          {
-              name: "F-TS1",
-              img: "",
-              blurb: "F-TS1 blurb",
-              isSelected: true,
-          },
-          {
-              name: "F-TS2",
-              img: "",
-              blurb: "F-TS2 blurb",
-              isSelected: false,
-          },
-      ],
-      places_to_eat: [
-          {
-              name: "F-PE1",
-              img: "",
-              blurb: "F-PE1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "F-PE2",
-              img: "",
-              blurb: "F-PE2 blurb",
-              isSelected: true,
-          },
-      ],
-      lodging: [
-          {
-              name: "F-L1",
-              img: "",
-              blurb: "F-L1 blurb",
-              isSelected: true,
-          },
-          {
-              name: "F-L2",
-              img: "",
-              blurb: "F-L2 blurb",
-              isSelected: false,
-          },
-      ],
-  },
-  {
-      name: "Paris",
-      country: "France",
-      population: "11,276,701",
-      top_spots: [
-          {
-              name: "P-TS1",
-              img: "",
-              blurb: "P-TS1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "P-TS2",
-              img: "",
-              blurb: "P-TS2 blurb",
-              isSelected: false,
-          },
-      ],
-      places_to_eat: [
-          {
-              name: "P-PE1",
-              img: "",
-              blurb: "P-PE1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "P-PE2",
-              img: "",
-              blurb: "P-PE2 blurb",
-              isSelected: false,
-          },
-      ],
-      lodging: [
-          {
-              name: "P-L1",
-              img: "",
-              blurb: "P-L1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "P-L2",
-              img: "",
-              blurb: "P-L2 blurb",
-              isSelected: false,
-          },
-      ],
-  },
+    {
+        name: "Colmar",
+        country: "France",
+        population: "71,163",
+        top_spots: [
+            {
+                name: "La Petite Venise (The Little Venice",
+                img: "img/france/colmar/spot_1.jpeg",
+                blurb: "La Petite Venise in Colmar is a charming riverside neighborhood known for its picturesque canals, colorful buildings, and lively cafes. It offers the city’s most iconic views!",
+                isSelected: true,
+            },
+            {
+                name: "Eglise des Dominicains",
+                img: "img/france/colmar/eglise_spot_2.jpg",
+                blurb: "Eglise des Dominicains is a peaceful 14th-century Gothic church with stunning stained-glass windows, an intricate high-vaulted ceiling, and the beautiful Vierge au Buisson de Roses painting. It is open Tuesday - Sunday from March 25th to Dec 26th.",
+                isSelected: false,
+            },
+        ],
+        places_to_eat: [
+            {
+                name: "Le 20ème Colmar",
+                img: "img/france/colmar/eat_1.jpg",
+                blurb: "This cozy restaurant offers authentic seasonal Colamar cuisine with stylishly presented meat & fish dishes, plus Alsatian wines!",
+                isSelected: false,
+            },
+            {
+                name: "Bistrot des Copains de Colmar",
+                img: "img/france/colmar/eats_2.jpg",
+                blurb: "Bistrot des Copains de Colmar is a local restaurant that provides authentic French cuisine and attentive service, with a charming summer terrace overlooking the cathedral for a cheerful dining experience.",
+                isSelected: true,
+            },
+        ],
+        lodging: [
+            {
+                name: "Hotel Le Colombier Colmar",
+                img: "img/france/colmar/lodge_1.jpg",
+                blurb: "Hotel Le Colombier is a charming 4-star hotel in Colmar’s Little Venice district, featuring an organic Alsatian breakfast, a cozy courtyard with a fountain, and eco-friendly amenities like a fitness room, bio sauna, and electric-car charging station.",
+                isSelected: true,
+            },
+            {
+                name: "Hotel Le Marechal Colmar",
+                img: "img/france/colmar/lodge_2.jpg",
+                blurb: "This 1565 historic house offers 30 uniquely decorated rooms that mix authenticity with modern amenities. Located on the Alsace wine route, the hotel features a gourmet restaurant, A l’Echevin, and amenities like free Wi-Fi, a riverside terrace, and jacuzzi bathrooms.",
+                isSelected: false,
+            },
+        ],
+    },
+    {
+        name: "Paris",
+        country: "France",
+        population: "11,276,701",
+        top_spots: [
+            {
+                name: "Louvre Museum",
+                img: "img/france/paris/spot_1.jpeg",
+                blurb: "The Louvre, a historic fortress-turned-museum, features a vast collection of art from antiquities to masterpieces by da Vinci and Michelangelo. Visitors can explore thematic trails and guided tours, with various entry points to enhance their experience.",
+                isSelected: false,
+            },
+            {
+                name: "Cathédrale Notre-Dame de Paris",
+                img: "img/france/paris/spot2.jpeg",
+                blurb: "Notre-Dame Cathedral is a stunning French Gothic architecture located on Île de la Cité in Paris. This historic Catholic cathedral is dedicated to the Virgin Mary and features breathtaking stained glass windows and other significant artifacts",
+                isSelected: false,
+            },
+        ],
+        places_to_eat: [
+            {
+                name: "Le Chardenoux",
+                img: "img/france/paris/eat_1.jpeg",
+                blurb: "At the historic Parisian bistro Le Chardenoux guests are drawn into a Belle Époque atmosphere with painted ceilings, Art Nouveau details, and a 100-year-old bar. Celebrity chef Cyril Lignac’s menu offers seafood highlights like lobster roll, salt-crusted sea bass, and tuna tartar. The cozy dining room and sunlit terrace provide a warm ambiance, perfect for enjoying inventive, seafood-focused dishes and cocktails located in the 11th arrondissement.",
+                isSelected: false,
+            },
+            {
+                name: "Le Petit Vendôme",
+                img: "img/france/paris/eat_2.jpeg",
+                blurb: "Close to Place Vendôme, this charming, down-to-earth luncheonette is a hit among office workers, luxury boutique staff, and tourists alike. The decor, with its bright chairs and cracked tile floor, exudes vintage appeal, but it’s the classic French fare that draws the crowds. Think baguette sandwiches with ham and Fourme d’Ambert blue cheese, comforting dishes like escargots, onion soup, duck confit with sautéed potatoes, and desserts like chocolate mousse or tarte Tatin. Prices are modest for the central location, making it a true Parisian experience. Arrive early to beat the crowd! Located in the 2nd arrondissement.",
+                isSelected: false,
+            },
+        ],
+        lodging: [
+            {
+                name: "Kimpton St Honoré Paris",
+                img: "img/france/paris/lodge_1.jpg",
+                blurb: "Kimpton St Honoré Paris is steps from the Opera Garnier, Faubourg St Honoré, and Tuileries Gardens. At Montecito, the hotel restaurant, guests can dine in a spacious area with a lush patio viewed through bay windows. The hotel also features a serene spa, an indoor heated pool, and treatments for ultimate relaxation. The Sequoia rooftop bar offers panoramic views of Paris.",
+                isSelected: false,
+            },
+            {
+                name: "Le Grand Mazarin",
+                img: "img/france/paris/lodge_2.jpg",
+                blurb: "A 5-star hotel in Paris’s Marais, combines classic French charm with modern flair. Its rooms and suites showcase artistic elegance, crafted by top French artisans. The hotel’s Boubalé Restaurant offers a fusion of Mediterranean and Levantine flavors, emphasizing sharing and tradition. Amenities include an 8-meter pool, a vaulted fitness room, and a serene treatment space. Set in the vibrant Marais, near the Hôtel de Ville, Le Grand Mazarin places guests at the heart of Parisian style and discovery.",
+                isSelected: false,
+            },
+        ],
+    },
 ];
 
 /**
