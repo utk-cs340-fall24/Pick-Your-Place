@@ -168,7 +168,7 @@ export const franceCities = [
         top_spots: [
             {
                 name: "La Petite Venise (The Little Venice",
-                img: "img/france/colmar/spot_1.jpg",
+                img: "img/france/colmar/spot_1.jpeg",
                 blurb: "La Petite Venise in Colmar is a charming riverside neighborhood known for its picturesque canals, colorful buildings, and lively cafes. It offers the city’s most iconic views!",
                 isSelected: true,
             },
@@ -229,13 +229,13 @@ export const franceCities = [
         places_to_eat: [
             {
                 name: "Le Chardenoux",
-                img: "Le Chardenoux",
+                img: "img/france/paris/eat_1.jpeg",
                 blurb: "At the historic Parisian bistro Le Chardenoux guests are drawn into a Belle Époque atmosphere with painted ceilings, Art Nouveau details, and a 100-year-old bar. Celebrity chef Cyril Lignac’s menu offers seafood highlights like lobster roll, salt-crusted sea bass, and tuna tartar. The cozy dining room and sunlit terrace provide a warm ambiance, perfect for enjoying inventive, seafood-focused dishes and cocktails located in the 11th arrondissement.",
                 isSelected: false,
             },
             {
                 name: "Le Petit Vendôme",
-                img: "img/france/paris/eat_2.jpg",
+                img: "img/france/paris/eat_2.jpeg",
                 blurb: "Close to Place Vendôme, this charming, down-to-earth luncheonette is a hit among office workers, luxury boutique staff, and tourists alike. The decor, with its bright chairs and cracked tile floor, exudes vintage appeal, but it’s the classic French fare that draws the crowds. Think baguette sandwiches with ham and Fourme d’Ambert blue cheese, comforting dishes like escargots, onion soup, duck confit with sautéed potatoes, and desserts like chocolate mousse or tarte Tatin. Prices are modest for the central location, making it a true Parisian experience. Arrive early to beat the crowd! Located in the 2nd arrondissement.",
                 isSelected: false,
             },
