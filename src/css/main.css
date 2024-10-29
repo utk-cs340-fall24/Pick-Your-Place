@@ -1,3 +1,11 @@
+/*Country at the top of our page*/
+#countryTitle {
+  font-family: "Urbanist";
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 4px;
+}
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -195,20 +203,19 @@
 
 .card {
   margin: 1%; /* Add margin for spacing */
-  /*transition: transform 0.6s ease, opacity 0.6s ease;  Smooth transition for all cards */
 }
-/* Hide the non-matching cards */
+
+/*Hide the non-matching cards*/
 .card.hidden {
-  /*transform: translateX(-100%); Slide out to the left */
-  opacity: 0; /* Fade out */
-  pointer-events: none; /* Prevent interaction */
+  opacity: 0; 
+  pointer-events: none; /*blocks any interaction*/
 }
 
 /* Keep the matching card in position */
 .card.match {
   opacity: 1; /* Ensure matching card is visible */
   position: absolute; /* Position it relative to the card container */
-  top: 270px; /* Position it below the search bar */
+  top: 320px; /*Position it below the search bar*/
   left: 100px; /* Position from the left */
   z-index: 10; /* Ensure it appears above other cards */
 }
