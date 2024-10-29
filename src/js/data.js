@@ -261,101 +261,138 @@ export const franceCities = [
 * To import: import { japanCities } from "./data.js";
 */
 export const japanCities = [
-  {
+    {
       name: "Kyoto",
       country: "Japan",
       population: "1,459,640",
       top_spots: [
-          {
-              name: "K-TS1",
-              img: "",
-              blurb: "K-TS1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "K-TS2",
-              img: "",
-              blurb: "K-TS2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "Nijo (Nijojo) Castle",
+          img: "img/japan/kyoto/TS1.jpg",
+          blurb: `Nijo Castle (Nijojo) is a UNESCO World Heritage Site that showcases the architectural 
+                  splendor of the Edo period, featuring beautiful gardens and stunning wooden structures. 
+                  Visitors can stroll through its historic halls, admire intricate wall paintings, and 
+                  experience the unique nightingale floors that chirp underfoot.`,
+          isSelected: false,
+        },
+        {
+          name: "The Kyoto Railway Museum",
+          img: "img/japan/kyoto/TS2.jpeg",
+          blurb: `The Kyoto Railway Museum offers an immersive journey through Japan's rich 
+            railway history, showcasing an impressive collection of trains and interactive exhibits. 
+            Visitors can explore vintage locomotives, learn about the evolution of rail travel, 
+            and even experience a simulated train ride.`,
+          isSelected: false,
+        },
       ],
       places_to_eat: [
-          {
-              name: "K-PE1",
-              img: "",
-              blurb: "K-PE1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "K-PE2",
-              img: "",
-              blurb: "K-PE2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "Fire Ramen Kyoto - Menbaka",
+          img: "img/japan/kyoto/PE1.jpg",
+          blurb: ` A unique dining experience that combines delicious ramen with a dramatic flair, 
+          as chefs ignite the broth for a spectacular presentation. Guests can enjoy rich, flavorful 
+          noodles while witnessing the captivating fire show-- a must-visit spot for 
+          adventurous food lovers.`,
+          isSelected: false,
+        },
+        {
+          name: "Matsuzakagyu What's Kyoto Muromachi",
+          img: "img/japan/kyoto/PE2.jpg",
+          blurb: `Specializes in exquisite Matsuzaka beef, renowned for its exceptional 
+          marbling and flavor, providing a gourmet experience in 
+          the heart of Kyoto. Diners can savor a variety of dishes prepared with this premium 
+          beef, all within a sophisticated setting that highlights the essence of Japanese cuisine.`,
+          isSelected: false,
+        },
       ],
       lodging: [
-          {
-              name: "K-L1",
-              img: "",
-              blurb: "K-L1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "K-L2",
-              img: "",
-              blurb: "K-L2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "Sora Niwa Terrace Kyoto",
+          img: "img/japan/kyoto/L1.jpg",
+          blurb: `A stylish hotel that combines modern comfort with 
+          traditional Japanese aesthetics, offering guests a serene retreat in the heart of the city.
+           With spacious rooms, a tranquil garden terrace, and easily accessible local attractions, it 
+           is ideal for both relaxation and cultural immersion.`,
+          isSelected: false,
+        },
+        {
+          name: "Hiiragiya Hotel",
+          img: "img/japan/kyoto/L2.jpg",
+          blurb: `A renowned ryokan that embodies the elegance of Kyoto’s traditional 
+          hospitality, offering guests a unique blend of luxurious comfort and rich cultural heritage. 
+          It provides an unforgettable experience in an environment reflective of the charm of old Japan.`,
+          isSelected: false,
+        },
       ],
-  },
-  {
+    },
+    {
       name: "Tokyo",
       country: "Japan",
       population: "8,336,599",
       top_spots: [
-          {
-              name: "T-TS1",
-              img: "",
-              blurb: "T-TS1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "T-TS2",
-              img: "",
-              blurb: "T-TS2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "Shinjuku Gyoen National Garden",
+          img: "img/japan/tokyo/TS1.jpg",
+          blurb: `A serene urban oasis that beautifully blends traditional Japanese, English, 
+          and French garden landscapes. Visitors can enjoy relaxing strolls through its lush 
+          greenery and vibrant seasonal flowers as a peaceful escape from the 
+          busy city.`,
+          isSelected: false,
+        },
+        {
+          name: "TeamLab Borderless Art Museum",
+          img: "img/japan/tokyo/TS2.jpeg",
+          blurb: `An innovative digital art museum that immerses visitors 
+          in a captivating world of interactive installations and stunning visual displays. Its 
+          dynamic exhibits offer a unique and engaging experience for art enthusiasts and 
+          curious minds alike`,
+          isSelected: false,
+        },
       ],
       places_to_eat: [
-          {
-              name: "T-PE1",
-              img: "",
-              blurb: "T-PE1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "T-PE2",
-              img: "",
-              blurb: "T-PE2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "Tsuta Ramen",
+          img: "img/japan/tokyo/PE1.jpg",
+          blurb: `A Michelin-starred noodle shop celebrated for its delicate 
+          flavors and handcrafted noodles, offering a unique take on traditional ramen with 
+          a rich truffle oil-infused broth. Guests can savor a bowl of this culinary 
+          masterpiece in a cozy setting, where each dish reflects a commitment to quality and artistry.`,
+          isSelected: false,
+        },
+        {
+          name: "Ginza Kojyu",
+          img: "img/japan/tokyo/PE2.jpg",
+          blurb: `Ginza Kojyu is a prestigious kaiseki restaurant that showcases the artistry 
+          of Japanese haute cuisine, featuring seasonal ingredients and beautifully presented 
+          dishes. Diners are treated to an exquisite multi-course meal in an elegant atmosphere, 
+          making it a memorable experience for those seeking a taste of luxury in Tokyo.`,
+          isSelected: false,
+        },
       ],
       lodging: [
-          {
-              name: "T-L1",
-              img: "",
-              blurb: "T-L1 blurb",
-              isSelected: false,
-          },
-          {
-              name: "T-L2",
-              img: "",
-              blurb: "T-L2 blurb",
-              isSelected: false,
-          },
+        {
+          name: "The Peninsula Tokyo",
+          img: "img/japan/tokyo/L1.jpg",
+          blurb: `The Peninsula Tokyo is a luxurious hotel that combines modern elegance with 
+          traditional Japanese hospitality, offering stunning views of the Imperial Palace. 
+          Guests can enjoy spacious rooms, exquisite dining options, and a tranquil spa, 
+          making it a perfect retreat in the heart of the city.`,
+          isSelected: false,
+        },
+        {
+          name: "Shinjuku Granbell Hotel",
+          img: "img/japan/tokyo/L2.jpg",
+          blurb: `Shinjuku Granbell Hotel features stylish, contemporary accommodations with
+           breathtaking views of Tokyo's skyline, making it an ideal base for exploring the 
+           vibrant Shinjuku district. With chic design, a rooftop bar, and easy access to 
+           transport, it caters to both business and leisure travelers seeking comfort and 
+           convenience.`,
+          isSelected: false,
+        },
       ],
-  },
-];
+    },
+  ];
+    
 
 /**
 * To import: import { moroccoCities } from "./data.js";
