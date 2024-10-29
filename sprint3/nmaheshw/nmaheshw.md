@@ -15,8 +15,8 @@ https://github.com/utk-cs340-fall24/Pick-Your-Place/edit/main/sprint3/nmaheshw/n
 - I completed issue #61 and #52, and have written the ajax function for issue #65. However, I wouldn't say that the ajax function is complete yet
   because I am still gaining an understanding of the role that the function plays in light of the overall application. As I work with my teammate who
   completed php-related issues in earlier sprints throughout this week and the next, I will modify this function to bring it to its final form. Until 
-  then, this function remains in progress, with the first draft of the function having been written by me during this sprint. Hence, I am leaving the 
-  issue open for sprint 4.
+  then, this function remains in progress, with the first draft of the function having been written by me during this sprint. Hence, I am leaving 
+  issue #65 open for sprint 4.
 
 ### What problems you encountered
 - A major problem I faced was figuring out the conceptual role of the ajax function in relation to the email that we are sending the user once they have
@@ -44,8 +44,7 @@ the database of information. The research issue involved looking up 2 lodging op
 For issue #61, a problem that we noticed during sprint 2 is that the identified city card would just stay in its place on the page before we searched for it. 
 This could be inconvenient, in theory, if we had several city cards and it stuck to its position at the bottom of the page- leading to confusion about whether or 
 not it actually exists simply because it is not visible unless the user scrolled. Therefore, to add scalability to our search functionality, I made the city card that 
-is the result of a search slide over to the very left of the page near the top, so it is visible right under the search bar as the result. 
-
-
-For the ajax function........
+is the result of a search slide over to the very left of the page near the top, so it is visible right under the search bar as the result. I also worked on the ajax 
+function, which will act like a middleman that ensure data is fetched properly from the server as we package up the user's bucket list into an email. It is currently in
+progress, and we will work on refining/finalizing it throughout sprint 4.
 
