@@ -40,7 +40,7 @@ function sendBucketList(data) {
     .catch((error) => console.error("Error:", error));
 }
 
-//this needs to go in process-bucket-list.php or something:
+//this needs to go in process-bucket-list.php:
 /*
 
 <?php

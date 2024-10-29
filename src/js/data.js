@@ -559,4 +559,3 @@ export const usCities = [
         ],
     },
 ];
-
