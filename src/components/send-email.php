@@ -7,8 +7,9 @@ use PHPMailer\PHPMailer\Exception;
 // location of your Composer autoload.php file.
 require '../vendor/autoload.php';
 
+// NOTE: WE WILL NOT BE USING THE ACTUAL EMAIL SINCE WE DO NOT HAVE PURCHASED DOMAIN
+
 // Replace sender@example.com with your "From" address.
-// This address must be verified with Amazon SES.
 $sender = 'pickurplacedomainidentitity@gmail.com';
 $senderName = 'Pick Your Place Team';
 
@@ -20,13 +21,6 @@ $recipient = 'PickUrPlace904@gmail.com';
 $usernameSmtp = 'AKIAU5LH5V5QZPX7Z7IG';
 $passwordSmtp = 'BM1CSFmMkzlRqyK+oX74XIGneD3Hg1BLrZ7Oej6vjw+X';
 
-// Specify a configuration set. If you do not want to use a configuration
-// set, comment or remove the next line.
-// $configurationSet = 'ConfigSet';
-
-// If you're using Amazon SES in a region other than US West (Oregon),
-// replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
-// endpoint in the appropriate region.
 $host = 'email-smtp.us-east-2.amazonaws.com';
 $port = 587;
 
@@ -68,7 +62,8 @@ try {
     $mail->Body       = $bodyHtml;
     $mail->AltBody    = $bodyText;
     $mail->Send();
-    echo "Email sent!" , PHP_EOL;
+    
+    echo json_encode(['success' => true, 'message' => 'Email sent successfully!']);
 } catch (Exception $e) {
-    echo "Email not sent. {$mail->ErrorInfo}", PHP_EOL; //Catch errors from Amazon SES.
+    echo json_encode(['success' => false, 'message' => "Email not sent. Error: {$mail->ErrorInfo}"]);
 }
