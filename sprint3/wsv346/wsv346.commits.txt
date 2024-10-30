@@ -1,1 +1,321 @@
-insert info here
+data.js
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  61) * To import: import { argentinaCities } from "./data.js";
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  62) */
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  65)       name: "Buenos Aires",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  66)       country: "Argentina",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  67)       population: "15,618,288",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  68)       top_spots: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  69)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  70)               name: "Colón Theater (Teatro Colón)",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  71)               img: "img/argentina/buenos-aires/spot1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  72)               blurb: "This is an outstanding opera house that offers beautiful architecture and performances. You can purchase tickets to attend performances and take guided tours to learn more about its history.",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  73)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  74)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  75)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  76)               name: "San Telmo",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  77)               img: "img/argentina/buenos-aires/spot2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  78)               blurb: "This is the oldest neighborhood in Buenos Aires that offers many different tastes of the city. You can find coffee shops, shops, restaurants, and many more! There's also a weekly street fair on Sundays where you can buy souvenirs to take home.",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  79)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  80)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  81)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  82)       places_to_eat: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  83)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  84)               name: "Fogón Asado",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  85)               img: "img/argentina/buenos-aires/pTe1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  86)               blurb: "This is a 5-star Michelin restaurant that offers Asado steak tradition with a twist. Not only will you have amazing steak and barbeque, you'll also have an unforgetable experience!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  87)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  88)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  89)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  90)               name: "D'Oro Italian Bar",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  91)               img: "img/argentina/buenos-aires/pTe2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  92)               blurb: "This beautiful restaurant offers Italian, Mediterranean, and European cuisine. It is also vegetarian and gluten free friendly with vegan options.",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  93)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  94)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  95)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  96)       lodging: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  97)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  98)               name: "Pestana Buenos Aires",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400  99)               img: "img/argentina/buenos-aires/lodging1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 100)               blurb: "This hotel is an 8-block walk from Florida Street and has been rated 8-9/10 from guests. Some of the amenities offered include: indoor swimming pool, airport shuttle, breakfast, free wifi, air conditioning, hot tub, and many more!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 101)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 102)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 103)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 104)               name: "Hub Porteño",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 105)               img: "img/argentina/buenos-aires/lodging2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 106)               blurb: "This is a 1957 French-style home that was previously used as a guest house by an Argentinian family. It continues to provide a home like feel. Some of the amenities offered include: suites with various views (city, garden, and winter garden), a dry sauna, a mini gym, and many more!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 107)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 108)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 109)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 112)       name: "Mendoza",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 113)       country: "Argentina",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 114)       population: "1,242,319",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 115)       top_spots: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 116)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 117)               name: "Andes High Mountain Tour",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 118)               img: "img/argentina/mendoza/spot1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 119)               blurb: "This full day tour allows you to see and explore the Andes Mountains. Depending on the time of year you visit, the view could be covered in snow or completely dry!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 120)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 121)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 122)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 123)               name: "Catena Zapata Winery",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 124)               img: "img/argentina/mendoza/spot2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 125)               blurb: "This winery offers beautiful views and delicious wines. This experience allows you to experience the offerings privately with your group and indulge in the experience!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 126)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 127)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 128)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 129)       places_to_eat: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 130)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 131)               name: "Zonda Cocina De Paisaje",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 132)               img: "img/argentina/mendoza/pTe1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 133)               blurb: "This is a 5-star Michelin restaurant that offers healthy Argentina cuisine. It has a connected winery and its very own organic garden that their vegetables are sourced from.",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 134)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 135)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 136)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 137)               name: "Clos de Chacras",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 138)               img: "img/argentina/mendoza/pTe2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 139)               blurb: "This 4.5 star winery offers a wide variety of wine and cuisine options. You'll get to have the full wine tasting experience with wine and their pairings.",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 140)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 141)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 142)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 143)       lodging: [
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 144)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 145)               name: "Hotel De Cielo",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 146)               img: "img/argentina/mendoza/lodging1.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 147)               blurb: "This hotel is located in La Carrera, offering a mixture of mountains and countryside. Some of the amenitites offered include: an outdoor swimming pool, airport shuttle, a bar, and many more!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 148)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 149)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 150)           {
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 151)               name: "Diplomatic Hotel",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 152)               img: "img/argentina/mendoza/lodging2.png",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 153)               blurb: "This hotel is located right in the city's center and is just 10 minute drive from the airport. Some of the amenities offered include: a suana room, an outdoor pool, a Mediterranean restaurant, and many more!",
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 154)               isSelected: false,
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 155)           },
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 156)       ],
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 161) * To import: import { franceCities } from "./data.js";
+5eb94a1d (jweste25                2024-10-29 08:07:30 -0400 162) */
+92518dc7 (jweste25                2024-10-29 08:29:08 -0400 171)                 img: "img/france/colmar/spot_1.jpeg",
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 173)                 isSelected: true,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 179)                 isSelected: false,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 187)                 isSelected: false,
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 193)                 isSelected: true,
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 201)                 isSelected: true,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 207)                 isSelected: false,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 220)                 isSelected: false,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 226)                 isSelected: false,
+92518dc7 (jweste25                2024-10-29 08:29:08 -0400 232)                 img: "img/france/paris/eat_1.jpeg",
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 234)                 isSelected: false,
+92518dc7 (jweste25                2024-10-29 08:29:08 -0400 238)                 img: "img/france/paris/eat_2.jpeg",
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 240)                 isSelected: false,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 248)                 isSelected: false,
+e550f3b7 (jweste25                2024-10-21 22:47:57 -0400 254)                 isSelected: false
+
+argentina.js
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   2) import * as bucketListFunctions from "./bucket_list.js";
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   3) const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  25)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  26)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  51)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  52)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  77)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  78)                       <img src="${lodge.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 108)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 109)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 134)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 135)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 160)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 161)                       <img src="${lodge.img}" class="nested-accordion-img" />
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 173)     populateBucketList();
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 175)     addCityCardCheckboxListener("BuenosAiresCheckbox", argentinaCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 176)     addCityCardCheckboxListener("MendozaCheckbox", argentinaCities);
+
+france.js:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   2) import * as bucketListFunctions from "./bucket_list.js";
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   3) const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   5)                                                                                                                                                                                                                                                                                                                                                                                                                      
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  26)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  27)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  52)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  53)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  78)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  79)                       <img src="${lodge.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 109)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 110)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 135)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 136)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 161)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 162)                       <img src="${lodge.img}" class="nested-accordion-img" />
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 174)     populateBucketList();
+bbb032a0 (jweste25                2024-10-21 22:49:00 -0400 175) 
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 176)     addCityCardCheckboxListener("ColmarCheckbox", franceCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 177)     addCityCardCheckboxListener("ParisCheckbox", franceCities);
+
+japan.js
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   2) import * as bucketListFunctions from "./bucket_list.js";
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   3) const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  24)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  25)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  50)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  51)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  76)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  77)                       <img src="${lodge.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 107)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 108)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 133)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 134)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 159)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 160)                       <img src="${lodge.img}" class="nested-accordion-img" />
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 172)     populateBucketList();
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 174)     addCityCardCheckboxListener("KyotoCheckbox", japanCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 175)     addCityCardCheckboxListener("TokyoCheckbox", japanCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 176)     
+
+morocco.js:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   2) import * as bucketListFunctions from "./bucket_list.js";
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   3) const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  24)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  25)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  50)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  51)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  76)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  77)                       <img src="${lodge.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 107)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 108)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 133)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 134)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 159)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 160)                       <img src="${lodge.img}" class="nested-accordion-img" />
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 172)     populateBucketList();
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 174)     addCityCardCheckboxListener("CasablancaCheckbox", moroccoCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 175)     addCityCardCheckboxListener("RabatCheckbox", moroccoCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 180) 
+
+us.js
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   2) import * as bucketListFunctions from "./bucket_list.js";
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400   3) const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  21)                 <div id="TopSpots-collapse${index}" class="accordi-collapse collapse"
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  24)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  25)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  50)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  51)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  76)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400  77)                       <img src="${lodge.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 107)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 108)                       <img src="${spots.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 133)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 134)                       <img src="${place.img}" class="nested-accordion-img" />
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 159)                     <div class="centered-nested-accordian-img-container" style="padding-bottom: 10px;">
+aa862769 (jweste25                2024-10-27 15:20:21 -0400 160)                       <img src="${lodge.img}" class="nested-accordion-img" />
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 172)     populateBucketList();
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 174)     addCityCardCheckboxListener("LosAngelesCheckbox", usCities);
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400 175)     addCityCardCheckboxListener("NewYorkCheckbox", usCities);
+
+bucket_list.js
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   1) export let userBucketList = [];
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   2) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   3) // Load userBucketList from localStorage if it exists
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   4) const savedBucketList = localStorage.getItem('userBucketList');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   5) if (savedBucketList) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   6)     userBucketList = JSON.parse(savedBucketList);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   7) }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   8) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400   9) // Function to save userBucketList to localStorage
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  10) export function saveBucketList() {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  11)     try {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  12)         localStorage.setItem('userBucketList', JSON.stringify(userBucketList));
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  13)     } catch (error) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  14)         console.error('Failed to save userBucketList to localStorage:', error);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  15)     }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  16) } 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  17) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  18) //Function to remove a city from the bucket list from the display
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  19) export function removeCityFromDOM(city, country) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  20)     const bucketListItems = document.querySelectorAll('.oc-bucket-list-group-item');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  21)     bucketListItems.forEach(function (item) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  22)         const span = item.querySelector('span');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  23)         if (span && span.textContent === `${city}, ${country}`) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  24)             item.remove();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  25)         }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  26)     });
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  27) }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  28) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  29) //Adds the city to the persistent user bucket list
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  30) export function addCityToBL(city, country, countryCities) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  31)     const cityObject = countryCities.find(item => item.name == city && item.country == country);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  32)     if(cityObject) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  33)         userBucketList.push(cityObject);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  34)         saveBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  35)         populateBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  36)     }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  37) }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  38) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  39) //Removes the city from the persistent user bucket list
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  40) export function removeCityFromBL(city, country) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  41)     if(userBucketList.length == 0) { return; }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  42)     const index = userBucketList.findIndex(item => item.name === city && item.country === country);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  43)     if(index !== -1 ) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  44)         userBucketList.splice(index, 1);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  45)         removeCityFromDOM(city, country);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  46)         saveBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  47)         populateBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  48)     }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  49) }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  50) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  51) //Populates the bucket list based on the person's selections
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  52) export function populateBucketList() {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  53)     const bl_group = document.querySelector('.list-group.oc-bucket-list-group');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  54)     userBucketList.forEach(cityObject => {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  55)         const listItem = document.createElement('li');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  56)         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  57)         listItem.innerHTML = `
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  58)             <span>${cityObject.name}, ${cityObject.country}</span>
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  59)             <button class="btn-delete-list-item">Remove</button>
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  60)         `;
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  61)         // Check if the item already exists in the innerHTML
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  62)         const exists = Array.from(bl_group.querySelectorAll('li')).some(item => 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  63)             item.querySelector('span').textContent === `${cityObject.name}, ${cityObject.country}`
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  64)         );
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  65) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  66)         if (!exists) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  67)             bl_group.appendChild(listItem);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  68) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  69)             listItem.querySelector('.btn-delete-list-item').addEventListener('click', function () {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  70)                 removeCityFromBL(cityObject.name, cityObject.country);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  77)             });
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  78)         }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  87)         
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  88)     });
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  89) }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  90) 
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  91) export function addCityCardCheckboxListener(checkboxId, countryCities) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  92)     const checkbox = document.getElementById(checkboxId);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  93)     checkbox.addEventListener('click', function () {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  94)         const city = this.getAttribute('data-city');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  95)         const country = this.getAttribute('data-country');
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  96)         if (this.checked) {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  97)             // Add city to bucket list
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  98)             addCityToBL(city, country, countryCities);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400  99)             populateBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 100)         } else {
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 101)             // Remove city from bucket list
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 102)             removeCityFromBL(city, country);
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 103)             populateBucketList();
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 104)         }
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 105)     });
+1ad04a16 (jweste25          2024-10-22 18:53:57 -0400 106) }
+
+argentina.html:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  74)         YOUR BUCKET LIST
+
+france2.html:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  72)           YOUR BUCKET LIST
+
+japan.html:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  73)           YOUR BUCKET LIST
+
+morocco.html:
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  72)           YOUR BUCKET LIST
+
+us.html
+c184a8f9 (jweste25                2024-10-29 08:47:46 -0400  11)   
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  26)     <script type="module" src="js/us.js"></script>
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  27)     <script type="module" src="js/data.js"></script>
