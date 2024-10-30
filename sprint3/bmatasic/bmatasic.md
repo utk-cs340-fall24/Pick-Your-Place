@@ -1,4 +1,4 @@
-# Sprint 2
+# Sprint 3
 
 Name: Bella Matasic
 GitHub ID: bellamatasic
@@ -6,31 +6,30 @@ Group Name: Pick Your Place
 
 ### What you planned to do
 
-- AJAX Server Client Side Email Connection [#35](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/35)
-- Backend Research to Connect Server to PHP [#3](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/3)
-- Fix PHP Template [#34](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/34)
+- Test AWS pHp with html objects from export button [#70](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/70)
+- Get out of AWS sandbox [#69](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/69)
+- Insert Morocco Accordion Information [#53](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/53)
 
 ### What you did not do
 
-- AJAX Server Side Email Connection
-- Connecting the JQUERY object to PHP file through AJAX
-- Setuping up email port for emails to be sent from
+- Insert Morocco Accordion Information
 
 ### What problems you encountered
 
-- Manually installed PHP and JSON to import composser and then figured out another way around this problem since hydra does not allow sudo commands
-- Manually installed PHPMailer
-- When trying to setup server connection, could not create an App Password in gmail account since depreciated September 30, 2024
-- Workaround with App Password requires an organization to have Google Workspace Account to meet Google's requirements for SMPT Server access
-- Found out Google Workspace has sunset SMPT on 09/24/2024
-- Moved to AWS Platfrom to setup AWS Basic Free Plan and finding out how to send emails programmatically through Amazon SES SMTP
-- Had to find a work around to send and email with AWS without custom domain
-- Tested and found out that with AWS I need to add a composer.json file
+- Found out I needed to register another email for Google.
+- Had to create an additional identity for the new email registration.
+- Needed to register one of the emails as a verified sender in AWS.
+- Faced challenges connecting both emails to the PHP script.
+- Experienced troubleshooting issues while testing with templates due to the account being - stuck in the AWS sandbox.
+- Realized that the only way to get out of the sandbox was to purchase a domain, which I wanted to avoid.
+- Figured out how to integrate the button into our platform.
+- Encountered issues sending PHP through localhost, requiring the use of a PHP server to connect and test the email functionality.
+- Ran into an issue where the modal didn't display on mobile when clicked, necessitating a fix for the triggering functionality.
 
 ### Issues you worked on
 
-- AJAX Server Client Side Email Connection [#35](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/35)
-- Backend Research to Connect Server to PHP [#3](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/3)
+- Test AWS pHp with html objects from export button [#70](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/70)
+- Get out of AWS sandbox [#69](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/69)
 
 ### Files you worked on
 
@@ -44,16 +43,13 @@ Group Name: Pick Your Place
 
 ### What you accomplished
 
-- Did a large amount of research on mail service
-- Manually installed PHPMailer
-- Created a gmail account for out project
-- Signed up for AWS Basic Free Plan
-- Had to learn Amazon Simple Service
-- Setup SES account
-- Sending email with AWS SES without custom domain
-- Created an email address identity
-- Tested sending emails in Amazon SES with the simulator
-- Created SMPT credentials
-- Varified STARTTLS Port
-- Learned sending emails programmatically through the Amazon SES SMTP interface
-- The main portion of this was spent on setting up AWS SES and following documentation. Which involved understanding the platform created, email verfication, subdomain emails, setting up the database, configuring the server locations and ports, finding a way to get out of the sandbox environment without having a domain which is required for verfication, and testing port connnection.
+- Successfully registered a new email for Google and created an identity for it.
+- Registered one of the emails as a verified sender in AWS.
+- Connected both emails to the PHP script for email functionality.
+- Navigated troubleshooting to test templates, despite being stuck in the AWS sandbox.
+- Developed a workaround to avoid purchasing a domain to exit the sandbox.
+- Integrated the button into the platform effectively.
+- Set up a PHP server to enable sending PHP through localhost for email testing.
+- Resolved the issue with the modal not displaying on mobile, fixing the triggering functionality.
+- Overcame significant challenges in adding Composer and figuring out PHP autoloading, which were not native to the project.
+- Successfully imported PHP Mailer into the directory after eight hours of frustrating troubleshooting.
