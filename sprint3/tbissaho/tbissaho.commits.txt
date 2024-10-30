@@ -1,1 +1,64 @@
-insert info here
+data.js
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 170)                 name: "La Petite Venise (The Little Venice",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 172)                 blurb: "La Petite Venise in Colmar is a charming riverside neighborhood known for its picturesque canals, colorful buildings, and lively cafes. It offers the city’s most iconic views!",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 176)                 name: "Eglise des Dominicains",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 177)                 img: "img/france/colmar/eglise_spot_2.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 178)                 blurb: "Eglise des Dominicains is a peaceful 14th-century Gothic church with stunning stained-glass windows, an intricate high-vaulted ceiling, and the beautiful Vierge au Buisson de Roses painting. It is open Tuesday - Sunday from March 25th to Dec 26th.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 184)                 name: "Le 20ème Colmar",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 185)                 img: "img/france/colmar/eat_1.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 186)                 blurb: "This cozy restaurant offers authentic seasonal Colamar cuisine with stylishly presented meat & fish dishes, plus Alsatian wines!",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 190)                 name: "Bistrot des Copains de Colmar",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 191)                 img: "img/france/colmar/eats_2.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 192)                 blurb: "Bistrot des Copains de Colmar is a local restaurant that provides authentic French cuisine and attentive service, with a charming summer terrace overlooking the cathedral for a cheerful dining experience.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 198)                 name: "Hotel Le Colombier Colmar",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 199)                 img: "img/france/colmar/lodge_1.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 200)                 blurb: "Hotel Le Colombier is a charming 4-star hotel in Colmar’s Little Venice district, featuring an organic Alsatian breakfast, a cozy courtyard with a fountain, and eco-friendly amenities like a fitness room, bio sauna, and electric-car charging station.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 204)                 name: "Hotel Le Marechal Colmar",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 205)                 img: "img/france/colmar/lodge_2.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 206)                 blurb: "This 1565 historic house offers 30 uniquely decorated rooms that mix authenticity with modern amenities. Located on the Alsace wine route, the hotel features a gourmet restaurant, A l’Echevin, and amenities like free Wi-Fi, a riverside terrace, and jacuzzi bathrooms.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 217)                 name: "Louvre Museum",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 218)                 img: "img/france/paris/spot_1.jpeg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 219)                 blurb: "The Louvre, a historic fortress-turned-museum, features a vast collection of art from antiquities to masterpieces by da Vinci and Michelangelo. Visitors can explore thematic trails and guided tours, with various entry points to enhance their experience.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 223)                 name: "Cathédrale Notre-Dame de Paris",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 224)                 img: "img/france/paris/spot2.jpeg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 225)                 blurb: "Notre-Dame Cathedral is a stunning French Gothic architecture located on Île de la Cité in Paris. This historic Catholic cathedral is dedicated to the Virgin Mary and features breathtaking stained glass windows and other significant artifacts",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 231)                 name: "Le Chardenoux",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 233)                 blurb: "At the historic Parisian bistro Le Chardenoux guests are drawn into a Belle Époque atmosphere with painted ceilings, Art Nouveau details, and a 100-year-old bar. Celebrity chef Cyril Lignac’s menu offers seafood highlights like lobster roll, salt-crusted sea bass, and tuna tartar. The cozy dining room and sunlit terrace provide a warm ambiance, perfect for enjoying inventive, seafood-focused dishes and cocktails located in the 11th arrondissement.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 237)                 name: "Le Petit Vendôme",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 239)                 blurb: "Close to Place Vendôme, this charming, down-to-earth luncheonette is a hit among office workers, luxury boutique staff, and tourists alike. The decor, with its bright chairs and cracked tile floor, exudes vintage appeal, but it’s the classic French fare that draws the crowds. Think baguette sandwiches with ham and Fourme d’Ambert blue cheese, comforting dishes like escargots, onion soup, duck confit with sautéed potatoes, and desserts like chocolate mousse or tarte Tatin. Prices are modest for the central location, making it a true Parisian experience. Arrive early to beat the crowd! Located in the 2nd arrondissement.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 245)                 name: "Kimpton St Honoré Paris",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 246)                 img: "img/france/paris/lodge_1.jpg",
+5aa54989 (Trinity Sanaa Bissahoyo 2024-10-29 08:47:37 -0400 247)                 blurb: "Kimpton St Honoré Paris is steps from the Opera Garnier, Faubourg St Honoré, and Tuileries Gardens. At Montecito, the hotel restaurant, guests can dine in a spacious area with a lush patio viewed through bay windows. The hotel also features a serene spa, an indoor heated pool, and treatments for ultimate relaxation. The Sequoia rooftop bar offers panoramic views of Paris.",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 251)                 name: "Le Grand Mazarin",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 252)                 img: "img/france/paris/lodge_2.jpg",
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 253)                 blurb: "A 5-star hotel in Paris’s Marais, combines classic French charm with modern flair. Its rooms and suites showcase artistic elegance, crafted by top French artisans. The hotel’s Boubalé Restaurant offers a fusion of Mediterranean and Levantine flavors, emphasizing sharing and tradition. Amenities include an 8-meter pool, a vaulted fitness room, and a serene treatment space. Set in the vibrant Marais, near the Hôtel de Ville, Le Grand Mazarin places guests at the heart of Parisian style and discovery.",
+
+
+argentina.html
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 264)             <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 267)                 <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 327)             <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 330)                 <div class="accordion accordion-flush w-100" id="LodgingList_1">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 494)             <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 497)                 <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 557)             <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400 560)                 <div class="accordion accordion-flush w-100" id="LodgingList_2">
+
+france2.html
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400  27)     <title>France</title>
+
+japan.html
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400  28)     <title>Japan</title>
+
+morocco.html
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400  26)     <title>Morocco</title>
+
+us.html
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400  28)     <title>United States</title>
+
+main.js
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 182) .search-bar {
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 183)     margin: 20px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 184)     max-width: -600px;
+8cff27b9 (Trinity Sanaa Bissahoyo 2024-10-29 08:18:24 -0400 185)     padding-left: 8px;
+2abf984c (Trinity Sanaa Bissahoyo 2024-10-14 01:35:48 -0400 186) }
