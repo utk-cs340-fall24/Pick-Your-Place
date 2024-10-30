@@ -1,1 +1,899 @@
-Insert info here
+src/components/export-button.html
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  1) <!DOCTYPE html>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  2) <html lang="en">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  3) 
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  4) <head>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  5)     <meta charset="UTF-8">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  6)     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  7)     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  8)         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400  9)     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 10)         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 11)         crossorigin="anonymous"></script>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 12)     <link rel="stylesheet" href="export-button.css">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 13)     <!-- Add the jQuery CDN first -->
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 14)     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 15)     <!-- Link to the external JavaScript file -->
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 16)     <script src="export-button.js" defer></script>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 17)     <title>Document</title>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 18) </head>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 19) 
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 20) <body>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 21)     <!-- Button trigger modal -->
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 22)     <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 23)         Get Travel List
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 24)     </button>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 25) 
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 26)     <!-- Modal -->
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 27)     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 28)         <!-- Vertically centered scrollable modal -->
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 29)         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 30)             <div class="modal-content">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 31)                 <div class="modal-header">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 32)                     <h5 class="modal-title" id="exampleModalLabel">Enter Your Information</h5>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 33)                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 34)                 </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 35)                 <div class="modal-body">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 36)                     <form id="userForm">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 37)                         <div class="mb-3">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 38)                             <label for="fullName" class="form-label">Full Name</label>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 39)                             <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 40)                         </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 41)                         <div class="mb-3">
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 42)                             <label for="email" class="form-label">Email address</label>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 43)                             <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 44)                         </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 45)                         <button type="submit" id="submitButton"
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 46)                             class="btn btn-outline-dark d-flex flex-row-reverse">Submit</button>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 47)                     </form>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 48)                     <script src="export-button.js"></script>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 49)                 </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 50)             </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 51)         </div>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 52) </body>
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 53) 
+^0dc9443 src/components/ExportButton/export-button.html (Bella Matasic 2024-10-16 22:15:08 -0400 54) </html>
+
+src/components/export-button.css
+^0dc9443 src/components/ExportButton/export-button.css (Bella Matasic 2024-10-16 22:15:08 -0400 1) #userForm {
+^0dc9443 src/components/ExportButton/export-button.css (Bella Matasic 2024-10-16 22:15:08 -0400 2)     padding-bottom: 5%;
+^0dc9443 src/components/ExportButton/export-button.css (Bella Matasic 2024-10-16 22:15:08 -0400 3) }
+
+
+src/components/export-button.js
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  1) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  2) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  3) document.addEventListener("DOMContentLoaded", function() {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  4)     // Function to load HTML from an external file
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  5)     function includeHTML(file, elementId) {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  6)       fetch(file)
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  7)         .then(response => response.text())
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  8)         .then(data => {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400  9)           document.getElementById(elementId).innerHTML = data;
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 10)           var scripts = document.getElementById(elementId).getElementsByTagName('script');
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 11)           for (var i = 0; i < scripts.length; i++) {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 12)             eval(scripts[i].innerText);
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 13)           }
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 14)         })
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 15)         .catch(error => console.log('Error loading file:', error));
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 16)     }
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 17) });
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 18) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 19) $(document).ready(function(){
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 20)   let formSubmitted = false;
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 21) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 22)   // Prevent attaching multiple event listeners
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 23)   $("#userForm").off('submit');
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 24) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 25)   // Listen for the form submission
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 26)   $("#userForm").on('submit', function(event) {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 27)     event.preventDefault();
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 28)     
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 29)     // Get form data
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 30)     var formData = {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 31)       fullName: $('#fullName').val(),
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 32)       email: $('#email').val(),
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 33)     }
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 34) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 35)     console.log('Full Name:', formData.fullName);
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 36)     console.log('Email:', formData.email);
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 37) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 38) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 39)     // Check if the data is not empty (basic validation)
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 40)     if (formData.fullName && formData.email) {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 41)       formSubmitted = true;
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 42) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 43)       // Hide the modal using Bootstrap's modal method
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 44)       $('#exampleModal').modal('hide');
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 45) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 46)       // Perform AJAX request to send email
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 47)       $.ajax({
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 48)         type: 'POST',
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 49)         url: 'send-email.php',
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 50)         data: formData,
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 51)         dataType: 'json',
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 52)         success: function(response) {
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 53)           console.log("Success:", response);
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 54)       },
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 55)       success: function(response) {
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 56)         console.log(response.message); // Displays the success or error message from the response
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 57)     },
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 58)     error: function(xhr) {
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 59)       console.log("An error occurred: " + xhr.responseText); // Handles any AJAX error
+0847420d src/components/export-button.js              (Bella Matasic 2024-10-28 11:04:58 -0400 60)   },
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 61)       });
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 62)     } else {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 63)       alert('Please fill in all the fields.');
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 64)     }
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 65)   });
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 66) 
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 67)   // Optional: You can trigger additional logic after the modal is hidden
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 68)   $("#exampleModal").on('hidden.bs.modal', function() {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 69)     if (formSubmitted) {
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 70)       alert('Please check email');
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 71)       formSubmitted = false; // Reset the flag
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 72)     }
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 73)   });
+^0dc9443 src/components/ExportButton/export-button.js (Bella Matasic 2024-10-16 22:15:08 -0400 74) });
+
+src/components/ReadMe.md
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  1) ### Gmail Account Information
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  2) 
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  3) login: PickUrPlace904@gmail.com
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  4) password: PickUrPl@ce904!
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  5) 
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  6) ### AWS Account Information
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  7) 
+1b353fa5 src/components/ReadMe.md              (Bella Matasic 2024-10-28 02:07:39 -0400  8) email: pickurplace904@gmail.com
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400  9) account name: PickUrPlace904
+^0dc9443 src/components/ExportButton/ReadMe.md (Bella Matasic 2024-10-16 22:15:08 -0400 10) password: PickUrPl@ce904!
+1b353fa5 src/components/ReadMe.md              (Bella Matasic 2024-10-28 02:07:39 -0400 11) 
+1b353fa5 src/components/ReadMe.md              (Bella Matasic 2024-10-28 02:07:39 -0400 12) Email Domain Identity:
+1b353fa5 src/components/ReadMe.md              (Bella Matasic 2024-10-28 02:07:39 -0400 13) pickurplacedomainidentitity@gmail.com
+1b353fa5 src/components/ReadMe.md              (Bella Matasic 2024-10-28 02:07:39 -0400 14) domainPickUrPlace
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 15) 
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 16) ### Running Project with PHP
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 17) 
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 18) 1. Check Server Path
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 19)    Make sure you're in the correct directory when you start the PHP built-in server. Navigate to your project root directory (Pick-Your-Place/src) before starting the server:
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 20) 
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 21) bash
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 22) Copy code
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 23) cd ~/cosc340/Pick-Your-Place/src
+0847420d src/components/ReadMe.md              (Bella Matasic 2024-10-28 11:04:58 -0400 24) php -S localhost:8000
+
+
+src/components/send-email.php
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  1) <?php
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  2) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  3) use PHPMailer\PHPMailer\PHPMailer;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  4) use PHPMailer\PHPMailer\Exception;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  5) 
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400  6) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  7) // location of your Composer autoload.php file.
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400  8) require '../vendor/autoload.php';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400  9) 
+0847420d src/components/send-email.php                          (Bella Matasic 2024-10-28 11:04:58 -0400 10) // NOTE: WE WILL NOT BE USING THE ACTUAL EMAIL SINCE WE DO NOT HAVE PURCHASED DOMAIN
+0847420d src/components/send-email.php                          (Bella Matasic 2024-10-28 11:04:58 -0400 11) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 12) // Replace sender@example.com with your "From" address.
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400 13) $sender = 'pickurplacedomainidentitity@gmail.com';
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400 14) $senderName = 'Pick Your Place Team';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 15) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 16) // Replace recipient@example.com with a "To" address. If your account
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 17) // is still in the sandbox, this address must be verified.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 18) $recipient = 'PickUrPlace904@gmail.com';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 19) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 20) // Replace smtp_username with your Amazon SES SMTP user name.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 21) $usernameSmtp = 'AKIAU5LH5V5QZPX7Z7IG';
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400 22) $passwordSmtp = 'BM1CSFmMkzlRqyK+oX74XIGneD3Hg1BLrZ7Oej6vjw+X';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 23) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 24) $host = 'email-smtp.us-east-2.amazonaws.com';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 25) $port = 587;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 26) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 27) // The subject line of the email
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 28) $subject = 'Amazon SES test (SMTP interface accessed using PHP)';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 29) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 30) // The plain-text body of the email
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 31) $bodyText =  "Email Test\r\nThis email was sent through the
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 32)     Amazon SES SMTP interface using the PHPMailer class.";
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 33) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 34) // The HTML-formatted body of the email
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 35) $bodyHtml = '<h1>Email Test</h1>
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 36)     <p>This email was sent through the
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 37)     <a href="https://aws.amazon.com/ses">Amazon SES</a> SMTP
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 38)     interface using the <a href="https://github.com/PHPMailer/PHPMailer">
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 39)     PHPMailer</a> class.</p>';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 40) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 41) $mail = new PHPMailer(true);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 42) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 43) try {
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 44)     // Specify the SMTP settings.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 45)     $mail->isSMTP();
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 46)     $mail->setFrom($sender, $senderName);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 47)     $mail->Username   = $usernameSmtp;
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400 48)     $mail->Password   = $passwordSmtp;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 49)     $mail->Host       = $host;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 50)     $mail->Port       = $port;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 51)     $mail->SMTPAuth   = true;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 52)     $mail->SMTPSecure = 'tls';
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 53)     $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 54) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 55)     // Specify the message recipients.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 56)     $mail->addAddress($recipient);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 57)     // You can also add CC, BCC, and additional To recipients here.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 58) 
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 59)     // Specify the content of the message.
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 60)     $mail->isHTML(true);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 61)     $mail->Subject    = $subject;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 62)     $mail->Body       = $bodyHtml;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 63)     $mail->AltBody    = $bodyText;
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 64)     $mail->Send();
+0847420d src/components/send-email.php                          (Bella Matasic 2024-10-28 11:04:58 -0400 65)     
+0847420d src/components/send-email.php                          (Bella Matasic 2024-10-28 11:04:58 -0400 66)     echo json_encode(['success' => true, 'message' => 'Email sent successfully!']);
+^0dc9443 src/components/ExportButton/amazon-ses-smtp-sample.php (Bella Matasic 2024-10-16 22:15:08 -0400 67) } catch (Exception $e) {
+0847420d src/components/send-email.php                          (Bella Matasic 2024-10-28 11:04:58 -0400 68)     echo json_encode(['success' => false, 'message' => "Email not sent. Error: {$mail->ErrorInfo}"]);
+1b353fa5 src/components/amazon-ses-smtp-sample.php              (Bella Matasic 2024-10-28 02:07:39 -0400 69) }
+
+
+src/components/sendEmail.php
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  1) <!-- 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  2)  SMTP endpoint address: 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  3)  email-smtp.us-east-2.amazonaws.com
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  4)  email-smtp-fips.us-east-2.amazonaws.com  
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  5) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  6) Amazon SES SMTP interface port number:
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  7) STARTTLS Port
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  8) 25, 587 or 2587
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400  9) -->
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 10) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 11) <?php
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 12) //Import PHPMailer classes into the global namespace
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 13) //These must be at the top of your script, not inside a function
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 14) use PHPMailer\PHPMailer\PHPMailer;
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 15) use PHPMailer\PHPMailer\SMTP;
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 16) use PHPMailer\PHPMailer\Exception;
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 17) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 18) //Load Composer's autoloader
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 19) require 'path/to/PHPMailer/src/Exception.php';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 20) require 'path/to/PHPMailer/src/PHPMailer.php';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 21) require 'path/to/PHPMailer/src/SMTP.php';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 22) require 'vendor/autoload.php';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 23) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 24) //Create an instance; passing `true` enables exceptions
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 25) $mail = new PHPMailer(true);
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 26) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 27) try {
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 28)     // Server settings
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 29)     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 30)     $mail->isSMTP();                           // Send using SMTP
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 31)     $mail->Host       = 'smtp.gmail.com';    // Set the SMTP server to send through
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 32)     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 33)     $mail->Username   = 'your_email@example.com'; // SMTP username
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 34)     $mail->Password   = 'your_email_password';   // SMTP password
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 35)     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 36)     $mail->Port       = 587;                   // TCP port to connect to
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 37) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 38)     // Recipients
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 39)     $mail->setFrom('your_email@example.com', 'Your Name');
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 40)     $mail->addAddress('recipient@example.com', 'Recipient Name');  // Add a recipient
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 41) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 42)     // Content
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 43)     $mail->isHTML(true);  // Set email format to HTML
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 44)     $mail->Subject = 'Test Email using PHPMailer';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 45)     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 46)     $mail->AltBody = 'This is the plain text body for non-HTML email clients';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 47) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 48)     // Send email
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 49)     $mail->send();
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 50)     echo 'Message has been sent';
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 51) } catch (Exception $e) {
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 52)     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 53) }
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 54) 
+^0dc9443 src/components/ExportButton/sendEmail.php (Bella Matasic 2024-10-16 22:15:08 -0400 55) ?>
+
+src/us.html
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400   1) <!DOCTYPE html>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400   2) <html lang="en">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400   3) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   4) <head>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   5)   <meta charset="UTF-8" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   6)   <link rel="preconnect" href="https://fonts.googleapis.com">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   7)   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   8)   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400   9)     rel="stylesheet">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  10) 
+c184a8f9 (jweste25                2024-10-29 08:47:46 -0400  11)   
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  12)     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  13)     <link
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  14)       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  15)       rel="stylesheet"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  16)       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  17)       crossorigin="anonymous"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  18)     />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  19)     <script
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  20)       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  21)       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  22)       crossorigin="anonymous"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  23)     ></script>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  24)     <link rel="stylesheet" href="css/main.css" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  25)     <script type="module" src="js/search_bar.js" defer></script>
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  26)     <script type="module" src="js/us.js"></script>
+1ad04a16 (jweste25                2024-10-22 18:53:57 -0400  27)     <script type="module" src="js/data.js"></script>
+83ef7fd1 (Trinity Sanaa Bissahoyo 2024-10-28 07:24:05 -0400  28)     <title>United States</title>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  29)   </head>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  30) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  31)   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  32)   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  33)     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  34)   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  35)     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  36)     crossorigin="anonymous"></script>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  37)   <link rel="stylesheet" href="css/main.css" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  38)   <script type="module" src="js/search_bar.js" defer></script>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  39)   <script type="module" src="js/us.js"></script>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  40)   <script type="module" src="js/data.js"></script>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  41)   <title>Document</title>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  42) </head>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  43) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  44) <body>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  45)   <!--nav bar-->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  46) </body>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  47) <nav class="nav-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  48)   <div class="container-fluid d-flex align-items-center justify-content-between">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  49)     <button class="bucket-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  50)       aria-controls="staticBackdrop">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  51)       <img src="img/main/bucket.png" alt="bucket image" style="width: 70px; height: 100px; object-fit: cover" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  52)     </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  53)     <div class="header-text">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  54)       <a href="dropdowns.html">PICK UR PLACE</a>
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  55)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  56)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  57) </nav>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  58) <hr class="navbar-brand-hr" />
+50f0e749 (sanya-shrivastava       2024-10-27 20:19:19 -0400  59) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  60) <!-- Country Title -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  61) <div class="container text-center mt-4">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  62)   <h1 id="countryTitle">United States</h1>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  63) </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  64) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  65) <div class="offcanvas offcanvas-start oc-bucket-list" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  66)   aria-labelledby="staticBackdropLabel">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  67)   <div class="offcanvas-header oc-bucket-list-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  68)     <h5 class="offcanvas-title oc-bucket-list-title" id="staticBackdropLabel">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  69)       YOUR BUCKET LIST
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  70)     </h5>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  71)     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  72)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  73)   <hr class="destinations-hr" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  74)   <div class="list-offcanvas-body">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  75)     <div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  76)       <p class="destinations-offcanvas-label">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  77)         Here are the destinations that you have added to your list. Have a
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  78)         wonderful trip!
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  79)       </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  80)       <hr class="destinations-hr" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  81)       <ul class="list-group oc-bucket-list-group" id="bucket-list">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  82)       </ul>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  83)       <iframe src="components/export-button.html" style="width:100%; height:500px; border:none;"></iframe>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  84)     </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  85)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  86) </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  87) 
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  88) <!--alert button-->
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  89) <div id="alert_box"></div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  90) 
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  91) 
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  92) <!--Search Bar Fucntion-->
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  93) <nav class="search-bar">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  94)   <form class="form-inline">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  95)     <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  96)   </form>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  97) </nav>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400  98) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400  99) <!-- This is the container of country city cards. -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 100) <div class="container p-3">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 101)   <div class="row">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 102)     <!-- This is the Los Angeles card -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 103)     <div class="col-md-3 mb-3">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 104)       <div class="card bg-dark text-white text-center result-items">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 105)         <img src="img/us/los-angeles/LA1.png" class="card-img city-card" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 106)         <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#LosAngeles"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 107)           aria-controls="offcanvasExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 108)           <h5 class="card-title" style="text-indent: -15px;">Los Angeles, CA</h5>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 109)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 110) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 111) 
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 112)         <div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 113)           <div class="form-check overlay">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 114)             <label class="city-card-check-box">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 115)               <input class="form-check-input city-card-input" type="checkbox" id="LosAngelesCheckbox"
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 116)                 data-city="Los Angeles" data-country="United States" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 117)             </label>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 118)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 119)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 120)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 121)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 122) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 123)     <!-- This is the New York card -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 124)     <div class="col-md-3 mb-3">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 125)       <div class="card bg-dark text-white text-center result-items">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 126)         <img src="img/us/new-york/NY1.png" class="card-img city-card" />
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 127)         <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#NewYork"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 128)           aria-controls="offcanvasExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 129)           <h5 class="card-title" style="text-indent: -15px;">New York, NY</h5>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 130)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 131) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 132) 
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 133)         <div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 134)           <div class="form-check overlay">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 135)             <label class="city-card-check-box">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 136)               <input class="form-check-input city-card-input" type="checkbox" id="NewYorkCheckbox" data-city="New York"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 137)                 data-country="United States" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 138)             </label>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 139)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 140)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 141)       </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 142)     </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 143)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 144) </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 145) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 146) <!-- This is the offCanvas for Los Angeles. -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 147) <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="LosAngeles"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 148)   aria-labelledby="LosAngelesOffCanvas">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 149)   <div class="offcanvas-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 150)     <h5 class="offcanvas-title" id="LosAngelesOffCanvas">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 151)       City, State, Country
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 152)     </h5>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 153)     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 154)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 155)   <div class="offcanvas-body">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 156)     <!-- Add to Bucket List Button -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 157)     <div class="d-flex justify-content-center align-items-center mb-3">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 158)       <button type="button" class="btn btn-outline-success w-100 add-remove-city">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 159)         Add City to Bucket List
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 160)       </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 161)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 162)     <!-- Image Carousel -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 163)     <div id="LosAngelesCarousel" class="carousel slide" style="padding-bottom: 4%;">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 164)       <div class="carousel-inner">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 165)         <div class="carousel-item active">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 166)           <img src="img/us/los-angeles/LA1.png" class="d-block w-100 fixed-size-img">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 167)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 168)         <div class="carousel-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 169)           <img src="img/us/los-angeles/LA2.png" class="d-block w-100 fixed-size-img">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 170)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 171)         <div class="carousel-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 172)           <img src="img/us/los-angeles/LA3.png" class="d-block w-100 fixed-size-img">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 173)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 174)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 175)       <button class="carousel-control-prev" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="prev">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 176)         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 177)         <span class="visually-hidden">Previous</span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 178)       </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 179)       <button class="carousel-control-next" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="next">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 180)         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 181)         <span class="visually-hidden">Next</span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 182)       </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 183)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 184)     <!-- This is the main accordion for each city's information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 185)     <div class="accordion w-100" id="MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 186)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 187)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 188)           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 189)             aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 190)             Top Spots
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 191)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 192)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 193)         <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 194)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 195)             <!-- This is the nested accordion for Top Spots information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 196)             <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 197)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 198)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 199)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 200)                     data-bs-target="#TopSpots-collapseOne" aria-expanded="false" aria-controls="TopSpots-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 201)                     Top Spot #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 202)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 203)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 204)                 <div id="TopSpots-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 205)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 206)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 207)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 208)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 209)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 210)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 211)                       This it the <b>first</b> top spot to visit and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 212)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 213)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 214)                     <button class="add-remove-button btn btn-outline-success" data-type="spot">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 215)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 216)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 217)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 218)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 219)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 220)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 221)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 222)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 223)                     data-bs-target="#TopSpots-collapseTwo" aria-expanded="false" aria-controls="TopSpots-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 224)                     Top Spot #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 225)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 226)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 227)                 <div id="TopSpots-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 228)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 229)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 230)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 231)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 232)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 233)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 234)                       This it the <b>second</b> top spot to visit and a
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 235)                       blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 236)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 237)                     <button class="add-remove-button btn btn-outline-success" data-type="spot">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 238)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 239)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 240)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 241)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 242)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 243)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 244)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 245)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 246)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 247)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 248)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 249)           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 250)             data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 251)             style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 252)             Places to Eat
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 253)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 254)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 255)         <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 256)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 257)             <!-- This is the nested accordion for Places To Eat information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 258)             <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 259)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 260)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 261)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 262)                     data-bs-target="#PlacesToEat-collapseOne" aria-expanded="false"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 263)                     aria-controls="PlacesToEat-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 264)                     Place #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 265)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 266)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 267)                 <div id="PlacesToEat-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 268)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 269)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 270)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 271)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 272)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 273)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 274)                       This it the <b>first</b> place to eat and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 275)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 276)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 277)                     <button class="add-remove-button btn btn-outline-success" data-type="eats">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 278)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 279)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 280)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 281)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 282)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 283)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 284)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 285)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 286)                     data-bs-target="#PlacesToEat-collapseTwo" aria-expanded="false"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 287)                     aria-controls="PlacesToEat-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 288)                     Place #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 289)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 290)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 291)                 <div id="PlacesToEat-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 292)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 293)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 294)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 295)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 296)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 297)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 298)                       This it the <b>second</b> place to eat and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 299)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 300)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 301)                     <button class="add-remove-button btn btn-outline-success" data-type="eats">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 302)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 303)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 304)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 305)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 306)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 307)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 308)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 309)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 310)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 311)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 312)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 313)           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 314)             aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 315)             Lodging
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 316)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 317)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 318)         <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 319)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 320)             <!-- This is the nested accordion for Lodging information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 321)             <div class="accordion accordion-flush w-100" id="LodgingList_1">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 322)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 323)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 324)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 325)                     data-bs-target="#Lodging-collapseOne" aria-expanded="false" aria-controls="Lodging-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 326)                     Lodging #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 327)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 328)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 329)                 <div id="Lodging-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 330)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 331)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 332)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 333)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 334)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 335)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 336)                       This it the <b>first</b> lodge and a blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 337)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 338)                     <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 339)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 340)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 341)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 342)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 343)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 344)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 345)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 346)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 347)                     data-bs-target="#Lodging-collapseTwo" aria-expanded="false" aria-controls="Lodging-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 348)                     Lodging #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 349)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 350)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 351)                 <div id="Lodging-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 352)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 353)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 354)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 355)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 356)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 357)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 358)                       This it the <b>second</b> lodge and a blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 359)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 360)                     <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 361)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 362)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 363)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 364)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 365)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 366)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 367)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 368)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 369)       </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 370)     </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 371)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 372) </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 373) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 374) <!-- This is the offCanvas for New York. -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 375) <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="NewYork"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 376)   aria-labelledby="NewYorkOffCanvas">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 377)   <div class="offcanvas-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 378)     <h5 class="offcanvas-title" id="NewYorkOffCanvas">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 379)       City, State, Country
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 380)     </h5>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 381)     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 382)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 383)   <div class="offcanvas-body">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 384)     <!-- Add to Bucket List Button -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 385)     <div class="d-flex justify-content-center align-items-center mb-3">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 386)       <button type="button" class="btn btn-outline-success w-100 add-remove-city">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 387)         Add City to Bucket List
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 388)       </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 389)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 390)     <!-- Image Carousel -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 391)     <div id="NewYorkCarousel" class="carousel slide" style="padding-bottom: 4%;">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 392)       <div class="carousel-inner">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 393)         <div class="carousel-item active">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 394)           <img src="img/us/new-york/NY1.png" class="d-block w-100 fixed-size-img">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 395)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 396)         <div class="carousel-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 397)           <img src="img/us/new-york/NY2.png" class="d-block w-100 fixed-size-img">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 398)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 399)         <div class="carousel-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 400)           <img src="img/us/new-york/NY3.png" class="d-block w-100 fixed-size-img">
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 401)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 402)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 403)       <button class="carousel-control-prev" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="prev">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 404)         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 405)         <span class="visually-hidden">Previous</span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 406)       </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 407)       <button class="carousel-control-next" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="next">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 408)         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 409)         <span class="visually-hidden">Next</span>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 410)       </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 411)     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 412)     <!-- This is the main accordion for each city's information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 413)     <div class="accordion w-100" id="MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 414)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 415)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 416)           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 417)             aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 418)             Top Spots
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 419)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 420)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 421)         <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 422)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 423)             <!-- This is the nested accordion for Top Spots information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 424)             <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 425)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 426)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 427)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 428)                     data-bs-target="#TopSpots-collapseOne" aria-expanded="false" aria-controls="TopSpots-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 429)                     Top Spot #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 430)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 431)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 432)                 <div id="TopSpots-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 433)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 434)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 435)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 436)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 437)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 438)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 439)                       This it the <b>first</b> top spot to visit and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 440)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 441)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 442)                     <button class="add-remove-button btn btn-outline-success" data-type="spot">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 443)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 444)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 445)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 446)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 447)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 448)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 449)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 450)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 451)                     data-bs-target="#TopSpots-collapseTwo" aria-expanded="false" aria-controls="TopSpots-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 452)                     Top Spot #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 453)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 454)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 455)                 <div id="TopSpots-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 456)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 457)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 458)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 459)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 460)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 461)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 462)                       This it the <b>second</b> top spot to visit and a
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 463)                       blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 464)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 465)                     <button class="add-remove-button btn btn-outline-success" data-type="spot">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 466)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 467)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 468)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 469)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 470)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 471)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 472)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 473)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 474)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 475)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 476)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 477)           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 478)             data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 479)             style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 480)             Places to Eat
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 481)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 482)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 483)         <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 484)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 485)             <!-- This is the nested accordion for Places To Eat information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 486)             <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 487)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 488)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 489)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 490)                     data-bs-target="#PlacesToEat-collapseOne" aria-expanded="false"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 491)                     aria-controls="PlacesToEat-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 492)                     Place #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 493)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 494)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 495)                 <div id="PlacesToEat-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 496)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 497)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 498)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 499)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 500)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 501)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 502)                       This it the <b>first</b> place to eat and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 503)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 504)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 505)                     <button class="add-remove-button btn btn-outline-success" data-type="eats">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 506)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 507)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 508)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 509)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 510)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 511)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 512)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 513)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 514)                     data-bs-target="#PlacesToEat-collapseTwo" aria-expanded="false"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 515)                     aria-controls="PlacesToEat-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 516)                     Place #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 517)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 518)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 519)                 <div id="PlacesToEat-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 520)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 521)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 522)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 523)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 524)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 525)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 526)                       This it the <b>second</b> place to eat and a blurb
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 527)                       about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 528)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 529)                     <button class="add-remove-button btn btn-outline-success" data-type="eats">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 530)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 531)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 532)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 533)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 534)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 535)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 536)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 537)         </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 538)       </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 539)       <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 540)         <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 541)           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 542)             aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 543)             Lodging
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 544)           </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 545)         </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 546)         <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 547)           <div class="accordion-body nested-first">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 548)             <!-- This is the nested accordion for Lodging information -->
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 549)             <div class="accordion accordion-flush w-100" id="LodgingList_2">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 550)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 551)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 552)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 553)                     data-bs-target="#Lodging-collapseOne" aria-expanded="false" aria-controls="Lodging-collapseOne">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 554)                     Lodging #1
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 555)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 556)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 557)                 <div id="Lodging-collapseOne" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 558)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 559)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 560)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 561)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 562)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 563)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 564)                       This it the <b>first</b> lodge and a blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 565)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 566)                     <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 567)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 568)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 569)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 570)                 </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 571)               </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 572)               <div class="accordion-item">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 573)                 <h2 class="accordion-header">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 574)                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 575)                     data-bs-target="#Lodging-collapseTwo" aria-expanded="false" aria-controls="Lodging-collapseTwo">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 576)                     Lodging #2
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 577)                   </button>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 578)                 </h2>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 579)                 <div id="Lodging-collapseTwo" class="accordion-collapse collapse"
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 580)                   data-bs-parent="#accordionFlushExample">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 581)                   <div class="accordion-body topSpots-accordion">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 582)                     <div class="centered-nested-accordian-img-container">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 583)                       <img src="img/main/under.jpeg" class="nested-accordion-img" />
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 584)                     </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 585)                     <p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 586)                       This it the <b>second</b> lodge and a blurb about why.
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 587)                     </p>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 588)                     <button class="add-remove-button btn btn-outline-success" data-type="lodging">
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 589)                       Add
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 590)                     </button>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 591)                   </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 592)                 </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 593)               </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 594)             </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 595)           </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 596)         </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 597)       </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 598)     </div>
+^abd5d4f (bellamatasic            2024-10-16 22:15:48 -0400 599)   </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 600) </div>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 601) </body>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 602) </body>
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 603) 
+0847420d (Bella Matasic           2024-10-28 11:04:58 -0400 604) </html>
