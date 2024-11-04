@@ -169,15 +169,18 @@ function populateMendozaOffCanvas(city) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
     addCityCardCheckboxListener("BuenosAiresCheckbox", argentinaCities);
     addCityCardCheckboxListener("MendozaCheckbox", argentinaCities);
+
     
     //Provides the Add and Remove button for the entire city
     populateBuenosAiresOffCanvas(argentinaCities[0]);
     populateMendozaOffCanvas(argentinaCities[1]);
+
    let alert_box = document.getElementById('alert_box');
 
     function added_alert(msg){

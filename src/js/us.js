@@ -168,11 +168,13 @@ function populateNewYorkOffCanvas(city) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
     addCityCardCheckboxListener("LosAngelesCheckbox", usCities);
     addCityCardCheckboxListener("NewYorkCheckbox", usCities);
+
     
     //Provides the Add and Remove button for the entire city
     populateLosAngelesOffCanvas(usCities[0]);

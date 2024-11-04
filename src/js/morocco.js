@@ -168,11 +168,13 @@ function populateRabatOffCanvas(city) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
     addCityCardCheckboxListener("CasablancaCheckbox", moroccoCities);
     addCityCardCheckboxListener("RabatCheckbox", moroccoCities);
+
 
     //Provides the Add and Remove button for the entire city
     populateCasablancaOffCanvas(moroccoCities[0]);

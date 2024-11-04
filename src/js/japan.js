@@ -168,11 +168,13 @@ function populateTokyoOffCanvas(city) {
     });
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
     addCityCardCheckboxListener("KyotoCheckbox", japanCities);
     addCityCardCheckboxListener("TokyoCheckbox", japanCities);
+
     
     //Provides the Add and Remove button for the entire city
     populateKyotoOffCanvas(japanCities[0]);

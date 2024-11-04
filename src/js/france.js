@@ -175,10 +175,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("ColmarCheckbox", franceCities);
     addCityCardCheckboxListener("ParisCheckbox", franceCities);
-    
+
     //Provides the Add and Remove button for the entire city
     populateColmarOffCanvas(franceCities[0]);
     populateParisOffCanvas(franceCities[1]);
+
     
   let alert_box = document.getElementById('alert_box');
 
