@@ -26,6 +26,12 @@ and make informed touristic decisions.
 
 ### Instructions about how to download, install, and run the product
 - What is needed here?
+**Note: No need to install any extra software besides VS Code***
+
+1. clone repository
+2. install live server extension on vs code
+3. navigate to index.html under the 'src' repository
+4. right click and choose 'open with live server' 
 
 ## Usage Instructions 
 
