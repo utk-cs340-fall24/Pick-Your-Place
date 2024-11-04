@@ -15,7 +15,7 @@ const allData = [
 ];
 
 document
-  .getElementById("sendBucketList")
+  .getElementById("get-list")
   .addEventListener("click", function () {
     //sendBucketList is a button that serves as the trigger when clicked
     sendBucketList(allData);
@@ -29,6 +29,7 @@ function sendBucketList(data) {
     },
     body: JSON.stringify(data),
   })
+  
     .then((response) => {
       if (response.status === 200) {
         return response.json(); // Parses JSON response if successful
@@ -39,6 +40,7 @@ function sendBucketList(data) {
     .then((data) => console.log("Data sent successfully:", data))
     .catch((error) => console.error("Error:", error));
 }
+
 
 //this needs to go in process-bucket-list.php:
 /*
