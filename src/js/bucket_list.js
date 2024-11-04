@@ -155,31 +155,3 @@ export function loadButtonState(button) {
         button.textContent = buttonState.textContent;
     }
 }
-
-// export function updateCheckboxBasedOnButton(button, checkbox) {
-//     if (button.textContent === "Remove City from Bucket List") {
-//         checkbox.checked = true;
-//     } else if (button.textContent === "Add City to Bucket List") {
-//         checkbox.checked = false;
-//     }
-// }
-
-// export function updateButtonBasedOnCheckbox(button, checkbox) {
-//     loadButtonState(button);
-//     if (checkbox.checked) {
-//         button.textContent = "Remove City from Bucket List";
-//     } else {
-//         button.textContent = "Add City to Bucket List";
-//     }
-//     saveButtonState(button);
-// }
-
-// export function buildCityButtonId(city, country) {
-//     const formattedCity = city.includes(' ') ? city.replace(/\s+/g, '.') : city;
-//     return `${formattedCity}-${country}`;
-// }
-
-// export function buildCityCheckboxId (city) {
-//     const formattedCity = city.replace(/\s+/g, '');
-//     return `${formattedCity}Checkbox`;
-// }
