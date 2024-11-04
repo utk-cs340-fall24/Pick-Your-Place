@@ -42,7 +42,6 @@ export function removeCityFromDOM(city, country) {
         const span = item.querySelector('span');
         if (span && span.textContent === `${city}, ${country}`) {
             item.remove();
-            added_alert("City Removed!");
         }
     });
 }
@@ -123,6 +122,7 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
             // Remove city from bucket list
             removeCityFromBL(city, country);
             populateBucketList();
+            added_alert("City Removed!");
         }
     });
 }
