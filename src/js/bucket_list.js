@@ -1,5 +1,25 @@
 export let userBucketList = [];
 
+let alert_box = document.getElementById('alert_box');
+
+    function added_alert(msg){
+        let alert = document.createElement('div');
+        alert.classList.add('alert');
+        alert.innerHTML = msg;
+        alert_box.appendChild(alert);
+
+        if (msg.includes('Removed')) {
+            alert.classList.add('remove');
+        }
+
+
+        setTimeout(() => {
+        alert.remove();
+        },3000);
+
+        
+    }
+
 // Load userBucketList from localStorage if it exists
 const savedBucketList = localStorage.getItem('userBucketList');
 if (savedBucketList) {
@@ -22,6 +42,7 @@ export function removeCityFromDOM(city, country) {
         const span = item.querySelector('span');
         if (span && span.textContent === `${city}, ${country}`) {
             item.remove();
+            added_alert("City Removed!");
         }
     });
 }
@@ -97,6 +118,7 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
             // Add city to bucket list
             addCityToBL(city, country, countryCities);
             populateBucketList();
+            added_alert("City Added!");
         } else {
             // Remove city from bucket list
             removeCityFromBL(city, country);
