@@ -42,7 +42,6 @@ export function removeCityFromDOM(city, country) {
         const span = item.querySelector('span');
         if (span && span.textContent === `${city}, ${country}`) {
             item.remove();
-            added_alert("City Removed!");
         }
     });
 }
