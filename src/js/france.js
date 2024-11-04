@@ -1,9 +1,7 @@
 import { franceCities } from "./data.js";
 import * as bucketListFunctions from "./bucket_list.js";
-const { userBucketList, populateBucketList, addCityCardCheckboxListener } = bucketListFunctions;
-
+const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState} = bucketListFunctions;
                                                                                                                                                                                                                                                                                                                                                                                                                      
-
 function populateColmarOffCanvas(city) {
     const offCanvasTitle = document.getElementById("ColmarOffCanvas");
     offCanvasTitle.textContent = `${city.name}, ${city.country}`;
@@ -202,26 +200,28 @@ document.addEventListener('DOMContentLoaded', function () {
     
     //Provides the Add and Remove button for the entire city
     const addRemoveCityButtons = document.querySelectorAll('.add-remove-city');
-
     addRemoveCityButtons.forEach(function (button) {
+        loadButtonState(button);
         button.addEventListener('click', function () {
-            if (button.classList.contains("btn-outline-success")) {
-                button.classList.remove("btn-outline-success");
-                button.classList.add("btn-outline-danger");
-                button.textContent = "Remove City from Bucket List";
-                added_alert("City Added!");
+            const buttonId = button.id;
+            const isAdding = button.classList.contains("btn-outline-success");
+    
+            if (isAdding) {
+                addCityToBLFromOffcanvas(buttonId, franceCities);
             } else {
-                button.classList.remove("btn-outline-danger");
-                button.classList.add("btn-outline-success");
-                button.textContent = "Add City to Bucket List";
-                added_alert('City Removed');
+                removeCityFromBLFromOffcanvas(buttonId, franceCities);
             }
+    
+            button.classList.toggle("btn-outline-success", !isAdding);
+            button.classList.toggle("btn-outline-danger", isAdding);
+            button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+            saveButtonState(button);
+            added_alert(isAdding ? "City Added!" : "City Removed");
         });
-    })
+    });
 
     //Provides the Add and Remove button for the city information in the nested accordion
     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
-
     addRemoveButtons.forEach(function (button) {
         button.addEventListener('click', function () {
             if (button.classList.contains("btn-outline-success")) {

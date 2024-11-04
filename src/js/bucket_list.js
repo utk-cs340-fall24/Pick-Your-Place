@@ -104,3 +104,82 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
         }
     });
 }
+
+export function addCityToBLFromOffcanvas(buttonId, countryCities) {
+    const parts = buttonId.split(/[~\-]/);
+    let city, country;
+    console.log(parts);
+
+    if (parts.length === 2) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts[1];
+    } else if (parts.length === 3) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts.slice(1).join(' ').replace(/~/g, ' ');
+    }
+    console.log(city);
+    console.log(country);
+
+    addCityToBL(city, country, countryCities);
+}
+
+export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
+    const parts = buttonId.split(/[~\-]/);
+    let city, country;
+    console.log(parts);
+
+    if (parts.length === 2) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts[1];
+    } else if (parts.length === 3) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts.slice(1).join(' ').replace(/~/g, ' ');
+    }
+    console.log(city);
+
+    removeCityFromBL(city, country, countryCities);
+}
+
+export function saveButtonState(button) {
+    const buttonState = {
+        classList: Array.from(button.classList),
+        textContent: button.textContent,
+    };
+    localStorage.setItem(button.id, JSON.stringify(buttonState));
+}
+
+export function loadButtonState(button) {
+    const buttonState = JSON.parse(localStorage.getItem(button.id));
+    if(buttonState) {
+        button.className = buttonState.classList.join(' ');
+        button.textContent = buttonState.textContent;
+    }
+}
+
+// export function updateCheckboxBasedOnButton(button, checkbox) {
+//     if (button.textContent === "Remove City from Bucket List") {
+//         checkbox.checked = true;
+//     } else if (button.textContent === "Add City to Bucket List") {
+//         checkbox.checked = false;
+//     }
+// }
+
+// export function updateButtonBasedOnCheckbox(button, checkbox) {
+//     loadButtonState(button);
+//     if (checkbox.checked) {
+//         button.textContent = "Remove City from Bucket List";
+//     } else {
+//         button.textContent = "Add City to Bucket List";
+//     }
+//     saveButtonState(button);
+// }
+
+// export function buildCityButtonId(city, country) {
+//     const formattedCity = city.includes(' ') ? city.replace(/\s+/g, '.') : city;
+//     return `${formattedCity}-${country}`;
+// }
+
+// export function buildCityCheckboxId (city) {
+//     const formattedCity = city.replace(/\s+/g, '');
+//     return `${formattedCity}Checkbox`;
+// }
