@@ -19,23 +19,20 @@
 </head>
 
 <body>
-  <div class="color-overlay title_page_header">
+  <div id="homepage-container">
     <div class="video-container">
-      <video autoplay muted loop class="bg-image" style="height: 100vh">
+      <video autoplay muted loop style="height: 100vh">
         <source src="earth.mp4" type="video/mp4">
       </video>
-      <div class="opening-greeting">
-        <h1 id="greeting"></h1>
-      </div>
     </div>
+    <div id="home-text">
+      <h1 id="greeting"></h1>
+      <button class="btn btn-primary" onclick="window.location.href='dropdowns.html';">
+        Explore ->
+      </button>
+    </div>
+    <script src="js/greeting.js"></script>
   </div>
-  <script src="js/greeting.js"></script>
-  <!--<h1>Pick Ur Place</h1>-->
-  </div>
-  <button class="btn btn-primary" onclick="window.location.href='dropdowns.html';">
-    Explore!
-  </button>
-  <!-- <button class="btn">Explore!</button> -->
 </body>
 
 </html>
