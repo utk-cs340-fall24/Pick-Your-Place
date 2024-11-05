@@ -122,6 +122,7 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
             // Remove city from bucket list
             removeCityFromBL(city, country);
             populateBucketList();
+            added_alert("City Removed!");
         }
     });
 }
