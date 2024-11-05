@@ -79,15 +79,19 @@ function populateLodging(city, lodgingListElement) {
 function populateOffcanvas(city, index) {
     const cityName = city.name.replace(/\s+/g, '');
     const offCanvasTitle = document.getElementById(`${cityName}OffCanvas`);
-    offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+    if(offCanvasTitle) {
+        offCanvasTitle.textContent = `${city.name}, ${city.country}`;
+    }
     
     const topSpotsList = document.getElementById(`TopSpotsList_${index + 1}`);
     const placesToEatList = document.getElementById(`PlacesToEatList_${index + 1}`);
     const lodgingList = document.getElementById(`LodgingList_${index + 1}`);
 
-    populateTopSpots(city, topSpotsList);
-    populatePlacesToEat(city, placesToEatList);
-    populateLodging(city, lodgingList);
+    if(topSpotsList && placesToEatList && lodgingList) {
+        populateTopSpots(city, topSpotsList);
+        populatePlacesToEat(city, placesToEatList);
+        populateLodging(city, lodgingList);
+    }
 }
 
 export function populateAllOffcanvases(countriesCities) {

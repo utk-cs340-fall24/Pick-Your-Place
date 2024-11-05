@@ -4,6 +4,7 @@ import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
 const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState } = bucketListFunctions;
 const { populateAllOffcanvases } = offcanvasPopulationFunctions;
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     populateAllOffcanvases(argentinaCities);
 
     let alert_box = document.getElementById('alert_box');
-
+  
     function added_alert(msg){
         let alert = document.createElement('div');
         alert.classList.add('alert');
