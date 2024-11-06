@@ -22,6 +22,7 @@ document
   });
 
 function sendBucketList(data) {
+  console.log("grabbing data.");
   fetch("process_bucket_list.php", {
     method: "POST",
     headers: {
