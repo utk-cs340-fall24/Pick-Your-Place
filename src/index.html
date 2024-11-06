@@ -15,6 +15,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <link href="css/index.css" rel="stylesheet" />
+  <link href="css/dropdowns.css" rel="stylesheet" />
   <title>index</title>
 </head>
 
@@ -27,11 +28,13 @@
     </div>
     <div id="home-text">
       <h1 id="greeting"></h1>
-      <button class="btn btn-primary" onclick="window.location.href='dropdowns.html';">
+      <div id="dropdown-container"></div>
+      <button class="btn btn-primary" onclick="loadDropdown();">
         Explore ->
       </button>
     </div>
     <script src="js/greeting.js"></script>
+    <script src="js/loaddropdown.js"></script>
   </div>
 </body>
 
