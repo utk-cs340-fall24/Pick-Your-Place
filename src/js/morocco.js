@@ -4,6 +4,7 @@ import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
 const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState } = bucketListFunctions;
 const { populateAllOffcanvases } = offcanvasPopulationFunctions;
 
+
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
 
