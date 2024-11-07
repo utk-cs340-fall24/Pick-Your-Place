@@ -23,8 +23,8 @@
 
 <body>
   <div class="dropdownbutton-container">
-    <button class="btn-secondary dropdown-toggle dropdown-button" type="button" data-bs-toggle="dropdown"
-      aria-expanded="false">
+    <button id="dropdownMenuButton" class="btn-secondary dropdown-toggle dropdown-button" type="button"
+      data-bs-toggle="dropdown" aria-expanded="false" data-bs-placement="bottom">
       Countries
     </button>
     <div class="dropdown-menu">
@@ -35,6 +35,17 @@
       <a class="dropdown-item" href="us.html">United States</a>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Dynamically set the placement to bottom (or any other value)
+      const dropdownButton = document.getElementById('dropdownMenuButton');
+      dropdownButton.setAttribute('data-popper-placement', 'bottom'); // You can change this dynamically
+
+      // Initialize dropdown using JavaScript
+      const dropdown = new bootstrap.Dropdown(dropdownButton);
+      dropdown.show(); // Show dropdown if needed
+    });
+  </script>
 </body>
 
 </html>
