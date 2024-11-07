@@ -88,13 +88,6 @@ const allData = [
 ];
 console.log(allData);
 
-document
-  .getElementById("sendBucketList")
-  .addEventListener("click", function () {
-    //sendBucketList is a button that serves as the trigger when clicked
-    sendBucketList(allData);
-  });
-
 function sendBucketList(data) {
   fetch("process_bucket_list.php", {
     method: "POST",
