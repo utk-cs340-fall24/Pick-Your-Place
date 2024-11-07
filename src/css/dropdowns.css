@@ -1,4 +1,9 @@
-.dropdownbutton-container {}
+body {
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Urbanist";
+  cursor: pointer;
+}
 
 .dropdown-button {
   color: white;
@@ -7,10 +12,6 @@
   font-size: 28px;
   width: 250px;
   background-color: dimgray;
-  cursor: pointer;
-  text-align: center;
-  letter-spacing: 3px;
-  font-family: "Urbanist";
   border: none;
   border-radius: 15px;
   /*rounding out button*/
@@ -19,5 +20,15 @@
 
 .dropdown-button:hover {
   background-color: navy;
-  transform: scale(1.05);
+  transform: sc ale(1.05);
+}
+
+.dropdown-menu {
+  width: 250px;
+  text-align: center;
+}
+
+.dropdown-item {
+  padding-left: 40px;
+  padding-right: 40px;
 }

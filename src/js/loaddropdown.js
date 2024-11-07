@@ -1,5 +1,7 @@
 // loadDropdown.js
 function loadDropdown() {
+  // Hide the button using its id
+    document.getElementById("exploreButton").style.display = "none";
     fetch('dropdowns.html')
       .then(response => response.text())
       .then(data => {
