@@ -15,6 +15,8 @@ function loadDropdown() {
         // Add the dropdown button content to index.html
         if (dropdownContent) {
           document.getElementById('dropdown-container').innerHTML = dropdownContent.outerHTML;
+        
+
         } else {
           console.error("Dropdown content not found");
         }

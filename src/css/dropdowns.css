@@ -5,6 +5,14 @@ body {
   cursor: pointer;
 }
 
+.wrap-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .video-container {
   width: 100%;
   background-size: cover;
@@ -16,11 +24,7 @@ body {
 
 .dropdown-button {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
   padding: 12px 14px;
   font-size: 28px;
   width: 250px;
