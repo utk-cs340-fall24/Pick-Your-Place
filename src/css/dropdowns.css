@@ -1,16 +1,34 @@
-.dropdownbutton-container {}
+body {
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Urbanist";
+  cursor: pointer;
+}
+
+.wrap-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+}
 
 .dropdown-button {
   color: white;
-  position: inherit;
+  position: relative;
   padding: 12px 14px;
   font-size: 28px;
   width: 250px;
   background-color: dimgray;
-  cursor: pointer;
-  text-align: center;
-  letter-spacing: 3px;
-  font-family: "Urbanist";
   border: none;
   border-radius: 15px;
   /*rounding out button*/
@@ -19,5 +37,15 @@
 
 .dropdown-button:hover {
   background-color: navy;
-  transform: scale(1.05);
+  transform: sc ale(1.05);
+}
+
+.dropdown-menu {
+  width: 250px;
+  text-align: center;
+}
+
+.dropdown-item {
+  padding-left: 40px;
+  padding-right: 40px;
 }

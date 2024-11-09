@@ -1,5 +1,7 @@
 // loadDropdown.js
 function loadDropdown() {
+  // Hide the button using its id
+    document.getElementById("exploreButton").style.display = "none";
     fetch('dropdowns.html')
       .then(response => response.text())
       .then(data => {
@@ -13,6 +15,8 @@ function loadDropdown() {
         // Add the dropdown button content to index.html
         if (dropdownContent) {
           document.getElementById('dropdown-container').innerHTML = dropdownContent.outerHTML;
+        
+
         } else {
           console.error("Dropdown content not found");
         }
