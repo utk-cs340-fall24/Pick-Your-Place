@@ -1,9 +1,10 @@
 import { argentinaCities } from "./data.js";
 import * as bucketListFunctions from "./bucket_list.js";
 import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
-const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState } = bucketListFunctions;
+const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelected} = bucketListFunctions;
 const { populateAllOffcanvases } = offcanvasPopulationFunctions;
 
+window.argentinaCities = argentinaCities;
 
 document.addEventListener('DOMContentLoaded', function () {
     populateBucketList();
@@ -57,6 +58,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Provides the Add and Remove button for the city information in the nested accordion
     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
+
+    console.log(addRemoveButtons[0].parentElement.parentNode);
+
+
     addRemoveButtons.forEach(function (button) {
         button.addEventListener('click', function () {
             if (button.classList.contains("btn-outline-success")) {
@@ -64,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.classList.add("btn-outline-danger");
                 button.textContent = "Remove";
                 
+                const attractionName = getAttractionName(button);
+                setAttractionSelected(attractionName, argentinaCities);
+
                 let type = button.getAttribute('data-type-button');
                 if (type == 'spot') {
                     added_alert("Attraction Added");

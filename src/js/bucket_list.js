@@ -184,3 +184,36 @@ export function loadButtonState(button) {
         button.textContent = buttonState.textContent;
     }
 }
+
+export function getAttractionName(button) {
+    const accordionItem = button.closest(".accordion-item");
+    const attractionName = accordionItem.querySelector('.accordion-button').textContent.trim();
+    console.log("Attraction Selected: ", attractionName);
+    return attractionName;
+}
+
+export function setAttractionSelected(attractionName, countryCities) {
+    for (const city of countryCities) {
+        // Search in top_spots
+        for (const spot of city.top_spots) {
+            if (spot.name === attractionName) {
+                spot.isSelected = true;
+                return;
+            }
+        }
+        // Search in places_to_eat
+        for (const place of city.places_to_eat) {
+            if (place.name === attractionName) {
+                place.isSelected = true;
+                return;
+            }
+        }
+        // Search in lodging
+        for (const lodge of city.lodging) {
+            if (lodge.name === attractionName) {
+                lodge.isSelected = true;
+                return;
+            }
+        }
+    }
+}
