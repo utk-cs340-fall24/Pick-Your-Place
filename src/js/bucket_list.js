@@ -192,12 +192,17 @@ export function getAttractionName(button) {
     return attractionName;
 }
 
-export function setAttractionSelected(attractionName, countryCities) {
+function saveAttractionToLocalStorage(attractionName, isSelected) {
+    localStorage.setItem(attractionName, isSelected);
+}
+
+export function setAttractionSelectedTrue(attractionName, countryCities) {
     for (const city of countryCities) {
         // Search in top_spots
         for (const spot of city.top_spots) {
             if (spot.name === attractionName) {
                 spot.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
                 return;
             }
         }
@@ -205,6 +210,7 @@ export function setAttractionSelected(attractionName, countryCities) {
         for (const place of city.places_to_eat) {
             if (place.name === attractionName) {
                 place.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
                 return;
             }
         }
@@ -212,8 +218,57 @@ export function setAttractionSelected(attractionName, countryCities) {
         for (const lodge of city.lodging) {
             if (lodge.name === attractionName) {
                 lodge.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
                 return;
             }
+        }
+    }
+}
+export function setAttractionSelectedFalse(attractionName, countryCities) {
+    for (const city of countryCities) {
+        // Search in top_spots
+        for (const spot of city.top_spots) {
+            if (spot.name === attractionName) {
+                spot.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+        // Search in places_to_eat
+        for (const place of city.places_to_eat) {
+            if (place.name === attractionName) {
+                place.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+        // Search in lodging
+        for (const lodge of city.lodging) {
+            if (lodge.name === attractionName) {
+                lodge.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+    }
+}
+
+export function loadAttractionsFromLocalStorage(countryCities) {
+    for (const city of countryCities) {
+        // Load state for top_spots
+        for (const spot of city.top_spots) {
+            const isSelected = localStorage.getItem(spot.name) === 'true';
+            spot.isSelected = isSelected;
+        }
+        // Load state for places_to_eat
+        for (const place of city.places_to_eat) {
+            const isSelected = localStorage.getItem(place.name) === 'true';
+            place.isSelected = isSelected;
+        }
+        // Load state for lodging
+        for (const lodge of city.lodging) {
+            const isSelected = localStorage.getItem(lodge.name) === 'true';
+            lodge.isSelected = isSelected;
         }
     }
 }

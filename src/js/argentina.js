@@ -1,7 +1,7 @@
 import { argentinaCities } from "./data.js";
 import * as bucketListFunctions from "./bucket_list.js";
 import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
-const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelected} = bucketListFunctions;
+const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
 const { populateAllOffcanvases } = offcanvasPopulationFunctions;
 
 window.argentinaCities = argentinaCities;
@@ -56,11 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    loadAttractionsFromLocalStorage(argentinaCities);
+
     //Provides the Add and Remove button for the city information in the nested accordion
     const addRemoveButtons = document.querySelectorAll('.add-remove-button');
-
-    console.log(addRemoveButtons[0].parentElement.parentNode);
-
 
     addRemoveButtons.forEach(function (button) {
         button.addEventListener('click', function () {
@@ -69,8 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.classList.add("btn-outline-danger");
                 button.textContent = "Remove";
                 
-                const attractionName = getAttractionName(button);
-                setAttractionSelected(attractionName, argentinaCities);
+
 
                 let type = button.getAttribute('data-type-button');
                 if (type == 'spot') {
@@ -80,6 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (type == 'lodging') {
                     added_alert("Lodging Added");
                 }
+
+                const attractionName = getAttractionName(button);
+                setAttractionSelectedTrue(attractionName, argentinaCities);
             } else {
                 button.classList.remove("btn-outline-danger");
                 button.classList.add("btn-outline-success");
@@ -93,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (type == 'lodging') {
                     added_alert("Lodging Removed");
                 }
+
+                const attractionName = getAttractionName(button);
+                setAttractionSelectedFalse(attractionName, argentinaCities);
             }
         });
     });
