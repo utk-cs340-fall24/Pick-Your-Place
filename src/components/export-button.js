@@ -104,7 +104,7 @@ function sendBucketList(data) {
     },
     body: JSON.stringify(data),
   })
-  
+
     .then((response) => {
       if (response.status === 200) {
         return response.json(); // Parses JSON response if successful

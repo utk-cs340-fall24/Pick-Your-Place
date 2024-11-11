@@ -13,14 +13,14 @@
     <!-- Add the jQuery CDN first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Link to the external JavaScript file -->
-    <script src="export-button.js" defer></script>
+    <script type="module" src="export-button.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Get Travel List
+    <button type="button" id="get-list" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Get Bucket List
     </button>
 
     <!-- Modal -->
@@ -45,7 +45,7 @@
                         <button type="submit" id="submitButton"
                             class="btn btn-outline-dark d-flex flex-row-reverse">Submit</button>
                     </form>
-                    <script src="export-button.js"></script>
+                    <script type="module" src="export-button.js"></script>
                 </div>
             </div>
         </div>

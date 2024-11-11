@@ -1,5 +1,25 @@
 export let userBucketList = [];
 
+let alert_box = document.getElementById('alert_box');
+
+    function added_alert(msg){
+        let alert = document.createElement('div');
+        alert.classList.add('alert');
+        alert.innerHTML = msg;
+        alert_box.appendChild(alert);
+
+        if (msg.includes('Removed')) {
+            alert.classList.add('remove');
+        }
+
+
+        setTimeout(() => {
+        alert.remove();
+        },3000);
+
+        
+    }
+
 // Load userBucketList from localStorage if it exists
 const savedBucketList = localStorage.getItem('userBucketList');
 if (savedBucketList) {
@@ -97,10 +117,70 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
             // Add city to bucket list
             addCityToBL(city, country, countryCities);
             populateBucketList();
+            added_alert("City Added!");
         } else {
             // Remove city from bucket list
             removeCityFromBL(city, country);
             populateBucketList();
+            added_alert("City Removed!");
         }
     });
+}
+
+export function addCityToBLFromOffcanvas(buttonId, countryCities) {
+    const parts = buttonId.split(/[~\-]/);
+    let city, country;
+    console.log(parts);
+
+    if (parts.length === 2) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts[1];
+    } else if (parts.length === 3) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts.slice(1).join(' ').replace(/~/g, ' ');
+    }
+    console.log(city);
+    console.log(country);
+
+    addCityToBL(city, country, countryCities);
+}
+
+export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
+    const parts = buttonId.split(/[~\-]/);
+    let city, country;
+    console.log(parts);
+
+    if (parts.length === 2) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts[1];
+    } else if (parts.length === 3) {
+        city = parts[0].replace(/\./g, ' ');
+        country = parts.slice(1).join(' ').replace(/~/g, ' ');
+    }
+    console.log(city);
+
+    removeCityFromBL(city, country, countryCities);
+
+    const checkboxId = `${city.replace(/\s+/g, '')}Checkbox`;
+    const checkbox = document.getElementById(checkboxId);
+    
+    if (checkbox) {
+        checkbox.checked = false; // Uncheck the checkbox
+    }    
+}
+
+export function saveButtonState(button) {
+    const buttonState = {
+        classList: Array.from(button.classList),
+        textContent: button.textContent,
+    };
+    localStorage.setItem(button.id, JSON.stringify(buttonState));
+}
+
+export function loadButtonState(button) {
+    const buttonState = JSON.parse(localStorage.getItem(button.id));
+    if(buttonState) {
+        button.className = buttonState.classList.join(' ');
+        button.textContent = buttonState.textContent;
+    }
 }

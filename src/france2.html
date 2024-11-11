@@ -52,57 +52,78 @@
     </nav>
     <hr class="navbar-brand-hr" />
 
-     <!-- Country Title -->
-    <div class="container text-center mt-4">
-      <h1 id="countryTitle">France</h1> 
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-    <div
-      class="offcanvas offcanvas-start oc-bucket-list"
-      data-bs-backdrop="static"
-      tabindex="-1"
-      id="staticBackdrop"
-      aria-labelledby="staticBackdropLabel"
-    >
-      <div class="offcanvas-header oc-bucket-list-header">
-        <h5
-          class="offcanvas-title oc-bucket-list-title"
-          id="staticBackdropLabel"
-        >
-          YOUR BUCKET LIST
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <hr class="destinations-hr" />
-      <div class="list-offcanvas-body">
-        <div>
-          <p class="destinations-offcanvas-label">
-            Here are the destinations that you have added to your list. Have a
-            wonderful trip!
-          </p>
-          <hr class="destinations-hr" />
-          <ul class="list-group oc-bucket-list-group" id = "bucket-list">
-          </ul>
-        </div>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/search_bar.js" defer></script>
+  <title>France</title>
+</head>
+
+<body>
+  <nav class="nav-header">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <button class="bucket-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+        aria-controls="staticBackdrop">
+        <img src="img/main/bucket.png" alt="bucket image" style="width: 70px; height: 100px; object-fit: cover" />
+      </button>
+      <div class="header-text">
+        <a href="dropdowns.html">PICK UR PLACE</a>
       </div>
     </div>
+  </nav>
+  <hr class="navbar-brand-hr" />
 
-<!--alert button-->
-<div id="alert_box"></div>
-    
-<!--Search Bar Fucntion-->
-    <nav class="search-bar">
-      <form class="form-inline">
-        <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
-      </form>
-    </nav>
+  <!-- Country Title -->
+  <div class="container text-center mt-4">
+    <h1 id="countryTitle">France</h1>
+  </div>
 
-    <!-- This is the container of country city cards. -->
+  <div class="offcanvas offcanvas-start oc-bucket-list" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header oc-bucket-list-header">
+      <h5 class="offcanvas-title oc-bucket-list-title" id="staticBackdropLabel">
+        YOUR BUCKET LIST
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <hr class="destinations-hr" />
+    <div class="list-offcanvas-body">
+      <div>
+        <p class="destinations-offcanvas-label">
+          Here are the destinations that you have added to your list. Have a
+          wonderful trip!
+        </p>
+        <hr class="destinations-hr" />
+        <ul class="list-group oc-bucket-list-group" id="bucket-list">
+        </ul>
+        <iframe src="components/export-button.html" style="width:100%; height:500px; border:none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!--alert button-->
+  <div id="alert_box"></div>
+
+  <!--Search Bar Fucntion-->
+  <nav class="search-bar">
+    <form class="form-inline">
+      <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+    </form>
+  </nav>
+
+  <!-- This is the container of country city cards. -->
   <div class="container p-3">
     <div class="row">
       <!-- This is the Colmar card -->
@@ -113,16 +134,16 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Colmar, France</h5>
           </div>
-        
-  
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ColmarCheckbox"
-                data-city="Colmar" data-country="France" />
-            </label>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ColmarCheckbox" data-city="Colmar"
+                  data-country="France" />
+              </label>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -135,21 +156,149 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Paris, France</h5>
           </div>
-        
-  
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ParisCheckbox"
-                data-city="Paris" data-country="France" />
-            </label>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ParisCheckbox" data-city="Paris"
+                  data-country="France" />
+              </label>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- This is the French Alps card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/french_alps/frenchalps.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#FrenchAlps"
+            aria-controls="FrenchAlpscanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">French Alps, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="FrenchAlpsCheckbox"
+                  data-city="French Alps" data-country="France" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the Nice card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/nice/nice.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Nice"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Nice, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="NiceCheckbox" data-city="Nice"
+                  data-country="France" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- This is the Montpellier card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/montpellier/montpellier.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Montpellier"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Montpellier, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="MontpellierCheckbox"
+                  data-city="Montpellier" data-country="France" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the Strasbourg card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/strasbourg/Strasbourg.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Strasbourg"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Strasbourg, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="StrasbourgCheckbox"
+                  data-city="Strasbourg" data-country="France" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the Toulouse card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/toulouse/Toulouse.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Toulouse"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Toulouse, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ToulouseCheckbox"
+                  data-city="Toulouse" data-country="France" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the Lourdes card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/Lourdes/Lourdes.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Lourdes"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Lourdes, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="LourdesCheckbox" data-city="Lourdes"
+                  data-country="France" />
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- This is the offCanvas for Colmar. -->
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Colmar"
     aria-labelledby="ColmarOffCanvas">
@@ -162,7 +311,7 @@
     <div class="offcanvas-body">
       <!-- Add to Bucket List Button -->
       <div class="d-flex justify-content-center align-items-center mb-3">
-        <button type="button" class="btn btn-outline-success w-100 add-remove-city">
+        <button id="Colmar-France" type="button" class="btn btn-outline-success w-100 add-remove-city">
           Add City to Bucket List
         </button>
       </div>
@@ -201,52 +350,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Top Spots information -->
               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#TopSpots-collapseOne" aria-expanded="false" aria-controls="TopSpots-collapseOne">
-                      Top Spot #1
-                    </button>
-                  </h2>
-                  <div id="TopSpots-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> top spot to visit and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#TopSpots-collapseTwo" aria-expanded="false" aria-controls="TopSpots-collapseTwo">
-                      Top Spot #2
-                    </button>
-                  </h2>
-                  <div id="TopSpots-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> top spot to visit and a
-                        blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -263,54 +366,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Places To Eat information -->
               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#PlacesToEat-collapseOne" aria-expanded="false"
-                      aria-controls="PlacesToEat-collapseOne">
-                      Place #1
-                    </button>
-                  </h2>
-                  <div id="PlacesToEat-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> place to eat and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#PlacesToEat-collapseTwo" aria-expanded="false"
-                      aria-controls="PlacesToEat-collapseTwo">
-                      Place #2
-                    </button>
-                  </h2>
-                  <div id="PlacesToEat-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> place to eat and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -326,50 +381,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Lodging information -->
               <div class="accordion accordion-flush w-100" id="LodgingList_1">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#Lodging-collapseOne" aria-expanded="false" aria-controls="Lodging-collapseOne">
-                      Lodging #1
-                    </button>
-                  </h2>
-                  <div id="Lodging-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> lodge and a blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#Lodging-collapseTwo" aria-expanded="false" aria-controls="Lodging-collapseTwo">
-                      Lodging #2
-                    </button>
-                  </h2>
-                  <div id="Lodging-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> lodge and a blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -377,10 +388,9 @@
       </div>
     </div>
   </div>
-  
+
   <!-- This is the offCanvas for Paris. -->
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Paris"
-    aria-labelledby="ParisOffCanvas">
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Paris" aria-labelledby="ParisOffCanvas">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="ParisOffCanvas">
         City, Country
@@ -390,7 +400,7 @@
     <div class="offcanvas-body">
       <!-- Add to Bucket List Button -->
       <div class="d-flex justify-content-center align-items-center mb-3">
-        <button type="button" class="btn btn-outline-success w-100 add-remove-city">
+        <button id="Paris-France" type="button" class="btn btn-outline-success w-100 add-remove-city">
           Add City to Bucket List
         </button>
       </div>
@@ -429,52 +439,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Top Spots information -->
               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#TopSpots-collapseOne" aria-expanded="false" aria-controls="TopSpots-collapseOne">
-                      Top Spot #1
-                    </button>
-                  </h2>
-                  <div id="TopSpots-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> top spot to visit and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#TopSpots-collapseTwo" aria-expanded="false" aria-controls="TopSpots-collapseTwo">
-                      Top Spot #2
-                    </button>
-                  </h2>
-                  <div id="TopSpots-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> top spot to visit and a
-                        blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="spot">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -491,54 +455,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Places To Eat information -->
               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#PlacesToEat-collapseOne" aria-expanded="false"
-                      aria-controls="PlacesToEat-collapseOne">
-                      Place #1
-                    </button>
-                  </h2>
-                  <div id="PlacesToEat-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> place to eat and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#PlacesToEat-collapseTwo" aria-expanded="false"
-                      aria-controls="PlacesToEat-collapseTwo">
-                      Place #2
-                    </button>
-                  </h2>
-                  <div id="PlacesToEat-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> place to eat and a blurb
-                        about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="eats">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -554,50 +470,6 @@
             <div class="accordion-body nested-first">
               <!-- This is the nested accordion for Lodging information -->
               <div class="accordion accordion-flush w-100" id="LodgingList_2">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#Lodging-collapseOne" aria-expanded="false" aria-controls="Lodging-collapseOne">
-                      Lodging #1
-                    </button>
-                  </h2>
-                  <div id="Lodging-collapseOne" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>first</b> lodge and a blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#Lodging-collapseTwo" aria-expanded="false" aria-controls="Lodging-collapseTwo">
-                      Lodging #2
-                    </button>
-                  </h2>
-                  <div id="Lodging-collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body topSpots-accordion">
-                      <div class="centered-nested-accordian-img-container">
-                        <img src="img/main/under.jpeg" class="nested-accordion-img" />
-                      </div>
-                      <p>
-                        This it the <b>second</b> lodge and a blurb about why.
-                      </p>
-                      <button class="add-remove-button btn btn-outline-success" data-type="lodging">
-                        Add
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -605,8 +477,13 @@
       </div>
     </div>
   </div>
-  </body>
-  <script type="module" src="js/data.js"></script>
-  <script type="module" src="js/france.js"></script>
-  </body>
+
+
+
+
+</body>
+<script type="module" src="js/data.js"></script>
+<script type="module" src="js/france.js"></script>
+</body>
+
 </html>

@@ -1,45 +1,45 @@
-.bg-image {
+#homepage-container {
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+}
+
+.video-container::before {
+  background-color: rgba(16, 27, 32, 0.826);
+  z-index: 1000;
+}
+
+.video-container {
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  position: relative;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  position: absolute;
+}
+
+#home-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /*formatting greeting*/
-.opening-greeting {
-  margin-top: -50px;
-  background-color: rgba(23, 36, 41, 0.826);
-  border-radius: 5px;
-  width: 100%;
-  height: 130px;
-}
-
 #greeting {
   color: whitesmoke;
-  margin: 35px auto;
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   font-family: "Urbanist";
-  font-weight: lighter;
   word-spacing: 6px;
   letter-spacing: 3px;
   font-style: italic;
 }
 
-.color-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(16, 27, 32, 0.826);
-}
-
 .btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
   padding: 15px 30px;
   font-size: 25px;
   font-family: "Urbanist";
@@ -48,7 +48,6 @@
   border: none;
   border-radius: 5px;
   letter-spacing: 3px;
-  cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
