@@ -46,63 +46,51 @@
           />
         </button>
         <div class="header-text">
-          <a href="dropdowns.html">PICK UR PLACE</a>
+          <a href="dropdowns.html">PICK YOUR PLACE</a>
         </div>
       </div>
     </nav>
     <hr class="navbar-brand-hr" />
 
-     <!-- Country Title -->
-    <div class="container text-center mt-4">
-      <h1 id="countryTitle">France</h1> 
-    </div>
+  <!-- Country Title -->
+  <div class="container text-center mt-4">
+    <h1 id="countryTitle">France</h1>
+  </div>
 
-    <div
-      class="offcanvas offcanvas-start oc-bucket-list"
-      data-bs-backdrop="static"
-      tabindex="-1"
-      id="staticBackdrop"
-      aria-labelledby="staticBackdropLabel"
-    >
-      <div class="offcanvas-header oc-bucket-list-header">
-        <h5
-          class="offcanvas-title oc-bucket-list-title"
-          id="staticBackdropLabel"
-        >
-          YOUR BUCKET LIST
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <hr class="destinations-hr" />
-      <div class="list-offcanvas-body">
-        <div>
-          <p class="destinations-offcanvas-label">
-            Here are the destinations that you have added to your list. Have a
-            wonderful trip!
-          </p>
-          <hr class="destinations-hr" />
-          <ul class="list-group oc-bucket-list-group" id = "bucket-list">
-          </ul>
-        </div>
+  <div class="offcanvas offcanvas-start oc-bucket-list" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header oc-bucket-list-header">
+      <h5 class="offcanvas-title oc-bucket-list-title" id="staticBackdropLabel">
+        YOUR BUCKET LIST
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <hr class="destinations-hr" />
+    <div class="list-offcanvas-body">
+      <div>
+        <p class="destinations-offcanvas-label">
+          Here are the destinations that you have added to your list. Have a
+          wonderful trip!
+        </p>
+        <hr class="destinations-hr" />
+        <ul class="list-group oc-bucket-list-group" id="bucket-list">
+        </ul>
+        <iframe src="components/export-button.html" style="width:100%; height:500px; border:none;"></iframe>
       </div>
     </div>
+  </div>
 
-<!--alert button-->
-<div id="alert_box"></div>
-    
-<!--Search Bar Fucntion-->
-    <nav class="search-bar">
-      <form class="form-inline">
-        <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
-      </form>
-    </nav>
+  <!--alert button-->
+  <div id="alert_box"></div>
 
-    <!-- This is the container of country city cards. -->
+  <!--Search Bar Fucntion-->
+  <nav class="search-bar">
+    <form class="form-inline">
+      <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+    </form>
+  </nav>
+
+  <!-- This is the container of country city cards. -->
   <div class="container p-3">
     <div class="row">
       <!-- This is the Colmar card -->
@@ -113,16 +101,16 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Colmar, France</h5>
           </div>
-        
-  
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ColmarCheckbox"
-                data-city="Colmar" data-country="France" />
-            </label>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ColmarCheckbox" data-city="Colmar"
+                  data-country="France" />
+              </label>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -135,16 +123,16 @@
             aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Paris, France</h5>
           </div>
-        
-  
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ParisCheckbox"
-                data-city="Paris" data-country="France" />
-            </label>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ParisCheckbox" data-city="Paris"
+                  data-country="France" />
+              </label>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -152,16 +140,17 @@
       <div class="col-md-3 mb-3">
         <div class="card bg-dark text-white text-center result-items">
           <img src="img/france/french_alps/frenchalps.jpeg" class="card-img city-card" />
-          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#FrenchAlps" aria-controls="FrenchAlpscanvasExample">
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#FrenchAlps"
+            aria-controls="FrenchAlpscanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">French Alps, France</h5>
           </div>
-      
-      
+
+
           <div>
             <div class="form-check overlay">
               <label class="city-card-check-box">
-                <input class="form-check-input city-card-input" type="checkbox" id="FrenchAlpsCheckbox" data-city="French Alps"
-                  data-country="France" />
+                <input class="form-check-input city-card-input" type="checkbox" id="FrenchAlpsCheckbox"
+                  data-city="French Alps" data-country="France" />
               </label>
             </div>
           </div>
@@ -172,11 +161,12 @@
       <div class="col-md-3 mb-3">
         <div class="card bg-dark text-white text-center result-items">
           <img src="img/france/nice/nice.jpeg" class="card-img city-card" />
-          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Nice" aria-controls="offcanvasExample">
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Nice"
+            aria-controls="offcanvasExample">
             <h5 class="card-title" style="text-indent: -15px;">Nice, France</h5>
           </div>
-      
-      
+
+
           <div>
             <div class="form-check overlay">
               <label class="city-card-check-box">
@@ -189,89 +179,93 @@
       </div>
     </div>
 
-  <div class="row">
-    <!-- This is the Montpellier card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/france/montpellier/montpellier.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Montpellier" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Montpellier, France</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="MontpellierCheckbox" data-city="Montpellier"
-                data-country="France" />
-            </label>
+    <div class="row">
+      <!-- This is the Montpellier card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/montpellier/montpellier.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Montpellier"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Montpellier, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="MontpellierCheckbox"
+                  data-city="Montpellier" data-country="France" />
+              </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- This is the Strasbourg card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/france/strasbourg/Strasbourg.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Strasbourg" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Strasbourg, France</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="StrasbourgCheckbox" data-city="Strasbourg"
-                data-country="France" />
-            </label>
+      <!-- This is the Strasbourg card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/strasbourg/Strasbourg.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Strasbourg"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Strasbourg, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="StrasbourgCheckbox"
+                  data-city="Strasbourg" data-country="France" />
+              </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- This is the Toulouse card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/france/toulouse/Toulouse.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Toulouse" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Toulouse, France</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ToulouseCheckbox" data-city="Toulouse"
-                data-country="France" />
-            </label>
+      <!-- This is the Toulouse card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/toulouse/Toulouse.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Toulouse"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Toulouse, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ToulouseCheckbox"
+                  data-city="Toulouse" data-country="France" />
+              </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- This is the Lourdes card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/france/Lourdes/Lourdes.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Lourdes" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Lourdes, France</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="LourdesCheckbox" data-city="Lourdes"
-                data-country="France" />
-            </label>
+      <!-- This is the Lourdes card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/france/Lourdes/Lourdes.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Lourdes"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Lourdes, France</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="LourdesCheckbox" data-city="Lourdes"
+                  data-country="France" />
+              </label>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  
+
   <!-- This is the offCanvas for Colmar. -->
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Colmar"
     aria-labelledby="ColmarOffCanvas">
@@ -361,10 +355,9 @@
       </div>
     </div>
   </div>
-  
+
   <!-- This is the offCanvas for Paris. -->
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Paris"
-    aria-labelledby="ParisOffCanvas">
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Paris" aria-labelledby="ParisOffCanvas">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="ParisOffCanvas">
         City, Country
@@ -452,11 +445,193 @@
     </div>
   </div>
 
+          <!-- This is the offCanvas for French Alps. -->
+          <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="FrenchAlps"
+            aria-labelledby="FrenchAlpsOffCanvas">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="FrenchAlpsOffCanvas">
+                French Alps, France
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Add to Bucket List Button -->
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <button id="French.Alps-France" type="button"
+                  class="btn btn-outline-success w-100 add-remove-city a-ba-city-button">
+                  Add City to Bucket List
+                </button>
+              </div>
+              <!-- Image Carousel -->
+              <div id="FrenchAlpsCarousel" class="carousel slide" style="padding-bottom: 4%;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/argentina/buenos-aires/BA1.jpeg" class="d-block w-100 fixed-size-img">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/argentina/buenos-aires/BA2.png" class="d-block w-100 fixed-size-img">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/argentina/buenos-aires/BA3.png" class="d-block w-100 fixed-size-img">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#FrenchAlpsCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#FrenchAlpsCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- This is the main accordion for each city's information -->
+              <div class="accordion w-100" id="MainAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+                      aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+                      Top Spots
+                    </button>
+                  </h2>
+                  <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                    <div class="accordion-body nested-first">
+                      <!-- This is the nested accordion for Top Spots information -->
+                      <div class="accordion accordion-flush w-100" id="TopSpotsList_3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+                      style="background-color: rgb(248, 201, 144);">
+                      Places to Eat
+                    </button>
+                  </h2>
+                  <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                    <div class="accordion-body nested-first">
+                      <!-- This is the nested accordion for Places To Eat information -->
+                      <div class="accordion accordion-flush w-100" id="PlacesToEatList_3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+                      aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+                      Lodging
+                    </button>
+                  </h2>
+                  <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                    <div class="accordion-body nested-first">
+                      <!-- This is the nested accordion for Lodging information -->
+                      <div class="accordion accordion-flush w-100" id="LodgingList_3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <!-- This is the offCanvas for Nice. -->
+                  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Nice"
+                    aria-labelledby="NiceOffCanvas">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="NiceOffCanvas">
+                        Nice, France
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <!-- Add to Bucket List Button -->
+                      <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button id="Nice-France" type="button"
+                          class="btn btn-outline-success w-100 add-remove-city a-ba-city-button">
+                          Add City to Bucket List
+                        </button>
+                      </div>
+                      <!-- Image Carousel -->
+                      <div id="CordobaCarousel" class="carousel slide" style="padding-bottom: 4%;">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/argentina/buenos-aires/BA1.jpeg" class="d-block w-100 fixed-size-img">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/argentina/buenos-aires/BA2.png" class="d-block w-100 fixed-size-img">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/argentina/buenos-aires/BA3.png" class="d-block w-100 fixed-size-img">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#NiceCarousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#NiceCarousel" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- This is the main accordion for each city's information -->
+                      <div class="accordion w-100" id="MainAccordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+                              aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+                              Top Spots
+                            </button>
+                          </h2>
+                          <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body nested-first">
+                              <!-- This is the nested accordion for Top Spots information -->
+                              <div class="accordion accordion-flush w-100" id="TopSpotsList_4">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+                              style="background-color: rgb(248, 201, 144);">
+                              Places to Eat
+                            </button>
+                          </h2>
+                          <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body nested-first">
+                              <!-- This is the nested accordion for Places To Eat information -->
+                              <div class="accordion accordion-flush w-100" id="PlacesToEatList_4">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+                              aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+                              Lodging
+                            </button>
+                          </h2>
+                          <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+                            <div class="accordion-body nested-first">
+                              <!-- This is the nested accordion for Lodging information -->
+                              <div class="accordion accordion-flush w-100" id="LodgingList_4">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
 
 
-  </body>
-  <script type="module" src="js/data.js"></script>
-  <script type="module" src="js/france.js"></script>
-  </body>
+</body>
+<script type="module" src="js/data.js"></script>
+<script type="module" src="js/france.js"></script>
+</body>
+
 </html>

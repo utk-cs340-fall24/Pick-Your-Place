@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("BuenosAiresCheckbox", argentinaCities);
     addCityCardCheckboxListener("MendozaCheckbox", argentinaCities);
+    addCityCardCheckboxListener("CordobaCheckbox", argentinaCities);
+    addCityCardCheckboxListener("UshuaiaCheckbox", argentinaCities);
+    addCityCardCheckboxListener("RosarioCheckbox", argentinaCities);
+    addCityCardCheckboxListener("Puerto_IguazúCheckbox", argentinaCities);
+    addCityCardCheckboxListener("San_Miguel_de_TucumanCheckbox", argentinaCities);
+    addCityCardCheckboxListener("Puerto_MadrynCheckbox", argentinaCities);
 
     populateAllOffcanvases(argentinaCities);
 
