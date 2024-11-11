@@ -1129,43 +1129,54 @@ export const japanCities = [
         population: "18,967,000",
         top_spots: [
             {
-                name: "Andes High Mountain Tour",
-                img: "img/argentina/mendoza/spot1.png",
-                blurb: "",
+                name: "Dotonbori",
+                img: "img/Japan/Osaka/TS1.jpg",
+                blurb: `A lively district famous for its neon lights, street food, and unique 
+                        attractions like the Glico running man sign. It’s a great spot for experiencing 
+                        Osaka’s energetic nightlife and vibrant atmosphere.`,
                 isSelected: false,
             },
             {
-                name: "Catena Zapata Winery",
-                img: "img/argentina/mendoza/spot2.png",
-                blurb: "",
+                name: "Osaka Castle",
+                img: "img/Japan/Osaka/TS2.jpg",
+                blurb: `A historical landmark surrounded by lush gardens, offering a mix of history 
+                        and natural beauty. You can explore the castle’s museum and enjoy panoramic 
+                        views from the top.`,
                 isSelected: false,
             },
         ],
         places_to_eat: [
             {
-                name: "Zonda Cocina De Paisaje",
-                img: "img/argentina/mendoza/pTe1.png",
-                blurb: "",
+                name: "Mizuno",
+                img: "img/Japan/Osaka/PE1.jpg",
+                blurb: `A renowned okonomiyaki restaurant in Dotonbori, famous for its savory Japanese 
+                pancake filled with various ingredients and a signature sauce. Expect a casual but 
+                authentic experience with delicious, made-to-order dishes.`,
                 isSelected: false,
             },
             {
-                name: "Clos de Chacras",
-                img: "img/argentina/mendoza/pTe2.png",
-                blurb: "",
+                name: "Kuromon Ichiba Market",
+                img: "img/Japan/Osaka/PE2.jpg",
+                blurb: `A bustling market where you can sample fresh seafood, skewers, and Osaka-style 
+                street foods. It’s perfect for grabbing a bite on the go or enjoying a sit-down meal in 
+                one of the local eateries.`,
                 isSelected: false,
             },
         ],
         lodging: [
             {
-                name: "Hotel De Cielo",
-                img: "img/argentina/mendoza/lodging1.png",
-                blurb: "",
+                name: "Swissotel Nankai Osaka",
+                img: "img/Japan/Osaka/L1.jpg",
+                blurb: `A luxurious hotel situated above Namba Station, offering great views, top-notch 
+                amenities, and convenient access to transport, shopping, and dining. Ideal for both business 
+                and leisure travelers.`,
                 isSelected: false,
             },
             {
-                name: "Diplomatic Hotel",
-                img: "img/argentina/mendoza/lodging2.png",
-                blurb: "",
+                name: "Hotel Nikko Osaka",
+                img: "img/Japan/Osaka/L2.jpg",
+                blurb: `Located near the heart of Dotonbori and Shinsaibashi, this hotel provides comfortable 
+                rooms, excellent service, and easy access to shopping, dining, and entertainment districts.`,
                 isSelected: false,
             },
         ],
