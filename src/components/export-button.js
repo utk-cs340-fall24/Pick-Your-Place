@@ -1,4 +1,10 @@
-
+import {
+  argentinaCities,
+  franceCities,
+  japanCities,
+  moroccoCities,
+  usCities,
+} from "../js/data.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     // Function to load HTML from an external file
@@ -72,3 +78,40 @@ $(document).ready(function(){
     }
   });
 });
+
+
+const allData = [
+  ...argentinaCities,
+  ...franceCities,
+  ...japanCities,
+  ...moroccoCities,
+  ...usCities,
+];
+
+document
+  .getElementById("get-list")
+  .addEventListener("click", function () {
+    //sendBucketList is a button that serves as the trigger when clicked
+    sendBucketList(allData);
+  });
+
+function sendBucketList(data) {
+  console.log("grabbing data.");
+  fetch("process_bucket_list.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json(); // Parses JSON response if successful
+      } else {
+        throw new Error("Network response was not ok.");
+      }
+    })
+    .then((data) => console.log("Data sent successfully:", data))
+    .catch((error) => console.error("Error:", error));
+}

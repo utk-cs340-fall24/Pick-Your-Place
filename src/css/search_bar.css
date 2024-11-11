@@ -18,7 +18,7 @@
 }
 
 /* for added alert function */
-#alert_box{
+#alert_box {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -30,20 +30,20 @@
     z-index: 1100;
 }
 
-.alert{
+.alert {
     width: 200px;
     height: 60px;
     background: #fff;
     font-weight: 500;
     margin: 15px 0;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     position: relative;
     z-index: 1100;
 }
 
-.alert::after{
+.alert::after {
     content: '';
     position: absolute;
     left: 0;
@@ -55,12 +55,12 @@
     z-index: 1100;
 }
 
-.alert.remove::after{
+.alert.remove::after {
     background: red;
 }
 
 @keyframes anim {
-    100%{
+    100% {
         width: 0;
     }
 }

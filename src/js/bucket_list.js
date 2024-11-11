@@ -160,6 +160,13 @@ export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
     console.log(city);
 
     removeCityFromBL(city, country, countryCities);
+
+    const checkboxId = `${city.replace(/\s+/g, '')}Checkbox`;
+    const checkbox = document.getElementById(checkboxId);
+    
+    if (checkbox) {
+        checkbox.checked = false; // Uncheck the checkbox
+    }    
 }
 
 export function saveButtonState(button) {
