@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("KyotoCheckbox", japanCities);
     addCityCardCheckboxListener("TokyoCheckbox", japanCities);
+    addCityCardCheckboxListener("OsakaCheckbox", japanCities);
+    addCityCardCheckboxListener("YokohamaCheckbox", japanCities);
+    addCityCardCheckboxListener("NagoyaCheckbox", japanCities);
+    addCityCardCheckboxListener("KobeCheckbox", japanCities);
+    addCityCardCheckboxListener("HiroshimaCheckbox", japanCities);
+    addCityCardCheckboxListener("TakayamaCheckbox", japanCities);
 
     populateAllOffcanvases(japanCities);
 

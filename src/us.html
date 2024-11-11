@@ -36,7 +36,15 @@
 
 <body>
   <!--nav bar-->
-</body>
+  <nav class="nav-header">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <button class="bucket-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
+        aria-controls="staticBackdrop">
+        <img src="img/main/bucket.png" alt="bucket image" style="width: 70px; height: 100px; object-fit: cover" />
+      </button>
+      <div class="header-text">
+        <a href="dropdowns.html">PICK YOUR PLACE</a>
+      </div>
 <nav class="nav-header">
   <div class="container-fluid d-flex align-items-center justify-content-between">
     <button class="bucket-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
@@ -46,402 +54,584 @@
     <div class="header-text">
       <a href="dropdowns.html">PICK YOUR PLACE</a>
     </div>
+  </nav>
+  <hr class="navbar-brand-hr" />
+
+  <!-- Country Title -->
+  <div class="container text-center mt-4">
+    <h1 id="countryTitle">United States</h1>
   </div>
-</nav>
-<hr class="navbar-brand-hr" />
 
-<!-- Country Title -->
-<div class="container text-center mt-4">
-  <h1 id="countryTitle">United States</h1>
-</div>
-
-<div class="offcanvas offcanvas-start oc-bucket-list" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-  aria-labelledby="staticBackdropLabel">
-  <div class="offcanvas-header oc-bucket-list-header">
-    <h5 class="offcanvas-title oc-bucket-list-title" id="staticBackdropLabel">
-      YOUR BUCKET LIST
-    </h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <hr class="destinations-hr" />
-  <div class="list-offcanvas-body">
-    <div>
-      <p class="destinations-offcanvas-label">
-        Here are the destinations that you have added to your list. Have a
-        wonderful trip!
-      </p>
-      <hr class="destinations-hr" />
-      <ul class="list-group oc-bucket-list-group" id="bucket-list">
-      </ul>
-      <iframe src="components/export-button.html" style="width:100%; height:500px; border:none;"></iframe>
+  <div class="offcanvas offcanvas-start oc-bucket-list" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+    aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header oc-bucket-list-header">
+      <h5 class="offcanvas-title oc-bucket-list-title" id="staticBackdropLabel">
+        YOUR BUCKET LIST
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <hr class="destinations-hr" />
+    <div class="list-offcanvas-body">
+      <div>
+        <p class="destinations-offcanvas-label">
+          Here are the destinations that you have added to your list. Have a
+          wonderful trip!
+        </p>
+        <hr class="destinations-hr" />
+        <ul class="list-group oc-bucket-list-group" id="bucket-list">
+        </ul>
+        <iframe src="components/export-button.html" style="width:100%; height:500px; border:none;"></iframe>
+      </div>
     </div>
   </div>
-</div>
 
-<!--alert button-->
-<div id="alert_box"></div>
-
-
-<!--Search Bar Fucntion-->
-<nav class="search-bar">
-  <form class="form-inline">
-    <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
-  </form>
-</nav>
-
-<!-- This is the container of country city cards. -->
-<div class="container p-3">
-  <div class="row">
-    <!-- This is the Los Angeles card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/los-angeles/LA1.png" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#LosAngeles"
-          aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Los Angeles, CA</h5>
-        </div>
+  <!--alert button-->
+  <div id="alert_box"></div>
 
 
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="LosAngelesCheckbox"
-                data-city="Los Angeles" data-country="United States" />
-            </label>
+  <!--Search Bar Fucntion-->
+  <nav class="search-bar">
+    <form class="form-inline">
+      <input id="searchform" class="search-box" type="search" placeholder="Search for City" />
+    </form>
+  </nav>
+
+  <!-- This is the container of country city cards. -->
+  <div class="container p-3">
+    <div class="row">
+      <!-- This is the Los Angeles card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/los-angeles/LA1.png" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#LosAngeles"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Los Angeles, CA</h5>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- This is the New York card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/new-york/NY1.png" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#NewYork"
-          aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">New York, NY</h5>
-        </div>
 
 
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="NewYorkCheckbox" data-city="New York"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- This is the Seattle card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/seattle/seattle.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Seattle" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Seattle, Washington</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="SeattleCheckbox" data-city="Seattle"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Miami card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/miami/miami.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Miami" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Miami, Flordia</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="MiamiCheckbox" data-city="Miami"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- This is the Chicago card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/chicago/chicago.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Chicago" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Chicago, Illinois</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="ChicagoCheckbox" data-city="Chicago"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- This is the Las Vegas, Nevada card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/las_vegas/las_vegas.jpg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#LasVegas" aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Las Vegas, Nevada</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="LasVegasCheckbox" data-city="LasVegas"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- This is the Washington, DC card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/washingtondc/washington.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Washington"
-          aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Washington, DC</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="WashingtonCheckbox" data-city="Washington"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- This is the Philadelphia, pennsylvania card -->
-    <div class="col-md-3 mb-3">
-      <div class="card bg-dark text-white text-center result-items">
-        <img src="img/us/philly/philadelphia.jpeg" class="card-img city-card" />
-        <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Philadelphia"
-          aria-controls="offcanvasExample">
-          <h5 class="card-title" style="text-indent: -15px;">Philadelphia, Pennsylvania</h5>
-        </div>
-    
-    
-        <div>
-          <div class="form-check overlay">
-            <label class="city-card-check-box">
-              <input class="form-check-input city-card-input" type="checkbox" id="PhiladelphiaCheckbox" data-city="Philadelphia"
-                data-country="United States" />
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-
-<!-- This is the offCanvas for Los Angeles. -->
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="LosAngeles"
-  aria-labelledby="LosAngelesOffCanvas">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="LosAngelesOffCanvas">
-      City, State, Country
-    </h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <!-- Add to Bucket List Button -->
-    <div class="d-flex justify-content-center align-items-center mb-3">
-      <button id="Los.Angeles-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
-        Add City to Bucket List
-      </button>
-    </div>
-    <!-- Image Carousel -->
-    <div id="LosAngelesCarousel" class="carousel slide" style="padding-bottom: 4%;">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/us/los-angeles/LA1.png" class="d-block w-100 fixed-size-img">
-        </div>
-        <div class="carousel-item">
-          <img src="img/us/los-angeles/LA2.png" class="d-block w-100 fixed-size-img">
-        </div>
-        <div class="carousel-item">
-          <img src="img/us/los-angeles/LA3.png" class="d-block w-100 fixed-size-img">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- This is the main accordion for each city's information -->
-    <div class="accordion w-100" id="MainAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
-            aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
-            Top Spots
-          </button>
-        </h2>
-        <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Top Spots information -->
-            <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="LosAngelesCheckbox"
+                  data-city="Los Angeles" data-country="United States" />
+              </label>
             </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
-            style="background-color: rgb(248, 201, 144);">
-            Places to Eat
-          </button>
-        </h2>
-        <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Places To Eat information -->
-            <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+
+      <!-- This is the New York card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/new-york/NY1.png" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#NewYork"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">New York, NY</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="NewYorkCheckbox"
+                  data-city="New York" data-country="United States" />
+              </label>
             </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
-            aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
-            Lodging
-          </button>
-        </h2>
-        <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Lodging information -->
-            <div class="accordion accordion-flush w-100" id="LodgingList_1">
+
+      <!-- This is the Seattle card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/seattle/seattle.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Seattle"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Seattle, Washington</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="SeattleCheckbox" data-city="Seattle"
+                  data-country="United States" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Miami card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/miami/miami.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Miami"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Miami, Flordia</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="MiamiCheckbox" data-city="Miami"
+                  data-country="United States" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <!-- This is the Chicago card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/chicago/chicago.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Chicago"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Chicago, Illinois</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="ChicagoCheckbox" data-city="Chicago"
+                  data-country="United States" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- This is the Las Vegas, Nevada card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/las_vegas/las_vegas.jpg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#LasVegas"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Las Vegas, Nevada</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="LasVegasCheckbox"
+                  data-city="LasVegas" data-country="United States" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- This is the Washington, DC card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/washingtondc/washington.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Washington"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Washington, DC</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="WashingtonCheckbox"
+                  data-city="Washington" data-country="United States" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the Philadelphia, pennsylvania card -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-dark text-white text-center result-items">
+          <img src="img/us/philly/philadelphia.jpeg" class="card-img city-card" />
+          <div class="card-img-overlay" data-bs-toggle="offcanvas" data-bs-target="#Philadelphia"
+            aria-controls="offcanvasExample">
+            <h5 class="card-title" style="text-indent: -15px;">Philadelphia, Pennsylvania</h5>
+          </div>
+
+
+          <div>
+            <div class="form-check overlay">
+              <label class="city-card-check-box">
+                <input class="form-check-input city-card-input" type="checkbox" id="PhiladelphiaCheckbox"
+                  data-city="Philadelphia" data-country="United States" />
+              </label>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- This is the offCanvas for New York. -->
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="NewYork"
-  aria-labelledby="NewYorkOffCanvas">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="NewYorkOffCanvas">
-      City, State, Country
-    </h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <!-- This is the offCanvas for Los Angeles. -->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="LosAngeles"
+    aria-labelledby="LosAngelesOffCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="LosAngelesOffCanvas">
+        City, State, Country
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Add to Bucket List Button -->
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <button id="Los.Angeles-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
+          Add City to Bucket List
+        </button>
+      </div>
+      <!-- Image Carousel -->
+      <div id="LosAngelesCarousel" class="carousel slide" style="padding-bottom: 4%;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/us/los-angeles/LA1.png" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/los-angeles/LA2.png" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/los-angeles/LA3.png" class="d-block w-100 fixed-size-img">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#LosAngelesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- This is the main accordion for each city's information -->
+      <div class="accordion w-100" id="MainAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+              aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+              Top Spots
+            </button>
+          </h2>
+          <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Top Spots information -->
+              <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+              style="background-color: rgb(248, 201, 144);">
+              Places to Eat
+            </button>
+          </h2>
+          <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Places To Eat information -->
+              <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+              aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+              Lodging
+            </button>
+          </h2>
+          <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Lodging information -->
+              <div class="accordion accordion-flush w-100" id="LodgingList_1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="offcanvas-body">
-    <!-- Add to Bucket List Button -->
-    <div class="d-flex justify-content-center align-items-center mb-3">
-      <button id="New.York-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
-        Add City to Bucket List
-      </button>
+
+  <!-- This is the offCanvas for New York. -->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="NewYork"
+    aria-labelledby="NewYorkOffCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="NewYorkOffCanvas">
+        City, State, Country
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <!-- Image Carousel -->
-    <div id="NewYorkCarousel" class="carousel slide" style="padding-bottom: 4%;">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/us/new-york/NY1.png" class="d-block w-100 fixed-size-img">
-        </div>
-        <div class="carousel-item">
-          <img src="img/us/new-york/NY2.png" class="d-block w-100 fixed-size-img">
-        </div>
-        <div class="carousel-item">
-          <img src="img/us/new-york/NY3.png" class="d-block w-100 fixed-size-img">
-        </div>
+    <div class="offcanvas-body">
+      <!-- Add to Bucket List Button -->
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <button id="New.York-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
+          Add City to Bucket List
+        </button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- This is the main accordion for each city's information -->
-    <div class="accordion w-100" id="MainAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
-            aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
-            Top Spots
-          </button>
-        </h2>
-        <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Top Spots information -->
-            <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+      <!-- Image Carousel -->
+      <div id="NewYorkCarousel" class="carousel slide" style="padding-bottom: 4%;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/us/new-york/NY1.png" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/new-york/NY2.png" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/new-york/NY3.png" class="d-block w-100 fixed-size-img">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#NewYorkCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- This is the main accordion for each city's information -->
+      <div class="accordion w-100" id="MainAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+              aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+              Top Spots
+            </button>
+          </h2>
+          <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Top Spots information -->
+              <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
-            style="background-color: rgb(248, 201, 144);">
-            Places to Eat
-          </button>
-        </h2>
-        <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Places To Eat information -->
-            <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+              style="background-color: rgb(248, 201, 144);">
+              Places to Eat
+            </button>
+          </h2>
+          <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Places To Eat information -->
+              <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
-            aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
-            Lodging
-          </button>
-        </h2>
-        <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
-          <div class="accordion-body nested-first">
-            <!-- This is the nested accordion for Lodging information -->
-            <div class="accordion accordion-flush w-100" id="LodgingList_2">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+              aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+              Lodging
+            </button>
+          </h2>
+          <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Lodging information -->
+              <div class="accordion accordion-flush w-100" id="LodgingList_2">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</body>
+
+  <!-- This is the offCanvas for Seattle. -->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Seattle"
+    aria-labelledby="SeattleOffCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="SeattleOffCanvas">
+        City, State, Country
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Add to Bucket List Button -->
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <button id="Seattle-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
+          Add City to Bucket List
+        </button>
+      </div>
+      <!-- Image Carousel -->
+      <div id="SeattleCarousel" class="carousel slide" style="padding-bottom: 4%;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/us/seattle/pic1.jpg" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/seattle/pic2.jpg" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/seattle/pic3.webp" class="d-block w-100 fixed-size-img">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#SeattleCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#SeattleCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- This is the main accordion for each city's information -->
+      <div class="accordion w-100" id="MainAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+              aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+              Top Spots
+            </button>
+          </h2>
+          <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Top Spots information -->
+              <div class="accordion accordion-flush w-100" id="TopSpotsList_3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+              style="background-color: rgb(248, 201, 144);">
+              Places to Eat
+            </button>
+          </h2>
+          <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Places To Eat information -->
+              <div class="accordion accordion-flush w-100" id="PlacesToEatList_3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+              aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+              Lodging
+            </button>
+          </h2>
+          <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Lodging information -->
+              <div class="accordion accordion-flush w-100" id="LodgingList_3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the offCanvas for Miami. -->
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="Miami" aria-labelledby="MiamiOffCanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="MiamiOffCanvas">
+        City, State, Country
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Add to Bucket List Button -->
+      <div class="d-flex justify-content-center align-items-center mb-3">
+        <button id="Miami-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
+          Add City to Bucket List
+        </button>
+      </div>
+      <!-- Image Carousel -->
+      <div id="MiamiCarousel" class="carousel slide" style="padding-bottom: 4%;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/us/miami/pic1.webp" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/miami/pic2.jpeg" class="d-block w-100 fixed-size-img">
+          </div>
+          <div class="carousel-item">
+            <img src="img/us/miami/pic3.jpg" class="d-block w-100 fixed-size-img">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#MiamiCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#MiamiCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- This is the main accordion for each city's information -->
+      <div class="accordion w-100" id="MainAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+              aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+              Top Spots
+            </button>
+          </h2>
+          <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Top Spots information -->
+              <div class="accordion accordion-flush w-100" id="TopSpotsList_4">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+              style="background-color: rgb(248, 201, 144);">
+              Places to Eat
+            </button>
+          </h2>
+          <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Places To Eat information -->
+              <div class="accordion accordion-flush w-100" id="PlacesToEatList_4">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+              aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+              Lodging
+            </button>
+          </h2>
+          <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+            <div class="accordion-body nested-first">
+              <!-- This is the nested accordion for Lodging information -->
+              <div class="accordion accordion-flush w-100" id="LodgingList_4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("ColmarCheckbox", franceCities);
     addCityCardCheckboxListener("ParisCheckbox", franceCities);
+    addCityCardCheckboxListener("FrenchAlpsCheckbox", franceCities);
+    addCityCardCheckboxListener("NiceCheckbox", franceCities);
+    addCityCardCheckboxListener("LourdesCheckbox", franceCities);
+    addCityCardCheckboxListener("MontpellierCheckbox", franceCities);
+    addCityCardCheckboxListener("StrasbourgCheckbox", franceCities);
+    addCityCardCheckboxListener("ToulouseCheckbox", franceCities);
 
     populateAllOffcanvases(franceCities);
     

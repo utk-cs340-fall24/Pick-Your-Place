@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("LosAngelesCheckbox", usCities);
     addCityCardCheckboxListener("NewYorkCheckbox", usCities);
-
+    addCityCardCheckboxListener("SeattleCheckbox", usCities);
+    addCityCardCheckboxListener("MiamiCheckbox", usCities);
+    addCityCardCheckboxListener("ChicagoCheckbox", usCities);
+    addCityCardCheckboxListener("LasVegasCheckbox", usCities);
+    addCityCardCheckboxListener("WashingtonCheckbox", usCities);
+    addCityCardCheckboxListener("PhiladelphiaCheckbox", usCities);
     
     populateAllOffcanvases(usCities);
 

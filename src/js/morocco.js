@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addCityCardCheckboxListener("CasablancaCheckbox", moroccoCities);
     addCityCardCheckboxListener("RabatCheckbox", moroccoCities);
+    addCityCardCheckboxListener("MarrakechCheckbox", moroccoCities);
+    addCityCardCheckboxListener("ChefchaouenCheckbox", moroccoCities);
+    addCityCardCheckboxListener("FesCheckbox", moroccoCities);
+    addCityCardCheckboxListener("AgadirCheckbox", moroccoCities);
+    addCityCardCheckboxListener("OuarzazateCheckbox", moroccoCities);
+    addCityCardCheckboxListener("TangierCheckbox", moroccoCities);
+
 
     populateAllOffcanvases(moroccoCities);
     
