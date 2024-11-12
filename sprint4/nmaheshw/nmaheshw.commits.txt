@@ -1,0 +1,157 @@
+==============
+src/js/data.js
+==============
+
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1132)                 name: "Dotonbori",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1133)                 img: "img/Japan/Osaka/TS1.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1134)                 blurb: `A lively district famous for its neon lights, street food, and unique 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1135)                         attractions like the Glico running man sign. It’s a great spot for experiencing 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1136)                         Osaka’s energetic nightlife and vibrant atmosphere.`,
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1140)                 name: "Osaka Castle",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1141)                 img: "img/Japan/Osaka/TS2.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1142)                 blurb: `A historical landmark surrounded by lush gardens, offering a mix of history 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1143)                         and natural beauty. You can explore the castle’s museum and enjoy panoramic 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1144)                         views from the top.`,
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1150)                 name: "Mizuno",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1151)                 img: "img/Japan/Osaka/PE1.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1152)                 blurb: `A renowned okonomiyaki restaurant in Dotonbori, famous for its savory Japanese 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1153)                 pancake filled with various ingredients and a signature sauce. Expect a casual but 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1154)                 authentic experience with delicious, made-to-order dishes.`,
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1158)                 name: "Kuromon Ichiba Market",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1159)                 img: "img/Japan/Osaka/PE2.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1160)                 blurb: `A bustling market where you can sample fresh seafood, skewers, and Osaka-style 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1161)                 street foods. It’s perfect for grabbing a bite on the go or enjoying a sit-down meal in 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1162)                 one of the local eateries.`,
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1168)                 name: "Swissotel Nankai Osaka",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1169)                 img: "img/Japan/Osaka/L1.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1170)                 blurb: `A luxurious hotel situated above Namba Station, offering great views, top-notch 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1171)                 amenities, and convenient access to transport, shopping, and dining. Ideal for both business 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1172)                 and leisure travelers.`,
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1176)                 name: "Hotel Nikko Osaka",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1177)                 img: "img/Japan/Osaka/L2.jpg",
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1178)                 blurb: `Located near the heart of Dotonbori and Shinsaibashi, this hotel provides comfortable 
+cedd950a (Nia M                   2024-11-11 10:59:08 -0500 1179)                 rooms, excellent service, and easy access to shopping, dining, and entertainment districts.`,
+
+
+===========
+src/us.html
+===========
+
+74043547 (Nia M                   2024-11-02 21:41:05 -0400  55)       <a href="dropdowns.html">PICK YOUR PLACE</a>
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  90)     
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  91)      <!-- Code for grabbing bucket list data -->  
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  92)      <!-- Inside your us.html file -->
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  93)       <!-- 1. console.log the data to make sure it grabs right data
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  94)           2. format the data using ajax 
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  95)           3. look at send-email.php to see how to connect the two.
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  96)        -->
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  97)      <script type="module">
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  98)       import { userBucketList } from './js/bucket_list.js'; // Make sure the path is correct
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500  99)   
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 100)       function exportBucketListData() {
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 101)         console.log("Here in exportBucketListData function!");
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 102) 
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 103)         const bucketListData = userBucketList.map(city => ({
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 104)           name: city.name,
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 105)           country: city.country,
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 106)         }));
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 107) 
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 108)         // Log the actual bucket list data for verification
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 109)         console.log("Current bucket list data:", userBucketList);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 110)         
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 111)         // Prepare and format userBucketList data
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 112)         const formattedData = JSON.stringify(userBucketList);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 113) 
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 114)         // Send formatted data to server
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 115)         const xhr = new XMLHttpRequest();
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 116)         xhr.open("POST", "./components/send-email.php", true);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 117)         xhr.setRequestHeader("Content-Type", "application/json");
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 118)         xhr.onreadystatechange = function() {
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 119)             if (xhr.readyState === 4 && xhr.status === 200) {
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 120)               console.log("Response from server:", xhr.responseText); // Check the response from the PHP server
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 121)               console.log("Bucket list successfully sent to the server:", xhr.responseText);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 122)             }
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 123)         };
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 124) 
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 125)         console.log("sending data: ", formattedData);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 126)         xhr.send(formattedData);
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 127)     }
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 128)   
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 129)       window.addEventListener("message", function(event) {
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 130)           if (event.data === "buttonClicked") {
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 131)               console.log("Export button clicked! calling send function.");
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 132)               exportBucketListData();
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 133)           }
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 134)       });
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 135)   </script>
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 136)       
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 137)       <!-- Embed the iframe -->
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 689) <!-- Inside your us.html file, before the closing </body> tag -->
+af2f76ac (Nia M                   2024-11-06 22:16:51 -0500 690) <!--<script src="grab_data.js"></script>-->
+
+=============================
+src/components/send-email.php
+=============================
+
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   3) // Allow all origins (for testing purposes)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   4) header("Access-Control-Allow-Origin: *");
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   5)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   6) // Ensure the response is JSON
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   7) header("Content-Type: application/json");
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500   8)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  33) // Read the raw POST data (JSON) (added this to work w bucket list data)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  34) $input = file_get_contents("php://input");
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  35) error_log("Raw POST data: " . $input);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  36)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  37) $data = json_decode($input, true);  // Decode JSON data to PHP associative array
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  38)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  42) // Check if the bucket list data exists
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  43) if ($data && is_array($data)) { //not passing this condition.
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  44)     // Prepare the body of the email with the bucket list data
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  45)     $bodyText = "Here is the user's bucket list:\n\n";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  46)     $bodyHtml = "<h1>User's Bucket List</h1><ul>";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  47)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  48)     foreach ($data as $cityObject) {
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  49)         $bodyText .= "- {$cityObject['name']}, {$cityObject['country']}\n";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  50)         $bodyHtml .= "<li>{$cityObject['name']}, {$cityObject['country']}</li>";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  51)     }
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  52)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  53)     $bodyHtml .= "</ul>";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  54)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  55)     $mail = new PHPMailer(true);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  56)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  57)     try {
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  58)         // Specify the SMTP settings.
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  59)         $mail->isSMTP();
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  60)         $mail->setFrom($sender, $senderName);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  61)         $mail->Username   = $usernameSmtp;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  62)         $mail->Password   = $passwordSmtp;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  63)         $mail->Host       = $host;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  64)         $mail->Port       = $port;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  65)         $mail->SMTPAuth   = true;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  66)         $mail->SMTPSecure = 'tls';
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  67)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  68)         // Specify the message recipients.
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  69)         $mail->addAddress($recipient);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  70)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  71)         // Specify the content of the message.
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  72)         $mail->isHTML(true);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  73)         $mail->Subject    = "User's Bucket List";
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  74)         $mail->Body       = $bodyHtml;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  75)         $mail->AltBody    = $bodyText;
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  76)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  77)         // Send the email
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  78)         $mail->Send();
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  79)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  80)         echo json_encode(['success' => true, 'message' => 'Email sent successfully!']);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  81)     } catch (Exception $e) {
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  82)         echo json_encode(['success' => false, 'message' => "Email not sent. Error: {$mail->ErrorInfo}"]);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  83)     }
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  84) } else {
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  85)     echo json_encode(['success' => false, 'message' => 'No valid bucket list data received']);
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  86) }
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  87)
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  88) //would have gone right under subject but trying something new.
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500  90) /*$bodyText =  "Email Test\r\nThis email was sent through the
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500 128) }*/
+af2f76ac (Nia M    2024-11-06 22:16:51 -0500 129) ?>
