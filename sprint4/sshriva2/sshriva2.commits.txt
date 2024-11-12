@@ -1,0 +1,29 @@
+bucket_list.js:
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   3) let alert_box = document.getElementById('alert_box');
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   4) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   5)     function added_alert(msg){
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   6)         let alert = document.createElement('div');
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   7)         alert.classList.add('alert');
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   8)         alert.innerHTML = msg;
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500   9)         alert_box.appendChild(alert);
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  10) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  11)         if (msg.includes('Removed')) {
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  12)             alert.classList.add('remove');
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  13)         }
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  14) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  15) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  16)         setTimeout(() => {
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  17)         alert.remove();
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  18)         },3000);
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  19) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  20)         
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  21)     }
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500  22) 
+bf24eea7 (sanya-shrivastava 2024-11-04 10:42:09 -0500 120)             added_alert("City Added!");
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 163) 
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 164)     const checkboxId = `${city.replace(/\s+/g, '')}Checkbox`;
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 165)     const checkbox = document.getElementById(checkboxId);
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 166)     
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 167)     if (checkbox) {
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 168)         checkbox.checked = false; // Uncheck the checkbox
+fd6d0757 (sanya-shrivastava 2024-11-06 18:16:12 -0500 169)     }    
