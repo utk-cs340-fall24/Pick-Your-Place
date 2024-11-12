@@ -1,1 +1,538 @@
-Commits
+argentina.js:
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   3) import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
+564fb61c (jweste25                2024-11-10 11:45:35 -0500   4) const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   5) const { populateAllOffcanvases } = offcanvasPopulationFunctions;
+861009b0 (jweste25                2024-11-09 17:30:04 -0500   7) window.argentinaCities = argentinaCities;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  21)     populateAllOffcanvases(argentinaCities);
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  23)     let alert_box = document.getElementById('alert_box');
+4e46acf3 (jweste25                2024-11-05 18:23:36 -0500  24)   
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  46)         loadButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  48)             const buttonId = button.id;
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  49)             const isAdding = button.classList.contains("btn-outline-success");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  50)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  51)             if (isAdding) {
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  52)                 addCityToBLFromOffcanvas(buttonId, argentinaCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  54)                 removeCityFromBLFromOffcanvas(buttonId, argentinaCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  56)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  57)             button.classList.toggle("btn-outline-success", !isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  58)             button.classList.toggle("btn-outline-danger", isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  59)             button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  60)             saveButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  61)             added_alert(isAdding ? "City Added!" : "City Removed");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  63)     });
+564fb61c (jweste25                2024-11-10 11:45:35 -0500  65)     loadAttractionsFromLocalStorage(argentinaCities);
+564fb61c (jweste25                2024-11-10 11:45:35 -0500  66) 
+861009b0 (jweste25                2024-11-09 17:30:04 -0500  69) 
+861009b0 (jweste25                2024-11-09 17:30:04 -0500  76) 
+564fb61c (jweste25                2024-11-10 11:45:35 -0500  85) 
+564fb61c (jweste25                2024-11-10 11:45:35 -0500  86)                 const attractionName = getAttractionName(button);
+564fb61c (jweste25                2024-11-10 11:45:35 -0500  87)                 setAttractionSelectedTrue(attractionName, argentinaCities);
+564fb61c (jweste25                2024-11-10 11:45:35 -0500 101) 
+564fb61c (jweste25                2024-11-10 11:45:35 -0500 102)                 const attractionName = getAttractionName(button);
+564fb61c (jweste25                2024-11-10 11:45:35 -0500 103)                 setAttractionSelectedFalse(attractionName, argentinaCities);
+
+bucket_list.js:
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  75)         let attractionsHTML = '<div style="width: 100%;">';
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  76) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  77)         // Append selected top spots
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  78)         let topSpotsHTML = '';
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  79)         cityObject.top_spots.forEach(spot => {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  80)             if (spot.isSelected) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  81)                 topSpotsHTML += `<li>${spot.name}</li>`;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  82)             }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  83)         });
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  84)         if (topSpotsHTML) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  85)             attractionsHTML += `
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  86)                 <div class="ms-2 me-auto" style="width: 100%;">
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  87)                     <div class="fw-bold">Top Spots</div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  88)                     <ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  89)                         ${topSpotsHTML}
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  90)                     </ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  91)                 </div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  92)                 <br>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  93)             `;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  94)         }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  95) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  96)         // Append selected places to eat
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  97)         let placesToEatHTML = '';
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  98)         cityObject.places_to_eat.forEach(place => {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500  99)             if (place.isSelected) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 100)                 placesToEatHTML += `<li>${place.name}</li>`;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 101)             }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 102)         });
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 103)         if (placesToEatHTML) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 104)             attractionsHTML += `
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 105)                 <div class="ms-2 me-auto" style="width: 100%;">
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 106)                     <div class="fw-bold">Places To Eat</div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 107)                     <ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 108)                         ${placesToEatHTML}
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 109)                     </ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 110)                 </div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 111)                 <br>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 112)             `;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 113)         }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 114) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 115)         // Append selected lodging
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 116)         let lodgingHTML = '';
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 117)         cityObject.lodging.forEach(lodge => {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 118)             if (lodge.isSelected) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 119)                 lodgingHTML += `<li>${lodge.name}</li>`;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 120)             }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 121)         });
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 122)         if (lodgingHTML) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 123)             attractionsHTML += `
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 124)                 <div class="ms-2 me-auto" style="width: 100%;">
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 125)                     <div class="fw-bold">Lodging</div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 126)                     <ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 127)                         ${lodgingHTML}
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 128)                     </ul>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 129)                 </div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 130)                 <br>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 131)             `;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 132)         }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 133) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 134)         attractionsHTML += "</div>"
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 135) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 136)         // console.log(attractionsHTML);
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 137) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 138)         // Create a new list item for the attractionsHTML content
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 142)             <div style="width: 100%;">
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 143)                 <span><strong>${cityObject.name}, ${cityObject.country}</strong></span>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 144)                 <button class="btn-delete-list-item">Remove</button>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 145)             </div>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 146)             <br>
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 147)             ${attractionsHTML}
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 149) 
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 151)         const exists = Array.from(bl_group.querySelectorAll('li')).some(item => {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 152)             const span = item.querySelector('span');
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 153)             return span && span.textContent === `${cityObject.name}, ${cityObject.country}`;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 154)         });
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 170)         // Ensure checkbox is checked if city is in the bucket list
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 171)         const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 172)         const checkbox = document.getElementById(checkboxId);
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 173)         if (checkbox) {
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 174)             checkbox.checked = true; // Check the checkbox
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 175)         }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 188)             // populateAttractions();
+875a7b8a (jweste25          2024-11-04 11:11:05 -0500 194)             added_alert("City Removed!");
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 197) }
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 198) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 199) export function addCityToBLFromOffcanvas(buttonId, countryCities) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 200)     const parts = buttonId.split(/[~\-]/);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 201)     let city, country;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 202)     // console.log(parts);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 203) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 204)     if (parts.length === 2) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 205)         city = parts[0].replace(/\./g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 206)         country = parts[1];
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 207)     } else if (parts.length === 3) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 208)         city = parts[0].replace(/\./g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 209)         country = parts.slice(1).join(' ').replace(/~/g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 210)     }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 211)     // console.log(city);
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 212)     // console.log(country);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 213) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 214)     addCityToBL(city, country, countryCities);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 215) }
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 216) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 217) export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 218)     const parts = buttonId.split(/[~\-]/);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 219)     let city, country;
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 220)     // console.log(parts);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 221) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 222)     if (parts.length === 2) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 223)         city = parts[0].replace(/\./g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 224)         country = parts[1];
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 225)     } else if (parts.length === 3) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 226)         city = parts[0].replace(/\./g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 227)         country = parts.slice(1).join(' ').replace(/~/g, ' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 228)     }
+55d288ed (jweste25          2024-11-12 08:30:58 -0500 229)     // console.log(city);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 230) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 231)     removeCityFromBL(city, country, countryCities);
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 239) }
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 240) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 241) export function saveButtonState(button) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 242)     const buttonState = {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 243)         classList: Array.from(button.classList),
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 244)         textContent: button.textContent,
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 245)     };
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 246)     localStorage.setItem(button.id, JSON.stringify(buttonState));
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 247) }
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 248) 
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 249) export function loadButtonState(button) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 250)     const buttonState = JSON.parse(localStorage.getItem(button.id));
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 251)     if(buttonState) {
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 252)         button.className = buttonState.classList.join(' ');
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 253)         button.textContent = buttonState.textContent;
+5d0b57ff (jweste25          2024-11-03 22:36:30 -0500 254)     }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 255) }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 256) 
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 257) export function getAttractionName(button) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 258)     const accordionItem = button.closest(".accordion-item");
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 259)     const attractionName = accordionItem.querySelector('.accordion-button').textContent.trim();
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 260)     console.log("Attraction Selected: ", attractionName);
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 261)     return attractionName;
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 262) }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 263) 
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 264) function saveAttractionToLocalStorage(attractionName, isSelected) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 265)     localStorage.setItem(attractionName, isSelected);
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 266) }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 267) 
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 268) export function setAttractionSelectedTrue(attractionName, countryCities) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 269)     for (const city of countryCities) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 270)         // Search in top_spots
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 271)         for (const spot of city.top_spots) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 272)             if (spot.name === attractionName) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 273)                 spot.isSelected = true;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 274)                 saveAttractionToLocalStorage(attractionName, true);
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 275)                 return;
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 276)             }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 277)         }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 278)         // Search in places_to_eat
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 279)         for (const place of city.places_to_eat) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 280)             if (place.name === attractionName) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 281)                 place.isSelected = true;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 282)                 saveAttractionToLocalStorage(attractionName, true);
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 283)                 return;
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 284)             }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 285)         }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 286)         // Search in lodging
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 287)         for (const lodge of city.lodging) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 288)             if (lodge.name === attractionName) {
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 289)                 lodge.isSelected = true;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 290)                 saveAttractionToLocalStorage(attractionName, true);
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 291)                 return;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 292)             }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 293)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 294)     }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 295) }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 296) export function setAttractionSelectedFalse(attractionName, countryCities) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 297)     for (const city of countryCities) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 298)         // Search in top_spots
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 299)         for (const spot of city.top_spots) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 300)             if (spot.name === attractionName) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 301)                 spot.isSelected = false;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 302)                 saveAttractionToLocalStorage(attractionName, false);
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 303)                 return;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 304)             }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 305)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 306)         // Search in places_to_eat
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 307)         for (const place of city.places_to_eat) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 308)             if (place.name === attractionName) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 309)                 place.isSelected = false;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 310)                 saveAttractionToLocalStorage(attractionName, false);
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 311)                 return;
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 312)             }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 313)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 314)         // Search in lodging
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 315)         for (const lodge of city.lodging) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 316)             if (lodge.name === attractionName) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 317)                 lodge.isSelected = false;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 318)                 saveAttractionToLocalStorage(attractionName, false);
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 319)                 return;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 320)             }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 321)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 322)     }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 323) }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 324) 
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 325) export function loadAttractionsFromLocalStorage(countryCities) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 326)     for (const city of countryCities) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 327)         // Load state for top_spots
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 328)         for (const spot of city.top_spots) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 329)             const isSelected = localStorage.getItem(spot.name) === 'true';
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 330)             spot.isSelected = isSelected;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 331)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 332)         // Load state for places_to_eat
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 333)         for (const place of city.places_to_eat) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 334)             const isSelected = localStorage.getItem(place.name) === 'true';
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 335)             place.isSelected = isSelected;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 336)         }
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 337)         // Load state for lodging
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 338)         for (const lodge of city.lodging) {
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 339)             const isSelected = localStorage.getItem(lodge.name) === 'true';
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 340)             lodge.isSelected = isSelected;
+564fb61c (jweste25          2024-11-10 11:45:35 -0500 341)         }
+861009b0 (jweste25          2024-11-09 17:30:04 -0500 342)     }
+95b44121 (jweste25          2024-11-04 00:12:52 -0500 343) }
+
+france.js
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   3) import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
+55d288ed (jweste25                2024-11-12 08:30:58 -0500   4) const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   5) const { populateAllOffcanvases } = offcanvasPopulationFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  18) 
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  19)     populateAllOffcanvases(franceCities);
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  21)     let alert_box = document.getElementById('alert_box');
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  44)         loadButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  46)             const buttonId = button.id;
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  47)             const isAdding = button.classList.contains("btn-outline-success");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  48)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  49)             if (isAdding) {
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  50)                 addCityToBLFromOffcanvas(buttonId, franceCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  52)                 removeCityFromBLFromOffcanvas(buttonId, franceCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  54)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  55)             button.classList.toggle("btn-outline-success", !isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  56)             button.classList.toggle("btn-outline-danger", isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  57)             button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  58)             saveButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  59)             added_alert(isAdding ? "City Added!" : "City Removed");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  61)     });
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  80) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  81) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  82)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  83)                 setAttractionSelectedTrue(attractionName, franceCities);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  97) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  98)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  99)                 setAttractionSelectedFalse(attractionName, franceCities);
+
+japan.js:
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   3) import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
+55d288ed (jweste25                2024-11-12 08:30:58 -0500   4) const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   5) const { populateAllOffcanvases } = offcanvasPopulationFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  20)     populateAllOffcanvases(japanCities);
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  21) 
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  22)     let alert_box = document.getElementById('alert_box');
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  45)         loadButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  47)             const buttonId = button.id;
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  48)             const isAdding = button.classList.contains("btn-outline-success");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  49)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  50)             if (isAdding) {
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  51)                 addCityToBLFromOffcanvas(buttonId, japanCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  53)                 removeCityFromBLFromOffcanvas(buttonId, japanCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  55)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  56)             button.classList.toggle("btn-outline-success", !isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  57)             button.classList.toggle("btn-outline-danger", isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  58)             button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  59)             saveButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  60)             added_alert(isAdding ? "City Added!" : "City Removed");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  62)     });
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  81) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  82)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  83)                 setAttractionSelectedTrue(attractionName, japanCities);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  97) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  98)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  99)                 setAttractionSelectedFalse(attractionName, japanCities);
+
+morocco.js:
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   3) import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
+55d288ed (jweste25                2024-11-12 08:30:58 -0500   4) const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   5) const { populateAllOffcanvases } = offcanvasPopulationFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  21)     populateAllOffcanvases(moroccoCities);
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  22)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  46)         loadButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  48)             const buttonId = button.id;
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  49)             const isAdding = button.classList.contains("btn-outline-success");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  50)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  51)             if (isAdding) {
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  52)                 addCityToBLFromOffcanvas(buttonId, moroccoCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  54)                 removeCityFromBLFromOffcanvas(buttonId, moroccoCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  56)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  57)             button.classList.toggle("btn-outline-success", !isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  58)             button.classList.toggle("btn-outline-danger", isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  59)             button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  60)             saveButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  61)             added_alert(isAdding ? "City Added!" : "City Removed");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  63)     });
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  83)             
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  84) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  85)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  86)                 setAttractionSelectedTrue(attractionName, moroccoCities);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500 100) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500 101)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500 102)                 setAttractionSelectedFalse(attractionName, moroccoCities);
+
+us.js:
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   3) import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
+55d288ed (jweste25                2024-11-12 08:30:58 -0500   4) const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500   5) const { populateAllOffcanvases } = offcanvasPopulationFunctions;
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  20)     populateAllOffcanvases(usCities);
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  21) 
+95b44121 (jweste25                2024-11-04 00:12:52 -0500  22)     let alert_box = document.getElementById('alert_box');
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  45)         loadButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  47)             const buttonId = button.id;
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  48)             const isAdding = button.classList.contains("btn-outline-success");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  49)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  50)             if (isAdding) {
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  51)                 addCityToBLFromOffcanvas(buttonId, usCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  53)                 removeCityFromBLFromOffcanvas(buttonId, usCities);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  55)     
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  56)             button.classList.toggle("btn-outline-success", !isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  57)             button.classList.toggle("btn-outline-danger", isAdding);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  58)             button.textContent = isAdding ? "Remove City from Bucket List" : "Add City to Bucket List";
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  59)             saveButtonState(button);
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  60)             added_alert(isAdding ? "City Added!" : "City Removed");
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500  62)     });
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  81) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  82)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  83)                 setAttractionSelectedTrue(attractionName, usCities);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  97) 
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  98)                 const attractionName = getAttractionName(button);
+55d288ed (jweste25                2024-11-12 08:30:58 -0500  99)                 setAttractionSelectedFalse(attractionName, usCities);
+
+argentina.html:
+55d288ed (jweste25                2024-11-12 08:30:58 -0500 134)             <div class="form-check overlay">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 285)     aria-labelledby="BuenosAiresOffCanvas">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 286)     <div class="offcanvas-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 287)       <h5 class="offcanvas-title" id="BuenosAiresOffCanvas">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 288)         Buenos Aires, Argentina
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 289)       </h5>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 290)       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 291)     </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 292)     <div class="offcanvas-body">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 293)       <!-- Add to Bucket List Button -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 294)       <div class="d-flex justify-content-center align-items-center mb-3">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 297)           Add City to Bucket List
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 298)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 299)       </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 300)       <!-- Image Carousel -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 301)       <div id="BuenosAiresCarousel" class="carousel slide" style="padding-bottom: 4%;">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 302)         <div class="carousel-inner">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 303)           <div class="carousel-item active">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 304)             <img src="img/argentina/buenos-aires/BA1.jpeg" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 305)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 306)           <div class="carousel-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 307)             <img src="img/argentina/buenos-aires/BA2.png" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 308)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 309)           <div class="carousel-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 310)             <img src="img/argentina/buenos-aires/BA3.png" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 311)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 313)         <button class="carousel-control-prev" type="button" data-bs-target="#BuenosAiresCarousel" data-bs-slide="prev">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 314)           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 315)           <span class="visually-hidden">Previous</span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 316)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 317)         <button class="carousel-control-next" type="button" data-bs-target="#BuenosAiresCarousel" data-bs-slide="next">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 318)           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 319)           <span class="visually-hidden">Next</span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 320)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 321)       </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 322)       <!-- This is the main accordion for each city's information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 323)       <div class="accordion w-100" id="MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 324)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 325)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 326)             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 327)               aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 328)               Top Spots
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 330)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 331)           <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 332)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 333)               <!-- This is the nested accordion for Top Spots information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 334)               <div class="accordion accordion-flush w-100" id="TopSpotsList_1">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 338)         </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 339)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 340)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 341)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 342)               data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 343)               style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 344)               Places to Eat
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 345)             </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 346)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 347)           <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 348)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 349)               <!-- This is the nested accordion for Places To Eat information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 350)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_1">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 353)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 354)         </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 355)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 356)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 357)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 358)               aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 359)               Lodging
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 360)             </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 361)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 362)           <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 363)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 364)               <!-- This is the nested accordion for Lodging information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 365)               <div class="accordion accordion-flush w-100" id="LodgingList_1">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 371)     </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 372)   </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 376)     aria-labelledby="MendozaOffCanvas">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 377)     <div class="offcanvas-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 378)       <h5 class="offcanvas-title" id="MendozaOffCanvas">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 379)         City, Country
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 380)       </h5>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 381)       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 382)     </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 383)     <div class="offcanvas-body">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 384)       <!-- Add to Bucket List Button -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 385)       <div class="d-flex justify-content-center align-items-center mb-3">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 386)         <button id="Mendoza-Argentina" type="button" class="btn btn-outline-success w-100 add-remove-city">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 387)           Add City to Bucket List
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 388)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 389)       </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 390)       <!-- Image Carousel -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 391)       <div id="MendozaCarousel" class="carousel slide" style="padding-bottom: 4%;">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 392)         <div class="carousel-inner">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 393)           <div class="carousel-item active">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 394)             <img src="img/argentina/mendoza/M1.png" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 395)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 396)           <div class="carousel-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 397)             <img src="img/argentina/mendoza/M2.png" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 398)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 399)           <div class="carousel-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 400)             <img src="img/argentina/mendoza/M3.png" class="d-block w-100 fixed-size-img">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 401)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 403)         <button class="carousel-control-prev" type="button" data-bs-target="#MendozaCarousel" data-bs-slide="prev">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 404)           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 405)           <span class="visually-hidden">Previous</span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 406)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 407)         <button class="carousel-control-next" type="button" data-bs-target="#MendozaCarousel" data-bs-slide="next">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 408)           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 409)           <span class="visually-hidden">Next</span>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 410)         </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 411)       </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 412)       <!-- This is the main accordion for each city's information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 413)       <div class="accordion w-100" id="MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 414)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 415)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 416)             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TopSpots"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 417)               aria-expanded="true" aria-controls="TopSpots" style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 418)               Top Spots
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 420)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 421)           <div id="TopSpots" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 422)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 423)               <!-- This is the nested accordion for Top Spots information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 424)               <div class="accordion accordion-flush w-100" id="TopSpotsList_2">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 428)         </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 429)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 430)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 431)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 432)               data-bs-target="#PlacesToEat" aria-expanded="false" aria-controls="PlacesToEat"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 433)               style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 434)               Places to Eat
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 435)             </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 436)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 437)           <div id="PlacesToEat" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 438)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 439)               <!-- This is the nested accordion for Places To Eat information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 440)               <div class="accordion accordion-flush w-100" id="PlacesToEatList_2">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 443)           </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 444)         </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 445)         <div class="accordion-item">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 446)           <h2 class="accordion-header">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 447)             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Lodging"
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 448)               aria-expanded="false" aria-controls="Lodging" style="background-color: rgb(248, 201, 144);">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 449)               Lodging
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 450)             </button>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 451)           </h2>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 452)           <div id="Lodging" class="accordion-collapse collapse show" data-bs-parent="#MainAccordion">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 453)             <div class="accordion-body nested-first">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 454)               <!-- This is the nested accordion for Lodging information -->
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 455)               <div class="accordion accordion-flush w-100" id="LodgingList_2">
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 461)     </div>
+c6a2840c (jweste25                2024-11-05 18:34:23 -0500 462)   </div>
+
+france2.html:
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 281)         <button id="Colmar-France" type="button" class="btn btn-outline-success w-100 add-remove-city">
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 370)         <button id="Paris-France" type="button" class="btn btn-outline-success w-100 add-remove-city">
+
+japan.html:
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 304)         <button id="Kyoto-Japan" type="button" class="btn btn-outline-success w-100 add-remove-city">
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 393)         <button id="Tokyo-Japan" type="button" class="btn btn-outline-success w-100 add-remove-city">
+
+morocco.html:
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 302)         <button id="Casablanca-Morocco" type="button" class="btn btn-outline-success w-100 add-remove-city">
+5d0b57ff (jweste25                2024-11-03 22:36:30 -0500 391)         <button id="Rabat-Morocco" type="button" class="btn btn-outline-success w-100 add-remove-city">
+
+us.html:
+    <button id="Los.Angeles-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
+    <button id="New.York-United~States" type="button" class="btn btn-outline-success w-100 add-remove-city">
