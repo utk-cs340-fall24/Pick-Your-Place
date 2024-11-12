@@ -5,7 +5,7 @@ password: PickUrPl@ce904!
 
 ### AWS Account Information
 
-email: pickurplace904@gmail.com
+email: pickurplace904@gmail.com  
 account name: PickUrPlace904
 password: PickUrPl@ce904!
 

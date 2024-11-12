@@ -23,6 +23,13 @@
         Get Bucket List
     </button>
 
+    <script>
+        document.getElementById("get-list").addEventListener("click", function() {
+            // Send a message to the parent window
+            window.parent.postMessage("buttonClicked", "*");
+        });
+    </script>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <!-- Vertically centered scrollable modal -->
