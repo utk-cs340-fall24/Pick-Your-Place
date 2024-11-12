@@ -67,8 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.classList.remove("btn-outline-success");
                 button.classList.add("btn-outline-danger");
                 button.textContent = "Remove";
-                
-
 
                 let type = button.getAttribute('data-type-button');
                 if (type == 'spot') {
