@@ -1,7 +1,7 @@
 import { franceCities } from "./data.js";
 import * as bucketListFunctions from "./bucket_list.js";
 import * as offcanvasPopulationFunctions from "./offcanvas_population.js";
-const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState} = bucketListFunctions;
+const { userBucketList, populateBucketList, addCityCardCheckboxListener, addCityToBLFromOffcanvas, removeCityFromBLFromOffcanvas, loadButtonState, saveButtonState, getAttractionName, setAttractionSelectedTrue, loadAttractionsFromLocalStorage, setAttractionSelectedFalse } = bucketListFunctions;
 const { populateAllOffcanvases } = offcanvasPopulationFunctions;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (type == 'lodging') {
                     added_alert("Lodging Added");
                 }
+
+
+                const attractionName = getAttractionName(button);
+                setAttractionSelectedTrue(attractionName, franceCities);
             } else {
                 button.classList.remove("btn-outline-danger");
                 button.classList.add("btn-outline-success");
@@ -90,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else if (type == 'lodging') {
                     added_alert("Lodging Removed");
                 }
+
+                const attractionName = getAttractionName(button);
+                setAttractionSelectedFalse(attractionName, franceCities);
             }
         });
     });

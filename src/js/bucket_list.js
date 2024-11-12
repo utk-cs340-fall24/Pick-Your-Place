@@ -72,16 +72,86 @@ export function removeCityFromBL(city, country) {
 export function populateBucketList() {
     const bl_group = document.querySelector('.list-group.oc-bucket-list-group');
     userBucketList.forEach(cityObject => {
+        let attractionsHTML = '<div style="width: 100%;">';
+
+        // Append selected top spots
+        let topSpotsHTML = '';
+        cityObject.top_spots.forEach(spot => {
+            if (spot.isSelected) {
+                topSpotsHTML += `<li>${spot.name}</li>`;
+            }
+        });
+        if (topSpotsHTML) {
+            attractionsHTML += `
+                <div class="ms-2 me-auto" style="width: 100%;">
+                    <div class="fw-bold">Top Spots</div>
+                    <ul>
+                        ${topSpotsHTML}
+                    </ul>
+                </div>
+                <br>
+            `;
+        }
+
+        // Append selected places to eat
+        let placesToEatHTML = '';
+        cityObject.places_to_eat.forEach(place => {
+            if (place.isSelected) {
+                placesToEatHTML += `<li>${place.name}</li>`;
+            }
+        });
+        if (placesToEatHTML) {
+            attractionsHTML += `
+                <div class="ms-2 me-auto" style="width: 100%;">
+                    <div class="fw-bold">Places To Eat</div>
+                    <ul>
+                        ${placesToEatHTML}
+                    </ul>
+                </div>
+                <br>
+            `;
+        }
+
+        // Append selected lodging
+        let lodgingHTML = '';
+        cityObject.lodging.forEach(lodge => {
+            if (lodge.isSelected) {
+                lodgingHTML += `<li>${lodge.name}</li>`;
+            }
+        });
+        if (lodgingHTML) {
+            attractionsHTML += `
+                <div class="ms-2 me-auto" style="width: 100%;">
+                    <div class="fw-bold">Lodging</div>
+                    <ul>
+                        ${lodgingHTML}
+                    </ul>
+                </div>
+                <br>
+            `;
+        }
+
+        attractionsHTML += "</div>"
+
+        // console.log(attractionsHTML);
+
+        // Create a new list item for the attractionsHTML content
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
         listItem.innerHTML = `
-            <span>${cityObject.name}, ${cityObject.country}</span>
-            <button class="btn-delete-list-item">Remove</button>
+            <div style="width: 100%;">
+                <span><strong>${cityObject.name}, ${cityObject.country}</strong></span>
+                <button class="btn-delete-list-item">Remove</button>
+            </div>
+            <br>
+            ${attractionsHTML}
         `;
+
         // Check if the item already exists in the innerHTML
-        const exists = Array.from(bl_group.querySelectorAll('li')).some(item => 
-            item.querySelector('span').textContent === `${cityObject.name}, ${cityObject.country}`
-        );
+        const exists = Array.from(bl_group.querySelectorAll('li')).some(item => {
+            const span = item.querySelector('span');
+            return span && span.textContent === `${cityObject.name}, ${cityObject.country}`;
+        });
 
         if (!exists) {
             bl_group.appendChild(listItem);
@@ -97,14 +167,12 @@ export function populateBucketList() {
             });
         }
 
-         // Ensure checkbox is checked if city is in the bucket list
-         const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
-         const checkbox = document.getElementById(checkboxId);
-         if (checkbox) {
-             checkbox.checked = true; // Check the checkbox
-         }
- 
-        
+        // Ensure checkbox is checked if city is in the bucket list
+        const checkboxId = `${cityObject.name.replace(/\s+/g, '')}Checkbox`;
+        const checkbox = document.getElementById(checkboxId);
+        if (checkbox) {
+            checkbox.checked = true; // Check the checkbox
+        }
     });
 }
 
@@ -117,6 +185,7 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
             // Add city to bucket list
             addCityToBL(city, country, countryCities);
             populateBucketList();
+            // populateAttractions();
             added_alert("City Added!");
         } else {
             // Remove city from bucket list
@@ -130,7 +199,7 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
 export function addCityToBLFromOffcanvas(buttonId, countryCities) {
     const parts = buttonId.split(/[~\-]/);
     let city, country;
-    console.log(parts);
+    // console.log(parts);
 
     if (parts.length === 2) {
         city = parts[0].replace(/\./g, ' ');
@@ -139,8 +208,8 @@ export function addCityToBLFromOffcanvas(buttonId, countryCities) {
         city = parts[0].replace(/\./g, ' ');
         country = parts.slice(1).join(' ').replace(/~/g, ' ');
     }
-    console.log(city);
-    console.log(country);
+    // console.log(city);
+    // console.log(country);
 
     addCityToBL(city, country, countryCities);
 }
@@ -148,7 +217,7 @@ export function addCityToBLFromOffcanvas(buttonId, countryCities) {
 export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
     const parts = buttonId.split(/[~\-]/);
     let city, country;
-    console.log(parts);
+    // console.log(parts);
 
     if (parts.length === 2) {
         city = parts[0].replace(/\./g, ' ');
@@ -157,7 +226,7 @@ export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
         city = parts[0].replace(/\./g, ' ');
         country = parts.slice(1).join(' ').replace(/~/g, ' ');
     }
-    console.log(city);
+    // console.log(city);
 
     removeCityFromBL(city, country, countryCities);
 
@@ -182,5 +251,93 @@ export function loadButtonState(button) {
     if(buttonState) {
         button.className = buttonState.classList.join(' ');
         button.textContent = buttonState.textContent;
+    }
+}
+
+export function getAttractionName(button) {
+    const accordionItem = button.closest(".accordion-item");
+    const attractionName = accordionItem.querySelector('.accordion-button').textContent.trim();
+    console.log("Attraction Selected: ", attractionName);
+    return attractionName;
+}
+
+function saveAttractionToLocalStorage(attractionName, isSelected) {
+    localStorage.setItem(attractionName, isSelected);
+}
+
+export function setAttractionSelectedTrue(attractionName, countryCities) {
+    for (const city of countryCities) {
+        // Search in top_spots
+        for (const spot of city.top_spots) {
+            if (spot.name === attractionName) {
+                spot.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
+                return;
+            }
+        }
+        // Search in places_to_eat
+        for (const place of city.places_to_eat) {
+            if (place.name === attractionName) {
+                place.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
+                return;
+            }
+        }
+        // Search in lodging
+        for (const lodge of city.lodging) {
+            if (lodge.name === attractionName) {
+                lodge.isSelected = true;
+                saveAttractionToLocalStorage(attractionName, true);
+                return;
+            }
+        }
+    }
+}
+export function setAttractionSelectedFalse(attractionName, countryCities) {
+    for (const city of countryCities) {
+        // Search in top_spots
+        for (const spot of city.top_spots) {
+            if (spot.name === attractionName) {
+                spot.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+        // Search in places_to_eat
+        for (const place of city.places_to_eat) {
+            if (place.name === attractionName) {
+                place.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+        // Search in lodging
+        for (const lodge of city.lodging) {
+            if (lodge.name === attractionName) {
+                lodge.isSelected = false;
+                saveAttractionToLocalStorage(attractionName, false);
+                return;
+            }
+        }
+    }
+}
+
+export function loadAttractionsFromLocalStorage(countryCities) {
+    for (const city of countryCities) {
+        // Load state for top_spots
+        for (const spot of city.top_spots) {
+            const isSelected = localStorage.getItem(spot.name) === 'true';
+            spot.isSelected = isSelected;
+        }
+        // Load state for places_to_eat
+        for (const place of city.places_to_eat) {
+            const isSelected = localStorage.getItem(place.name) === 'true';
+            place.isSelected = isSelected;
+        }
+        // Load state for lodging
+        for (const lodge of city.lodging) {
+            const isSelected = localStorage.getItem(lodge.name) === 'true';
+            lodge.isSelected = isSelected;
+        }
     }
 }
