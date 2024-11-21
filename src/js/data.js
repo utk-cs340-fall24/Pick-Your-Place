@@ -1130,7 +1130,7 @@ export const japanCities = [
         top_spots: [
             {
                 name: "Dotonbori",
-                img: "img/Japan/Osaka/TS1.jpg",
+                img: "img/japan/Osaka/TS1.jpg",
                 blurb: `A lively district famous for its neon lights, street food, and unique 
                         attractions like the Glico running man sign. It’s a great spot for experiencing 
                         Osaka’s energetic nightlife and vibrant atmosphere.`,
@@ -1138,7 +1138,7 @@ export const japanCities = [
             },
             {
                 name: "Osaka Castle",
-                img: "img/Japan/Osaka/TS2.jpg",
+                img: "img/japan/Osaka/TS2.jpg",
                 blurb: `A historical landmark surrounded by lush gardens, offering a mix of history 
                         and natural beauty. You can explore the castle’s museum and enjoy panoramic 
                         views from the top.`,
@@ -1148,7 +1148,7 @@ export const japanCities = [
         places_to_eat: [
             {
                 name: "Mizuno",
-                img: "img/Japan/Osaka/PE1.jpg",
+                img: "img/japan/Osaka/PE1.jpg",
                 blurb: `A renowned okonomiyaki restaurant in Dotonbori, famous for its savory Japanese 
                 pancake filled with various ingredients and a signature sauce. Expect a casual but 
                 authentic experience with delicious, made-to-order dishes.`,
@@ -1156,7 +1156,7 @@ export const japanCities = [
             },
             {
                 name: "Kuromon Ichiba Market",
-                img: "img/Japan/Osaka/PE2.jpg",
+                img: "img/japan/Osaka/PE2.jpg",
                 blurb: `A bustling market where you can sample fresh seafood, skewers, and Osaka-style 
                 street foods. It’s perfect for grabbing a bite on the go or enjoying a sit-down meal in 
                 one of the local eateries.`,
@@ -1166,7 +1166,7 @@ export const japanCities = [
         lodging: [
             {
                 name: "Swissotel Nankai Osaka",
-                img: "img/Japan/Osaka/L1.jpg",
+                img: "img/japan/Osaka/L1.jpg",
                 blurb: `A luxurious hotel situated above Namba Station, offering great views, top-notch 
                 amenities, and convenient access to transport, shopping, and dining. Ideal for both business 
                 and leisure travelers.`,
@@ -1174,7 +1174,7 @@ export const japanCities = [
             },
             {
                 name: "Hotel Nikko Osaka",
-                img: "img/Japan/Osaka/L2.jpg",
+                img: "img/japan/Osaka/L2.jpg",
                 blurb: `Located near the heart of Dotonbori and Shinsaibashi, this hotel provides comfortable 
                 rooms, excellent service, and easy access to shopping, dining, and entertainment districts.`,
                 isSelected: false,
