@@ -5,13 +5,13 @@ document.addEventListener("keyup", function () {
 
   items.forEach(function (item) {
     if (item.innerHTML.toLowerCase().includes(input)) {
-      item.style.display = "block"; // Show items that match the query
-      // item.classList.remove("hidden");
+      //item.style.display = "block"; // Show items that match the query
+      item.classList.remove("hidden");
       item.classList.add("match");
     } else {
-      item.style.display = "none"; // Hide items that don't match
-      // item.classList.remove("match");
-      // item.classList.add("hidden");
+      //item.style.display = "none"; // Hide items that don't match
+      item.classList.remove("match");
+      item.classList.add("hidden");
     }
   });
 
