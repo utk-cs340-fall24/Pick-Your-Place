@@ -118,6 +118,13 @@
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
 .btn-delete-list-item:hover {
   background-color: rgb(75, 52, 25);
   transform: scale(1.02);

@@ -133,19 +133,24 @@ export function populateBucketList() {
 
         attractionsHTML += "</div>"
 
-        // console.log(attractionsHTML);
-
         // Create a new list item for the attractionsHTML content
         const listItem = document.createElement('li');
         listItem.classList.add('list-group-item', 'oc-bucket-list-group-item');
-        listItem.innerHTML = `
-            <div style="width: 100%;">
+        if(topSpotsHTML || placesToEatHTML || lodgingHTML) {
+            listItem.innerHTML = `
+            ${attractionsHTML}
+                <div class="flex-container">
+                    <span><strong>${cityObject.name}, ${cityObject.country}</strong></span><br>
+                    <button class="btn-delete-list-item">Remove</button>
+                </div>
+                <br>
+            `;
+        } else {
+            listItem.innerHTML = `
                 <span><strong>${cityObject.name}, ${cityObject.country}</strong></span>
                 <button class="btn-delete-list-item">Remove</button>
-            </div>
-            <br>
-            ${attractionsHTML}
         `;
+        }
 
         // Check if the item already exists in the innerHTML
         const exists = Array.from(bl_group.querySelectorAll('li')).some(item => {
@@ -199,7 +204,6 @@ export function addCityCardCheckboxListener(checkboxId, countryCities) {
 export function addCityToBLFromOffcanvas(buttonId, countryCities) {
     const parts = buttonId.split(/[~\-]/);
     let city, country;
-    // console.log(parts);
 
     if (parts.length === 2) {
         city = parts[0].replace(/\./g, ' ');
@@ -208,8 +212,6 @@ export function addCityToBLFromOffcanvas(buttonId, countryCities) {
         city = parts[0].replace(/\./g, ' ');
         country = parts.slice(1).join(' ').replace(/~/g, ' ');
     }
-    // console.log(city);
-    // console.log(country);
 
     addCityToBL(city, country, countryCities);
 }
@@ -217,7 +219,6 @@ export function addCityToBLFromOffcanvas(buttonId, countryCities) {
 export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
     const parts = buttonId.split(/[~\-]/);
     let city, country;
-    // console.log(parts);
 
     if (parts.length === 2) {
         city = parts[0].replace(/\./g, ' ');
@@ -226,7 +227,6 @@ export function removeCityFromBLFromOffcanvas(buttonId, countryCities) {
         city = parts[0].replace(/\./g, ' ');
         country = parts.slice(1).join(' ').replace(/~/g, ' ');
     }
-    // console.log(city);
 
     removeCityFromBL(city, country, countryCities);
 
@@ -257,11 +257,10 @@ export function loadButtonState(button) {
 export function getAttractionName(button) {
     const accordionItem = button.closest(".accordion-item");
     const attractionName = accordionItem.querySelector('.accordion-button').textContent.trim();
-    console.log("Attraction Selected: ", attractionName);
     return attractionName;
 }
 
-function saveAttractionToLocalStorage(attractionName, isSelected) {
+export function saveAttractionToLocalStorage(attractionName, isSelected) {
     localStorage.setItem(attractionName, isSelected);
 }
 
