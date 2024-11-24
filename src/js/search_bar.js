@@ -16,7 +16,7 @@ document.addEventListener("keyup", function () {
   });
 
   // Reset all cards to original positions if input is empty
-  if (input === "") {
+  if (input === "" || input === " ") {
     items.forEach(function (item) {
       item.classList.remove("hidden"); // Show all items
       item.classList.remove("match"); // Remove match class
