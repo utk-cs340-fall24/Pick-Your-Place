@@ -11,7 +11,7 @@
 
 ## Logo
 
-![Pick Your Place](img/main/globe_design.jpg)
+![Pick Your Place](src/img/main/globe_design.jpg)
 
 ## Description 
 
@@ -54,4 +54,4 @@ You will need the following softwares:
 
 ---
 
-[License information](#LICENSE.txt)
+[License information](src/LICENSE.txt)
