@@ -11,7 +11,7 @@
 
 ## Logo
 
-![Pick Your Place](img/main/globe_design.jpg)
+![Pick Your Place](src/img/main/globe_design.jpg)
 
 ## Description 
 
