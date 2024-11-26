@@ -26,6 +26,22 @@ Group Name: Pick Your Place
 - Video for index.html [#98](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/98)
 - Make javascript file with object that uses Ajax [#65](https://github.com/utk-cs340-fall24/Pick-Your-Place/issues/65)
 
+# Files I've Worked On
+
+- src/css/dropdowns.css
+- src/dropdowns.html
+- src/js/loaddropdown.js
+- src/css/dropdowns.css
+- src/css/search_bar.css
+- src/dropdowns.html
+- src/argentina.html
+- src/france2.html
+- src/japan.html
+- src/morocco.html
+- src/components/export-button.css
+- src/css/dropdowns.css
+- src/dropdowns.html
+
 ## What you accomplished
 
 Create trigger event --> calls Ajax function
