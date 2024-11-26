@@ -54,4 +54,4 @@ You will need the following softwares:
 
 ---
 
-[License information](#LICENSE.txt)
+[License information](src/LICENSE.txt)
